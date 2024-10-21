@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/font.css';
 import './style/reset.css';
 import ReactDOM from 'react-dom/client';
 import { routeTree } from './routeTree.gen';

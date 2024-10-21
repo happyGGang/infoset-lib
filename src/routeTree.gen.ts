@@ -11,14 +11,21 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
+import { Route as SmartImport } from './routes/smart'
+import { Route as KioskImport } from './routes/kiosk'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
+const SmartRoute = SmartImport.update({
+  id: '/smart',
+  path: '/smart',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const KioskRoute = KioskImport.update({
+  id: '/kiosk',
+  path: '/kiosk',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,11 +46,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+    '/kiosk': {
+      id: '/kiosk'
+      path: '/kiosk'
+      fullPath: '/kiosk'
+      preLoaderRoute: typeof KioskImport
+      parentRoute: typeof rootRoute
+    }
+    '/smart': {
+      id: '/smart'
+      path: '/smart'
+      fullPath: '/smart'
+      preLoaderRoute: typeof SmartImport
       parentRoute: typeof rootRoute
     }
   }
@@ -53,37 +67,42 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/kiosk': typeof KioskRoute
+  '/smart': typeof SmartRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/kiosk': typeof KioskRoute
+  '/smart': typeof SmartRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/kiosk': typeof KioskRoute
+  '/smart': typeof SmartRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths: '/' | '/kiosk' | '/smart'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to: '/' | '/kiosk' | '/smart'
+  id: '__root__' | '/' | '/kiosk' | '/smart'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
+  KioskRoute: typeof KioskRoute
+  SmartRoute: typeof SmartRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
+  KioskRoute: KioskRoute,
+  SmartRoute: SmartRoute,
 }
 
 export const routeTree = rootRoute
@@ -99,14 +118,18 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about"
+        "/kiosk",
+        "/smart"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/kiosk": {
+      "filePath": "kiosk.tsx"
+    },
+    "/smart": {
+      "filePath": "smart.tsx"
     }
   }
 }
