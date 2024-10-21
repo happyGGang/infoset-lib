@@ -1,0 +1,28 @@
+{
+  "name": "infoset-library",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "vite --port=3001",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.74.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.74.4",
+    "@tanstack/router-devtools": "^1.74.4",
+    "@types/node": "^22.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
