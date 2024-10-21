@@ -1,5 +1,7 @@
-import * as React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
+import styles from '../style/media_wall.module.css';
+import Tab from '../components/tab';
+import Prev from '../components/prev';
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,
@@ -7,8 +9,11 @@ export const Route = createFileRoute('/')({
 
 function HomeComponent() {
   return (
-    <div>
-      <h3>인포셋 도서관</h3>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <Tab />
+      </div>
+      <Prev />
     </div>
   );
 }
