@@ -36,16 +36,8 @@
   color: #8B95A1;
 }
 
-.slider_container {
-  display: flex;
-  overflow: hidden;
-  width: 1200px;
-  margin-top: 64.55px;
-  gap: 23.5px;
-}
-
 .wrapper {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 18.75px;
 }

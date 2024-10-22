@@ -4,8 +4,22 @@ import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 const Notice: React.FC = () => {
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    speed: 7000,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    cssEase: 'linear',
+    className: 'slide_container',
+  };
+
   return (
     <div>
       <Title title={'공지사항'} />
@@ -14,8 +28,7 @@ const Notice: React.FC = () => {
           <div className={styles.header_title_kr}>공지사항</div>
           <div className={styles.header_title_en}>NOTICE</div>
         </div>
-
-        <div className={styles.slider_container}>
+        <Slider {...settings} className={styles.slider_container}>
           {NOTICE.map(({ id, image, title }) => (
             <div key={id} className={styles.wrapper}>
               <div
@@ -25,7 +38,7 @@ const Notice: React.FC = () => {
               <div className={styles.title}>{title}</div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );
