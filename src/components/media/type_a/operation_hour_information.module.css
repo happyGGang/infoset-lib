@@ -1,0 +1,9 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 675px;
+  background: url('../../../assets/img/media/type_a/hours_information_bg.svg') center center no-repeat;
+  background-size: cover;
+}

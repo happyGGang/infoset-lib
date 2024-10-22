@@ -1,0 +1,72 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 675px;
+  background: url('../../../assets/img/media/type_a/notice_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin-bottom: 32.81px;
+  padding: 31.25px 50px 31.25px 50px
+}
+
+.header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #8B95A1;
+}
+
+.slider_container {
+  display: flex;
+  overflow: hidden;
+  width: 1200px;
+  margin-top: 64.55px;
+  gap: 23.5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18.75px;
+}
+
+.img {
+  width: 234.375px;
+  height: 331.25px;
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.20);
+}
+
+.title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  overflow: hidden;
+  width: 100%;
+  max-width: 229.375px;
+  white-space: nowrap;
+  letter-spacing: -0.375px;
+  text-overflow: ellipsis;
+  color: #FFF;
+}
