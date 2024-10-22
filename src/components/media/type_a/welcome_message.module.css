@@ -65,6 +65,7 @@
   font-style: normal;
   line-height: normal;
   margin-bottom: 16.44px;
+  animation: slideInUp 0.8s ease forwards;
   text-align: center;
   letter-spacing: 1.875px;
   text-transform: uppercase;
@@ -77,9 +78,21 @@
   font-weight: 500;
   font-style: normal;
   line-height: 150%;
+  animation: slideInUp 0.8s ease forwards;
   text-align: center;
   letter-spacing: -0.75px;
   color: #FFF;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .ticker {

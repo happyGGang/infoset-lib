@@ -78,3 +78,195 @@
   url(@/assets/font/Pretendard-Black.woff) format('woff'),
   url(@/assets/font/Pretendard-Black.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 100;
+  src:
+      local('GOTHIC'),
+      local('GOTHIC'),
+      url(@/assets/font/GOTHIC.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src:
+      local('GOTHICB'),
+      local('GOTHICB'),
+      url(@/assets/font/GOTHICB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulHangang-Light';
+  font-style: normal;
+  font-weight: 200;
+  src:
+      local('SeoulHangangL'),
+      local('SeoulHangangL'),
+      url(@/assets/font/SeoulHangangL.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangang-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src:
+      local('SeoulHangangM'),
+      local('SeoulHangangM'),
+      url(@/assets/font/SeoulHangangM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangang-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src:
+      local('SeoulHangangB'),
+      local('SeoulHangangB'),
+      url(@/assets/font/SeoulHangangB.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangang-ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  src:
+      local('SeoulHangangEB'),
+      local('SeoulHangangEB'),
+      url(@/assets/font/SeoulHangangEB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulHangangCm-Light';
+  font-style: normal;
+  font-weight: 200;
+  src:
+      local('SeoulHangangCmL'),
+      local('SeoulHangangCmL'),
+      url(@/assets/font/SeoulHangangCmL.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangangCm-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src:
+      local('SeoulHangangCmM'),
+      local('SeoulHangangCmM'),
+      url(@/assets/font/SeoulHangangCmM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangangCm-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src:
+      local('SeoulHangangCmB'),
+      local('SeoulHangangCmB'),
+      url(@/assets/font/SeoulHangangCmB.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangangCm-ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  src:
+      local('SeoulHangangEB'),
+      local('SeoulHangangEB'),
+      url(@/assets/font/SeoulHangangEB.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SeoulHangangCm-Black';
+  font-style: normal;
+  font-weight: 900;
+  src:
+      local('SeoulHangangCmBL'),
+      local('SeoulHangangCmBL'),
+      url(@/assets/font/SeoulHangangEB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulNamsanM';
+  font-style: normal;
+  font-weight: 500;
+  src:
+      local('SeoulNamsanM'),
+      local('SeoulNamsanM'),
+      url(@/assets/font/SeoulNamsanM.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulNamsanL';
+  font-style: normal;
+  font-weight: 400;
+  src:
+      local('SeoulNamsanL'),
+      local('SeoulNamsanL'),
+      url(@/assets/font/SeoulNamsanL.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulNamsanB';
+  font-style: normal;
+  font-weight: 600;
+  src:
+      local('SeoulNamsanB'),
+      local('SeoulNamsanB'),
+      url(@/assets/font/SeoulNamsanB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulNamsanEB';
+  font-style: normal;
+  font-weight: 700;
+  src:
+      local('SeoulNamsanEB'),
+      local('SeoulNamsanEB'),
+      url(@/assets/font/SeoulNamsanEB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SeoulNamsanCEB';
+  font-style: normal;
+  font-weight: 500;
+  src:
+      local('SeoulNamsanCEB'),
+      local('SeoulNamsanCEB'),
+      url(@/assets/font/SeoulNamsanCEB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-style: normal;
+  font-weight: 500;
+  src:
+      local('NanumMyeongjo'),
+      local('NanumMyeongjo'),
+      url(@/assets/font/NanumMyeongjo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumMyeongjoBold';
+  font-style: normal;
+  font-weight: 600;
+  src:
+      local('NanumMyeongjoBold'),
+      local('NanumMyeongjoBold'),
+      url(@/assets/font/NanumMyeongjoBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumMyeongjoExtraBold';
+  font-style: normal;
+  font-weight: 700;
+  src:
+      local('NanumMyeongjoExtraBold'),
+      local('NanumMyeongjoExtraBold'),
+      url(@/assets/font/NanumMyeongjoExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'FjallaOne-Regular';
+  font-style: normal;
+  font-weight: 500;
+  src:
+      local('FjallaOne-Regular'),
+      local('FjallaOne-Regular'),
+      url(@/assets/font/FjallaOne-Regular.ttf) format('truetype');
+}
