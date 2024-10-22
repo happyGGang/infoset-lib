@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Notice: React.FC = () => {
   return (
-    <>
+    <div>
       <Title title={'공지사항'} />
       <div className={styles.container}>
         <div className={styles.header}>
@@ -27,7 +27,7 @@ const Notice: React.FC = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

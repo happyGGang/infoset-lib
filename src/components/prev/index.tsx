@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './index.module.css';
 
 interface PrevProps {
   list: { id: number; img: string }[];
+  selectedId: number;
   onSelect: (id: number) => void;
 }
 
-const Prev: React.FC<PrevProps> = ({ list, onSelect }) => {
-  const [selectedId, setSelectedId] = useState(0);
-
+const Prev: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
   const handleClick = (id: number) => {
     onSelect(id);
-    setSelectedId(id);
   };
 
   return (

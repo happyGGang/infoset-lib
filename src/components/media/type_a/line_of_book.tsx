@@ -4,7 +4,7 @@ import React from 'react';
 
 const LineOfBook: React.FC = () => {
   return (
-    <>
+    <div>
       <Title title={'책속한줄'} />
       <div className={styles.container}>
         <div className={styles.header}>
@@ -17,7 +17,7 @@ const LineOfBook: React.FC = () => {
         </div>
         <div className={styles.caption}>'나는 메트로폴리탄 미술관의 경비원입니다' 중에서</div>
       </div>
-    </>
+    </div>
   );
 };
 

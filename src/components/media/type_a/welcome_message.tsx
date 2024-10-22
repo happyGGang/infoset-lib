@@ -17,7 +17,7 @@ const WelcomeMessage: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Title title={'환영메세지'} />
       <div className={styles.container}>
         <div className={styles.header}>
@@ -36,7 +36,7 @@ const WelcomeMessage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

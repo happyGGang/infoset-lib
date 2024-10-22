@@ -15,7 +15,7 @@ export const Route = createFileRoute('/a')({
 });
 
 function MediaWallTypeA() {
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [selectedId, setSelectedId] = useState<number>(0);
 
   const renderComponent = () => {
     switch (selectedId) {
@@ -34,13 +34,20 @@ function MediaWallTypeA() {
     }
   };
 
+  const handlePrev = () => setSelectedId((prev) => (prev > 0 ? prev - 1 : 7));
+  const handleNext = () => setSelectedId((prev) => (prev < 7 ? prev + 1 : 0));
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <Tab link={'/'} />
-        {renderComponent()}
+        <div className={styles.wrapper}>
+          <div onClick={handlePrev} className={styles.prev}></div>
+          {renderComponent()}
+          <div onClick={handleNext} className={styles.next}></div>
+        </div>
       </div>
-      <Prev list={PREV_A} onSelect={setSelectedId} />
+      <Prev list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
     </div>
   );
 }
