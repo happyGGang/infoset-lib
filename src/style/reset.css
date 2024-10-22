@@ -52,3 +52,22 @@ table {
 a {
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 232px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: none
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgba(217, 217, 217, 0.40);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 217, 217, 0.40);
+}

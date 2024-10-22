@@ -1,0 +1,13 @@
+.menu_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 42px;
+  padding: 12px 20px 12px 20px;
+  text-align: center;
+  color: #FFF;
+}
