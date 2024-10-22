@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import line from '../../assets/img/line.svg';
+import { Link } from '@tanstack/react-router';
 
-const Tab: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('typeA');
+interface TabProps {
+  link: string;
+}
 
-  const tabs = [
-    { id: 'typeA', label: 'type A' },
-    { id: 'typeB', label: 'type B' },
-    { id: 'typeC', label: 'type C' },
-  ];
+const Tab: React.FC<TabProps> = ({ link }) => {
+  const [activeTab, setActiveTab] = useState('a');
+
+  const getTabLink = (tab: string) => (link === '/' ? `/${tab}` : `${link}/${tab}`);
 
   return (
     <div className={styles.container}>
       <ul className={styles.tab_group}>
-        {tabs.map((tab) => (
-          <li key={tab.id} onClick={() => setActiveTab(tab.id)} className={styles.tab}>
-            <div className={activeTab === tab.id ? styles.active : ''}>{tab.label}</div>
-            <img
-              src={line}
-              alt=""
-              className={activeTab === tab.id ? styles.visible : styles.hidden}
-            />
+        {['a', 'b'].map((tab) => (
+          <li key={tab} onClick={() => setActiveTab(tab)}>
+            <Link className={styles.tab} to={getTabLink(tab)}>
+              <div className={activeTab === tab ? styles.active : ''}>type {tab.toUpperCase()}</div>
+              <img
+                src={line}
+                alt=""
+                className={activeTab === tab ? styles.visible : styles.hidden}
+              />
+            </Link>
           </li>
         ))}
       </ul>

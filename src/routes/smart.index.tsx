@@ -1,16 +1,16 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
 import { useEffect } from 'react';
 
-export const Route = createFileRoute('/')({
-  component: MediaWallPage,
+export const Route = createFileRoute('/smart/')({
+  component: SmartPage,
 });
 
-function MediaWallPage() {
+function SmartPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate({ to: '/a' });
+    navigate({ to: '/smart/a' });
   }, []);
 
-  return <div>media wall page</div>;
+  return <div>smart page</div>;
 }

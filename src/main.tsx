@@ -5,9 +5,12 @@ import ReactDOM from 'react-dom/client';
 import { routeTree } from './routeTree.gen';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 
+const NotFound = () => <div>404 - 페이지를 찾을 수 없습니다</div>;
+
 const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
+  defaultNotFoundComponent: NotFound,
 });
 
 declare module '@tanstack/react-router' {
