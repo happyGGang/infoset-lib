@@ -9,6 +9,7 @@ import WelcomeMessage from '../components/media/type_a/welcome_message';
 import HoursInformation from '../components/media/type_a/operation_hour_information';
 import ReturnBook from '../components/media/type_a/return_date';
 import LineOfBook from '../components/media/type_a/line_of_book';
+import Event from '../components/media/type_a/event';
 
 export const Route = createFileRoute('/a')({
   component: MediaWallTypeA,
@@ -27,6 +28,8 @@ function MediaWallTypeA() {
         return <ReturnBook />;
       case 5:
         return <HoursInformation />;
+      case 6:
+        return <Event />;
       case 7:
         return <LineOfBook />;
       default:

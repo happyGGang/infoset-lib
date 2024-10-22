@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 675px;
+  background: url('../../../assets/img/media/type_a/event_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin-bottom: 32.81px;
+  padding: 31.25px 50px 31.25px 50px
+}
+
+.header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #8B95A1;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 158px;
+  gap: 25px;
+}
+
+.event_info {
+  font-family: "Pretendard", sans-serif;
+  font-size: 28.75px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding: 18.75px 50px;
+  text-align: center;
+  letter-spacing: 2.875px;
+  color: #FFF;
+  border: 0.938px solid rgba(229, 232, 235, 0.50);
+  border-radius: 62.5px;
+
+}
+
+.event_info span {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18.75px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  margin-right: 15px;
+  text-align: center;
+  letter-spacing: 1.875px;
+  color: #8B95A1;
+}

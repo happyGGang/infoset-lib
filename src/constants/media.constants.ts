@@ -131,3 +131,36 @@ export const NOTICE = [
     title: '전자책 도서추천',
   },
 ];
+
+export const EVENT = [
+  {
+    id: 0,
+    title: '독서 클럽 모임',
+    time: '16:00 ~ 17:30',
+    location: 'F3 강좌실',
+  },
+  {
+    id: 1,
+    title: '작가와의 대화',
+    time: '14:00 ~ 15:30',
+    location: 'F2 세미나실',
+  },
+  {
+    id: 2,
+    title: '어린이 그림책 읽기',
+    time: '10:30 ~ 11:30',
+    location: 'F1 아동도서관',
+  },
+  {
+    id: 3,
+    title: '도서관 탐방 투어',
+    time: '13:00 ~ 14:00',
+    location: '정보센터 앞',
+  },
+  {
+    id: 4,
+    title: '문화 강좌: 사진 촬영 기법',
+    time: '18:00 ~ 19:30',
+    location: 'F4 강의실',
+  },
+];
