@@ -26,8 +26,8 @@ const WelcomeMessage: React.FC = () => {
         </div>
         <div className={styles.time}>{currentTime}</div>
         <div className={styles.date}>{currentDate}</div>
-        <div className={styles.title}>INFOSET LIBRARY</div>
-        <div className={styles.message}> 인포셋도서관에 오신 것을 환영합니다.</div>
+        <div className={styles.message}>인포셋도서관에 오신 것을 환영합니다.</div>
+        <div className={styles.title}>Welcome to Infoset Library</div>
         <div className={styles.ticker}>
           <div className={styles.ticker_message}>
             도서관초대석 (불편한편의점) 일정이 김호연 작가의 개인사정으로 인해 변경되었습니다.
