@@ -11,6 +11,7 @@ import ReturnBook from '../components/media/type_a/return_date';
 import LineOfBook from '../components/media/type_a/line_of_book';
 import Event from '../components/media/type_a/event';
 import BookInformation from '../components/media/type_a/book_information';
+import Promotion from '../components/media/type_a/promotion';
 
 export const Route = createFileRoute('/a')({
   component: MediaWallTypeA,
@@ -28,7 +29,7 @@ function MediaWallTypeA() {
       case 2:
         return <BookInformation />;
       case 3:
-        return <Notice />;
+        return <Promotion />;
       case 4:
         return <ReturnBook />;
       case 5:
