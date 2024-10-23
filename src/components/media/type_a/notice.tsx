@@ -38,10 +38,7 @@ const Notice: React.FC = () => {
         <div className={`${styles.slide} ${fade ? styles.fadeOut : styles.fadeIn}`}>
           {displayedItems.map(({ id, image, title }) => (
             <div className={styles.wrapper} key={id}>
-              <div
-                style={{ background: `url(${image}) center center no-repeat` }}
-                className={styles.img}
-              />
+              <img src={image} alt={title} className={styles.img} />
               <div className={styles.title}>{title}</div>
             </div>
           ))}

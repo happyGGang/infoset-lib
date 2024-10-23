@@ -18,6 +18,9 @@ import notice_0 from '../assets/img/media/type_a/notice_0.png';
 import notice_1 from '../assets/img/media/type_a/notice_1.png';
 import notice_2 from '../assets/img/media/type_a/notice_2.png';
 import notice_3 from '../assets/img/media/type_a/notice_3.png';
+import notice_4 from '../assets/img/media/type_a/notice_4.svg';
+import notice_5 from '../assets/img/media/type_a/notice_5.svg';
+import notice_6 from '../assets/img/media/type_a/notice_6.svg';
 import new_book_0 from '../assets/img/media/type_a/new_book_0.svg';
 import new_book_1 from '../assets/img/media/type_a/new_book_1.svg';
 import new_book_2 from '../assets/img/media/type_a/new_book_2.svg';
@@ -120,17 +123,17 @@ export const NOTICE = [
   },
   {
     id: 5,
-    image: notice_0,
+    image: notice_4,
     title: '작가 이솔로몬을 만나는 시간',
   },
   {
     id: 6,
-    image: notice_1,
+    image: notice_5,
     title: '개관 기념 독서문화',
   },
   {
     id: 7,
-    image: notice_2,
+    image: notice_6,
     title: '일상속의 작은 행복! 스마트 도서 추천',
   },
   {
