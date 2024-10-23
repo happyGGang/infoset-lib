@@ -12,12 +12,12 @@ const Notice: React.FC = () => {
     dots: false,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 4,
-    speed: 3000,
+    slidesToScroll: 1,
+    speed: 10000,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     cssEase: 'linear',
-    className: 'slide_container',
+    className: '123123',
   };
 
   return (
@@ -28,9 +28,9 @@ const Notice: React.FC = () => {
           <div className={styles.header_title_kr}>공지사항</div>
           <div className={styles.header_title_en}>NOTICE</div>
         </div>
-        <Slider {...settings} className={styles.slider_container}>
+        <Slider {...settings}>
           {NOTICE.map(({ id, image, title }) => (
-            <div key={id} className={styles.wrapper}>
+            <div className={styles.wrapper} key={id}>
               <div
                 style={{ background: `url(${image}) center center no-repeat` }}
                 className={styles.img}

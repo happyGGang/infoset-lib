@@ -25,6 +25,7 @@
   color: #FFF;
 }
 
+
 .header_title_en {
   font-family: "Pretendard", sans-serif;
   font-size: 10px;
@@ -38,7 +39,11 @@
 
 .wrapper {
   display: flex !important;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 64.19px;
+  text-align: center;
   gap: 18.75px;
 }
 
@@ -57,6 +62,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 229.375px;
+  text-align: left;
   white-space: nowrap;
   letter-spacing: -0.375px;
   text-overflow: ellipsis;

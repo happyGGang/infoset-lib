@@ -17,7 +17,6 @@ const Event: React.FC = () => {
     autoplay: true,
     autoplaySpeed: 7000,
     cssEase: 'linear',
-    className: 'slide_container',
     appendDots: (dots: any) => (
       <div style={{ bottom: '-62.9px' }}>
         <ul style={{ display: 'flex', gap: '8.75px', justifyContent: 'center' }}>
@@ -49,7 +48,7 @@ const Event: React.FC = () => {
           <div className={styles.header_title_kr}>행사안내</div>
           <div className={styles.header_title_en}>LIBRARY EVENT</div>
         </div>
-        <Slider {...settings} className={styles.slider_container}>
+        <Slider {...settings}>
           {EVENT.map((event) => (
             <div key={event.id}>
               <div className={styles.wrapper}>
