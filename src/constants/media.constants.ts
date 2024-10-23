@@ -84,11 +84,11 @@ export const PREV_B = [
   },
   {
     id: 4,
-    img: mw_4_b,
+    img: mw_5_b,
   },
   {
     id: 5,
-    img: mw_5_b,
+    img: mw_4_b,
   },
   {
     id: 6,

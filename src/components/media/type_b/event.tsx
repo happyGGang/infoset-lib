@@ -1,73 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../../title';
 import styles from './event.module.css';
 import { EVENT } from '../../../constants/media.constants';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
 
-const Event: React.FC = () => {
-  const settings = {
-    arrows: false,
-    dots: true,
-    fade: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 8000,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    waitForAnimate: false,
-    appendDots: (dots: any) => (
-      <div style={{ bottom: '-62.9px', left: '-390px' }}>
-        <ul style={{ display: 'flex', gap: '8.75px', justifyContent: 'center' }}>
-          {dots.map((dot: any, index: number) => (
-            <li
-              key={index}
-              className={dot.props.className}
-              style={{
-                width: '7.5px',
-                height: '7.5px',
-                backgroundColor: dot.props.className.includes('slick-active')
-                  ? '#ADB5BD'
-                  : '#FFFFFF',
-                borderRadius: '50%',
-                transition: 'background-color 0.8s ease',
-              }}
-            />
-          ))}
-        </ul>
-      </div>
-    ),
-  };
+interface Props {
+  isFullScreen: boolean;
+  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Event: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showEvent, setShowEvent] = useState(true);
+
+  const handleZoomClick = () => setIsFullScreen(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowEvent(false); // 이벤트 숨기기
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % EVENT.length);
+        setShowEvent(true); // 이벤트 다시 표시
+      }, 600); // CSS와 일치하도록 설정
+    }, 8000); // 8초마다 변경
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
       <Title title={'행사안내'} />
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <div className={styles.header_title_kr}>행사안내</div>
-          <div className={styles.header_title_en}>LIBRARY EVENT</div>
+      <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
+        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
+        <div className={isFullScreen ? styles.f_header : styles.header}>
+          <div className={isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}>
+            행사안내
+          </div>
+          <div className={isFullScreen ? styles.f_header_title_en : styles.header_title_en}>
+            LIBRARY EVENT
+          </div>
         </div>
-        <div className={styles.slide_wrapper}>
-          <Slider {...settings}>
-            {EVENT.map((event) => (
-              <div key={event.id} style={{ height: '625px' }}>
-                <div className={styles.label}>TODAY'S EVENT</div>
-                <div className={styles.event_title}>{event.title}</div>
-                <div className={styles.wrapper}>
-                  <div className={styles.event_info}>
-                    <span>시간</span>
-                    {event.time}
-                  </div>
-                  <div className={styles.event_info}>
-                    <span>장소</span>
-                    {event.location}
-                  </div>
-                </div>
+        <div className={isFullScreen ? styles.f_slide_wrapper : styles.slide_wrapper}>
+          <div
+            key={EVENT[currentIndex].id}
+            style={{ height: '625px' }}
+            className={`${styles.event} ${showEvent ? styles.show : styles.hide}`}
+          >
+            <div className={isFullScreen ? styles.f_label : styles.label}>TODAY'S EVENT</div>
+            <div className={isFullScreen ? styles.f_event_title : styles.event_title}>
+              {EVENT[currentIndex].title}
+            </div>
+            <div className={isFullScreen ? styles.f_wrapper : styles.wrapper}>
+              <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
+                <span>시간</span>
+                {EVENT[currentIndex].time}
               </div>
-            ))}
-          </Slider>
+              <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
+                <span>장소</span>
+                {EVENT[currentIndex].location}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={isFullScreen ? styles.f_dot_container : styles.dot_container}>
+          {EVENT.map((_, index) => (
+            <div
+              key={index}
+              className={`${isFullScreen ? styles.f_dot : styles.dot} ${index === currentIndex ? (isFullScreen ? styles.f_active : styles.active) : ''}`}
+            ></div>
+          ))}
         </div>
       </div>
     </div>

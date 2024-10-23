@@ -8,6 +8,20 @@
   background-size: cover;
 }
 
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_b/event_bg.png') center center no-repeat;
+  background-size: cover;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -83,6 +97,59 @@
   color: #B87045;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.event {
+  position: absolute;
+  width: 100%;
+  animation-duration: 0.8s; /* 애니메이션 지속시간 */
+  animation-fill-mode: forwards; /* 애니메이션 완료 후 최종 상태 유지 */
+}
+
+.show {
+  animation-name: fadeIn; /* 나타나는 애니메이션 */
+}
+
+.hide {
+  animation-name: fadeOut; /* 사라지는 애니메이션 */
+}
+
+.dot_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 320px;
+  margin-left: -710px;
+}
+
+.dot {
+  width: 7.5px;
+  height: 7.5px;
+  margin: 0 8.5px; /* 도트 간 간격 */
+  transition: background-color 0.3s; /* 부드러운 색상 전환 */
+  border-radius: 50%; /* 동그라미 형태 */
+  background-color: #FFFFFF; /* 비활성화 상태 색상 */
+}
+
+.active {
+  background-color: #ADB5BD
+}
+
 .event_title {
   font-family: "Pretendard", sans-serif;
   font-size: 62.5px;
@@ -94,4 +161,163 @@
   letter-spacing: -1.25px;
   text-transform: uppercase;
   color: #191F28;
+}
+
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100px * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25px * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #191F28;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1px * 1.6 */
+  color: #8B95A1;
+}
+
+.f_slide_wrapper {
+  margin-top: 151.82px; /* 94.89px * 1.6 */
+  padding-left: 160px; /* 100px * 1.6 */
+}
+
+.f_label {
+  font-family: "Pretendard", sans-serif;
+  font-size: 26px; /* 16.25px * 1.6 */
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 40px; /* 25px * 1.6 */
+  letter-spacing: 5.2px; /* 3.25px * 1.6 */
+  text-transform: uppercase;
+  color: #B87045;
+}
+
+.f_wrapper {
+  display: flex;
+  gap: 80px; /* 50px * 1.6 */
+}
+
+.f_event_info {
+  font-family: "Pretendard", sans-serif;
+  font-size: 36px; /* 22.5px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #6B7684;
+}
+
+.f_event_info span {
+  font-family: "Pretendard", sans-serif;
+  font-size: 30px; /* 18.75px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  overflow: hidden;
+  margin-right: 25px; /* 15.62px * 1.6 */
+  letter-spacing: 3px; /* 1.875px * 1.6 */
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #B87045;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.f_event {
+  position: absolute;
+  width: 100%;
+  animation-duration: 1.28s; /* 0.8s * 1.6 */
+  animation-fill-mode: forwards; /* 애니메이션 완료 후 최종 상태 유지 */
+}
+
+.f_show {
+  animation-name: fadeIn; /* 나타나는 애니메이션 */
+}
+
+.f_hide {
+  animation-name: fadeOut; /* 사라지는 애니메이션 */
+}
+
+.f_dot_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 512px; /* 320px * 1.6 */
+  margin-left: 287px; /* -710px * 1.6 */
+}
+
+.f_dot {
+  width: 12px; /* 7.5px * 1.6 */
+  height: 12px; /* 7.5px * 1.6 */
+  margin: 0 14px; /* 8.5px * 1.6 */
+  transition: background-color 0.3s; /* 부드러운 색상 전환 */
+  border-radius: 50%; /* 동그라미 형태 */
+  background-color: #FFFFFF; /* 비활성화 상태 색상 */
+}
+
+.f_active {
+  background-color: #ADB5BD;
+}
+
+.f_event_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 100px; /* 62.5px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: 130%;
+  margin-bottom: 50px; /* 31.25px * 1.6 */
+  white-space: pre-line;
+  letter-spacing: -2px; /* -1.25px * 1.6 */
+  text-transform: uppercase;
+  color: #191F28;
+}
+
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }

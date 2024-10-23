@@ -7,3 +7,34 @@
   background: url('../../../assets/img/media/type_b/book_information_bg.svg') center center no-repeat;
   background-size: cover;
 }
+
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_b/book_information_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
+}

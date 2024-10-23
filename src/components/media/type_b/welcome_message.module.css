@@ -8,6 +8,20 @@
   background-size: cover;
 }
 
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_b/welcome_message_bg.png') center center no-repeat;
+  background-size: cover;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +77,7 @@
   font-weight: 400;
   font-style: normal;
   line-height: 150%;
+  animation: slideInUp 0.8s ease forwards;
   text-align: center;
   letter-spacing: 2.6px;
   color: #8B95A1;
@@ -76,6 +91,7 @@
   line-height: 140%;
   margin-top: 347.16px;
   margin-bottom: 5.5px;
+  animation: slideInUp 0.8s ease forwards;
   text-align: center;
   letter-spacing: -0.75px;
   color: #191F28;
@@ -115,6 +131,116 @@
   color: #FFF;
 }
 
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100px * 1.6 */
+  margin-bottom: 21.24px; /* 13.27px * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25px * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1px * 1.6 */
+  color: #EFF1F3;
+}
+
+.f_time {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 90px; /* 56.25px * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 12px; /* 7.5px * 1.6 */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.f_date {
+  font-family: "Pretendard", sans-serif;
+  font-size: 30px; /* 18.75px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.f_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 26px; /* 16.25px * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  letter-spacing: 4.16px; /* 2.6px * 1.6 */
+  color: #8B95A1;
+}
+
+.f_message {
+  font-family: "Pretendard", sans-serif;
+  font-size: 60px; /* 37.5px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  margin-top: 555.46px; /* 347.16px * 1.6 */
+  margin-bottom: 8.8px; /* 5.5px * 1.6 */
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  letter-spacing: -1.2px; /* -0.75px * 1.6 */
+  color: #191F28;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(48px); /* 30px * 1.6 */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.f_ticker {
+  position: fixed;
+  bottom:0; /* 211px * 1.6 */
+  left:0; /* 360px * 1.6 */
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 1920px; /* 1200px * 1.6 */
+  height: 64px; /* 40px * 1.6 */
+  background: #000;
+}
+
+.f_ticker_message {
+  font-family: "Pretendard", sans-serif;
+  font-size: 22px; /* 13.75px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  animation: ticker-animation 80s linear infinite; /* 50s * 1.6 */
+  white-space: nowrap;
+  color: #FFF;
+}
+
+
 @keyframes ticker-animation {
   0% {
     transform: translateX(100%);
@@ -122,4 +248,21 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }

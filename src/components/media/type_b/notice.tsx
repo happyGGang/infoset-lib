@@ -3,7 +3,12 @@ import Title from '../../title';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
 
-const Notice: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Notice: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 3;
   const totalItems = NOTICE.length;
@@ -27,21 +32,30 @@ const Notice: React.FC = () => {
 
   const displayedItems = NOTICE.slice(currentIndex, currentIndex + itemsPerPage);
 
+  const handleZoomClick = () => setIsFullScreen(false);
+
   return (
     <div>
       <Title title={'공지사항'} />
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <div className={styles.header_title_kr}>공지사항</div>
-          <div className={styles.header_title_en}>NOTICE</div>
+      <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
+        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
+        <div className={isFullScreen ? styles.f_header : styles.header}>
+          <div className={isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}>
+            공지사항
+          </div>
+          <div className={isFullScreen ? styles.f_header_title_en : styles.header_title_en}>
+            NOTICE
+          </div>
         </div>
-        <div className={`${styles.slide} ${fade ? styles.fadeOut : styles.fadeIn}`}>
+        <div
+          className={`${isFullScreen ? styles.f_slide : styles.slide} ${fade ? styles.fadeOut : styles.fadeIn}`}
+        >
           {displayedItems.map(({ id, image, title }) => (
-            <div className={styles.wrapper} key={id}>
-              <img src={image} alt={title} className={styles.img} />
-              <div className={styles.text_wrapper}>
-                <div className={styles.index}>{id}</div>
-                <div className={styles.title}>{title}</div>
+            <div className={isFullScreen ? styles.f_wrapper : styles.wrapper} key={id}>
+              <img src={image} alt={title} className={isFullScreen ? styles.f_img : styles.img} />
+              <div className={isFullScreen ? styles.f_text_wrapper : styles.text_wrapper}>
+                <div className={isFullScreen ? styles.f_index : styles.index}>{id}</div>
+                <div className={isFullScreen ? styles.f_title : styles.title}>{title}</div>
               </div>
             </div>
           ))}
