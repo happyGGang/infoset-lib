@@ -2,7 +2,11 @@ import Title from '../../title';
 import styles from './line_of_book.module.css';
 import React from 'react';
 
-const LineOfBook: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+}
+
+const LineOfBook: React.FC<Props> = ({ isFullScreen }) => {
   return (
     <div>
       <Title title={'책속한줄'} />

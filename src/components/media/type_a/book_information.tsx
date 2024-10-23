@@ -5,7 +5,11 @@ import line from '../../../assets/img/line.svg';
 import dummy from '../../../assets/img/media/type_a/new_book_0.svg';
 import { BESTSELLER, NEW_BOOK } from '../../../constants/media.constants';
 
-const BookInformation: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+}
+
+const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
   const [currentIndexes, setCurrentIndexes] = useState([0, 0]); // [newBookIndex, bestsellerIndex]
   const [isFading, setIsFading] = useState(false);
 

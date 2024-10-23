@@ -6,7 +6,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
-const Event: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+}
+
+const Event: React.FC<Props> = ({ isFullScreen }) => {
   const settings = {
     arrows: false,
     dots: true,

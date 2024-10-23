@@ -35,3 +35,12 @@
   background: url('../assets/img/arrow.svg') center center no-repeat;
   background-size: cover;
 }
+
+.full {
+  width: 48px;
+  height: 48px;
+  margin-top: 114px;
+  cursor: pointer;
+  background: url('../assets/img/full.svg') center center no-repeat;
+  background-size: cover;
+}

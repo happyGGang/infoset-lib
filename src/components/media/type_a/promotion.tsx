@@ -3,7 +3,11 @@ import styles from './promotion.module.css';
 import React, { useEffect, useState } from 'react';
 import weather from '../../../assets/img/media/type_a/weather.svg';
 
-const Promotion: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+}
+
+const Promotion: React.FC<Props> = ({ isFullScreen }) => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {

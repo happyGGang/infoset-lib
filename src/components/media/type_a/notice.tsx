@@ -3,7 +3,11 @@ import Title from '../../title';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
 
-const Notice: React.FC = () => {
+interface Props {
+  isFullScreen: boolean;
+}
+
+const Notice: React.FC<Props> = ({ isFullScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
   const totalItems = NOTICE.length;

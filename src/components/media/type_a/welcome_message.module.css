@@ -4,6 +4,21 @@
   flex-direction: column;
   width: 1200px;
   height: 675px;
+  transition: all 0.5s ease; /* 애니메이션 추가 */
+  background: url('../../../assets/img/media/type_a/welcome_message_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   background: url('../../../assets/img/media/type_a/welcome_message_bg.svg') center center no-repeat;
   background-size: cover;
 }
@@ -13,7 +28,7 @@
   justify-content: space-between;
   width: 1100px;
   margin-bottom: 32.81px;
-  padding: 31.25px 50px 31.25px 50px
+  padding: 31.25px 50px 31.25px 50px;
 }
 
 .header_title_kr {
@@ -125,4 +140,140 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100px * 1.6 */
+  margin-bottom: 52.4976px; /* 32.81px * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25px * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1px * 1.6 */
+  color: #8B95A1;
+}
+
+.f_time {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 90px; /* 56.25px * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 12px; /* 7.5px * 1.6 */
+  text-align: center;
+  color: #191F28;
+}
+
+.f_date {
+  font-family: "Pretendard", sans-serif;
+  font-size: 30px; /* 18.75px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 343.128px; /* 214.43px * 1.6 */
+  text-align: center;
+  color: #191F28;
+}
+
+.f_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 30px; /* 18.75px * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 26.464px; /* 16.44px * 1.6 */
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  letter-spacing: 3px; /* 1.875px * 1.6 */
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.f_message {
+  font-family: "Pretendard", sans-serif;
+  font-size: 60px; /* 37.5px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: 150%;
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  letter-spacing: -1.2px; /* -0.75px * 1.6 */
+  color: #FFF;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(48px); /* 30px * 1.6 */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.f_ticker {
+  position: fixed;
+  bottom: 0; /* 211px * 1.6 */
+  left: 0; /* 360px * 1.6 */
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  width: 1920px; /* 1200px * 1.6 */
+  height: 64px; /* 40px * 1.6 */
+  background: #000;
+}
+
+.f_ticker_message {
+  font-family: "Pretendard", sans-serif;
+  font-size: 22px; /* 13.75px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  animation: ticker-animation 50s linear infinite; /* 50s * 1.6 */
+  white-space: nowrap;
+  color: #FFF;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(100%); /* 100% * 1.6 */
+  }
+  100% {
+    transform: translateX(-100%); /* -100% * 1.6 */
+  }
+}
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }
