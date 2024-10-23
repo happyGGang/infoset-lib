@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 1200px;
   height: 675px;
-  background: url('../../../assets/img/media/type_a/event_bg.svg') center center no-repeat;
+  background: url('../../../assets/img/media/type_b/event_bg.png') center center no-repeat;
   background-size: cover;
 }
 
@@ -12,7 +12,6 @@
   display: flex;
   justify-content: space-between;
   width: 1100px;
-  margin-bottom: 32.81px;
   padding: 31.25px 50px 31.25px 50px
 }
 
@@ -22,7 +21,7 @@
   font-weight: 600;
   font-style: normal;
   line-height: normal;
-  color: #FFF;
+  color: #191F28;
 }
 
 .header_title_en {
@@ -36,29 +35,38 @@
   color: #8B95A1;
 }
 
+.slide_wrapper {
+  margin-top: 94.89px;
+  padding-left: 100px;
+}
+
+.label {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16.25px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 25px;
+  letter-spacing: 3.25px;
+  text-transform: uppercase;
+  color: #B87045;
+}
+
 .wrapper {
   display: flex;
-  justify-content: center;
-  margin-top: 158px;
-  gap: 25px;
+  gap: 50px;
 }
 
 .event_info {
   font-family: "Pretendard", sans-serif;
-  font-size: 28.75px;
-  font-weight: 600;
+  font-size: 22.5px;
+  font-weight: 500;
   font-style: normal;
-  line-height: normal;
-  display: flex;
-  align-items: center;
-  width: 320px;
-  padding: 18.75px 50px;
-  text-align: center;
-  letter-spacing: 2.875px;
-  color: #FFF;
-  border: 0.938px solid rgba(229, 232, 235, 0.50);
-  border-radius: 62.5px;
-
+  line-height: 140%;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #6B7684;
 }
 
 .event_info span {
@@ -66,24 +74,24 @@
   font-size: 18.75px;
   font-weight: 600;
   font-style: normal;
-  line-height: normal;
-  margin-right: 15px;
-  text-align: center;
+  line-height: 140%;
+  overflow: hidden;
+  margin-right: 15.62px;
   letter-spacing: 1.875px;
-  color: #8B95A1;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #B87045;
 }
 
 .event_title {
   font-family: "Pretendard", sans-serif;
-  font-size: 75px;
+  font-size: 62.5px;
   font-weight: 600;
   font-style: normal;
-  line-height: normal;
-  overflow: hidden;
-  margin-top: 32.56px;
-  text-align: center;
+  line-height: 130%;
+  margin-bottom: 31.25px;
   white-space: pre-line;
-  letter-spacing: -1.875px;
-  text-overflow: ellipsis;
-  color: #FFF;
+  letter-spacing: -1.25px;
+  text-transform: uppercase;
+  color: #191F28;
 }

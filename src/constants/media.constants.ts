@@ -146,31 +146,31 @@ export const NOTICE = [
 export const EVENT = [
   {
     id: 0,
-    title: 'BOOK TALK\n' + '작가 이솔로몬을 만나는 시간',
+    title: 'BOOK TALK\n작가 이솔로몬을 만나는 시간',
     time: '16:00 ~ 17:30',
     location: 'F3 강좌실',
   },
   {
     id: 1,
-    title: '작가와의 대화',
+    title: '작가와의 대화\n소설가 이정운 초청',
     time: '14:00 ~ 15:30',
     location: 'F2 세미나실',
   },
   {
     id: 2,
-    title: '어린이 그림책 읽기',
+    title: '어린이 그림책 읽기\n모든 어린이를 환영합니다',
     time: '10:30 ~ 11:30',
     location: 'F1 아동도서관',
   },
   {
     id: 3,
-    title: '도서관 탐방 투어',
+    title: '도서관 탐방 투어\n도서관의 비밀을 알아보세요',
     time: '13:00 ~ 14:00',
     location: '정보센터 앞',
   },
   {
     id: 4,
-    title: '문화 강좌: 사진 촬영 기법',
+    title: '문화 강좌\n사진 촬영 기법 배우기',
     time: '18:00 ~ 19:30',
     location: 'F4 강의실',
   },

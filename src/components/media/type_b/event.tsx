@@ -10,15 +10,16 @@ const Event: React.FC = () => {
   const settings = {
     arrows: false,
     dots: true,
+    fade: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 5000,
-    autoplay: true,
-    autoplaySpeed: 7000,
-    cssEase: 'linear',
+    waitForAnimate: false,
     appendDots: (dots: any) => (
-      <div style={{ bottom: '-62.9px' }}>
+      <div style={{ bottom: '-62.9px', left: '-390px' }}>
         <ul style={{ display: 'flex', gap: '8.75px', justifyContent: 'center' }}>
           {dots.map((dot: any, index: number) => (
             <li
@@ -28,8 +29,8 @@ const Event: React.FC = () => {
                 width: '7.5px',
                 height: '7.5px',
                 backgroundColor: dot.props.className.includes('slick-active')
-                  ? '#FFFFFF'
-                  : '#ADB5BD',
+                  ? '#ADB5BD'
+                  : '#FFFFFF',
                 borderRadius: '50%',
                 transition: 'background-color 0.8s ease',
               }}
@@ -48,23 +49,26 @@ const Event: React.FC = () => {
           <div className={styles.header_title_kr}>행사안내</div>
           <div className={styles.header_title_en}>LIBRARY EVENT</div>
         </div>
-        <Slider {...settings}>
-          {EVENT.map((event) => (
-            <div key={event.id}>
-              <div className={styles.wrapper}>
-                <div className={styles.event_info}>
-                  <span>시간</span>
-                  {event.time}
-                </div>
-                <div className={styles.event_info}>
-                  <span>장소</span>
-                  {event.location}
+        <div className={styles.slide_wrapper}>
+          <Slider {...settings}>
+            {EVENT.map((event) => (
+              <div key={event.id} style={{ height: '625px' }}>
+                <div className={styles.label}>TODAY'S EVENT</div>
+                <div className={styles.event_title}>{event.title}</div>
+                <div className={styles.wrapper}>
+                  <div className={styles.event_info}>
+                    <span>시간</span>
+                    {event.time}
+                  </div>
+                  <div className={styles.event_info}>
+                    <span>장소</span>
+                    {event.location}
+                  </div>
                 </div>
               </div>
-              <div className={styles.event_title}>{event.title}</div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );
