@@ -37,13 +37,17 @@
   color: #8B95A1;
 }
 
+.slide {
+  display: flex;
+  justify-content: center;
+  gap: 32.5px;
+}
+
 .wrapper {
-  display: flex !important;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   margin-top: 64.19px;
-  text-align: center;
   gap: 18.75px;
 }
 
@@ -67,4 +71,14 @@
   letter-spacing: -0.375px;
   text-overflow: ellipsis;
   color: #FFF;
+}
+
+.fadeIn {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+}
+
+.fadeOut {
+  transition: opacity 1s ease-out;
+  opacity: 0;
 }

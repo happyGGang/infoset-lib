@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../../title';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
 
 const Notice: React.FC = () => {
-  const settings = {
-    arrows: false,
-    dots: false,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    speed: 10000,
-    autoplay: true,
-    autoplaySpeed: 10000,
-    cssEase: 'linear',
-    className: '123123',
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 4;
+  const totalItems = NOTICE.length;
+  const [fade, setFade] = useState(false);
+
+  const getNextIndex = (index: number) => {
+    return (index + itemsPerPage) % totalItems;
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => getNextIndex(prevIndex));
+        setFade(false);
+      }, 1000);
+    }, 12000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const displayedItems = NOTICE.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
     <div>
@@ -28,8 +35,8 @@ const Notice: React.FC = () => {
           <div className={styles.header_title_kr}>공지사항</div>
           <div className={styles.header_title_en}>NOTICE</div>
         </div>
-        <Slider {...settings}>
-          {NOTICE.map(({ id, image, title }) => (
+        <div className={`${styles.slide} ${fade ? styles.fadeOut : styles.fadeIn}`}>
+          {displayedItems.map(({ id, image, title }) => (
             <div className={styles.wrapper} key={id}>
               <div
                 style={{ background: `url(${image}) center center no-repeat` }}
@@ -38,7 +45,7 @@ const Notice: React.FC = () => {
               <div className={styles.title}>{title}</div>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
     </div>
   );
