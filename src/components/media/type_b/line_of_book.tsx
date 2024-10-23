@@ -11,6 +11,7 @@ const LineOfBook: React.FC = () => {
           <div className={styles.header_title_kr}>책속한줄</div>
           <div className={styles.header_title_en}>A LINE OF BOOK</div>
         </div>
+        <div className={styles.title}>책 속의 한줄 발견</div>
         <div className={styles.line_of_book}>
           그림 안의 시간은 한순간에 얼어붙었다기보다 <br />
           흘러들어 고인 느낌이다.
