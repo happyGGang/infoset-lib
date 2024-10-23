@@ -5,7 +5,7 @@ import { NOTICE } from '../../../constants/media.constants';
 
 const Notice: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 4;
+  const itemsPerPage = 3;
   const totalItems = NOTICE.length;
   const [fade, setFade] = useState(false);
 
@@ -39,7 +39,10 @@ const Notice: React.FC = () => {
           {displayedItems.map(({ id, image, title }) => (
             <div className={styles.wrapper} key={id}>
               <img src={image} alt={title} className={styles.img} />
-              <div className={styles.title}>{title}</div>
+              <div className={styles.text_wrapper}>
+                <div className={styles.index}>{id}</div>
+                <div className={styles.title}>{title}</div>
+              </div>
             </div>
           ))}
         </div>

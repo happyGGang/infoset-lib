@@ -102,42 +102,42 @@ export const PREV_B = [
 
 export const NOTICE = [
   {
-    id: 1,
+    id: '01',
     image: notice_0,
     title: '작가 이솔로몬을 만나는 시간',
   },
   {
-    id: 2,
+    id: '02',
     image: notice_1,
     title: '개관 기념 독서문화',
   },
   {
-    id: 3,
+    id: '03',
     image: notice_2,
     title: '일상속의 작은 행복! 스마트 도서 추천',
   },
   {
-    id: 4,
+    id: '04',
     image: notice_3,
     title: '전자책 도서추천',
   },
   {
-    id: 5,
+    id: '05',
     image: notice_4,
     title: '작가 이솔로몬을 만나는 시간',
   },
   {
-    id: 6,
+    id: '06',
     image: notice_5,
     title: '개관 기념 독서문화',
   },
   {
-    id: 7,
+    id: '07',
     image: notice_6,
     title: '일상속의 작은 행복! 스마트 도서 추천',
   },
   {
-    id: 8,
+    id: '08',
     image: notice_3,
     title: '전자책 도서추천',
   },
