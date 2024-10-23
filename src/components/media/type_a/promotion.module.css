@@ -8,6 +8,21 @@
   background-size: cover;
 }
 
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_a/promotion_bg.png') center center no-repeat;
+  background-size: cover;
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -182,4 +197,197 @@
   letter-spacing: -0.3px;
   text-transform: uppercase;
   color: #FFF;
+}
+
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100 * 1.6 */
+  margin-bottom: 73.296px; /* 45.81 * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25 * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10 * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10 * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1 * 1.6 */
+  color: #8B95A1;
+}
+
+.f_content {
+  display: flex;
+  align-items: center;
+}
+
+.f_clock_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 52px; /* 32.5 * 1.6 */
+}
+
+.f_lib {
+  font-family: "Pretendard", sans-serif;
+  font-size: 17px; /* 10.625 * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 76.8px; /* 48 * 1.6 */
+  text-align: center;
+  letter-spacing: 3.061px; /* 1.913 * 1.6 */
+  text-transform: uppercase;
+  color: #B7B6B6;
+}
+
+.f_clock {
+  position: relative;
+  width: 240px; /* 150 * 1.6 */
+  height: 240px; /* 150 * 1.6 */
+  margin-bottom: 36.8px; /* 23 * 1.6 */
+  background: url('../../../assets/img/media/type_a/clock.png') center center no-repeat;
+  background-size: cover;
+}
+
+.f_hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+  background-color: #FFFFFF;
+}
+
+.f_hand:nth-child(1) {
+  width: 1.6px; /* 1 * 1.6 */
+  height: 64px; /* 40 * 1.6 */
+}
+
+.f_hand:nth-child(2) {
+  width: 1.6px; /* 1 * 1.6 */
+  height: 88px; /* 55 * 1.6 */
+}
+
+.f_hand:nth-child(3) {
+  width: 0.8px; /* 0.5 * 1.6 */
+  height: 91px; /* 57 * 1.6 */
+  background-color: #FFFFFF;
+}
+
+.f_date {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16.8px; /* 10.5 * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 8.16px; /* 5.1 * 1.6 */
+  text-align: center;
+  letter-spacing: -1.344px; /* -0.84 * 1.6 */
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.f_time {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 41.6px; /* 26 * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 11.2px; /* 7 * 1.6 */
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.f_video {
+  margin-right: 49.6px; /* 31 * 1.6 */
+  margin-left: 49.6px; /* 31 * 1.6 */
+}
+
+.f_weather_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.f_label {
+  font-family: "Pretendard", sans-serif;
+  font-size: 17px; /* 10.625 * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 46.4px; /* 29 * 1.6 */
+  text-align: center;
+  letter-spacing: 1.878px; /* 1.169 * 1.6 */
+  text-transform: uppercase;
+  color: #fed9a3;
+}
+
+.f_perceived {
+  font-family: "Pretendard", sans-serif;
+  font-size: 31px; /* 19.375 * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.619px; /* -0.387 * 1.6 */
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.f_icon {
+  width: 240px; /* 150 * 1.6 */
+}
+
+.f_temperature {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 70px; /* 43.75 * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  margin-bottom: 19.2px; /* 12 * 1.6 */
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.f_description {
+  font-family: "Pretendard", sans-serif;
+  font-size: 24px; /* 15 * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.48px; /* -0.3 * 1.6 */
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }

@@ -21,52 +21,32 @@ function MediaWallTypeA() {
   const [fullScreenStates, setFullScreenStates] = useState<boolean[]>(Array(8).fill(false)); // 각 컴포넌트의 fullscreen 상태 배열
 
   const renderComponent = () => {
-    switch (selectedId) {
-      case 0:
-        return (
-          <WelcomeMessage
-            isFullScreen={fullScreenStates[0]}
-            setIsFullScreen={(state) =>
-              setFullScreenStates((prev) => {
-                const newStates = [...prev];
-                if (typeof state === 'boolean') {
-                  newStates[0] = state;
-                }
-                return newStates;
-              })
-            }
-          />
-        );
-      case 1:
-        return <Notice isFullScreen={fullScreenStates[1]} />;
-      case 2:
-        return <BookInformation isFullScreen={fullScreenStates[2]} />;
-      case 3:
-        return <Promotion isFullScreen={fullScreenStates[3]} />;
-      case 4:
-        return <ReturnBook isFullScreen={fullScreenStates[4]} />;
-      case 5:
-        return <HoursInformation isFullScreen={fullScreenStates[5]} />;
-      case 6:
-        return <Event isFullScreen={fullScreenStates[6]} />;
-      case 7:
-        return <LineOfBook isFullScreen={fullScreenStates[7]} />;
-      default:
-        return (
-          <WelcomeMessage
-            isFullScreen={fullScreenStates[0]}
-            setIsFullScreen={(state) =>
-              setFullScreenStates((prev) => {
-                const newStates = [...prev];
-                if (typeof state === 'boolean') {
-                  newStates[0] = state;
-                }
-                return newStates;
-              })
-            }
-          />
-        );
-    }
+    const components = [
+      WelcomeMessage,
+      Notice,
+      BookInformation,
+      Promotion,
+      ReturnBook,
+      HoursInformation,
+      Event,
+      LineOfBook,
+    ];
+
+    const SelectedComponent = components[selectedId] || WelcomeMessage;
+
+    return (
+      <SelectedComponent
+        isFullScreen={fullScreenStates[selectedId] || fullScreenStates[0]}
+        setIsFullScreen={(state) =>
+          typeof state === 'boolean' &&
+          setFullScreenStates((prev) => {
+            const newStates = [...prev];
+            newStates[selectedId] = state;
+            return newStates;
+          })
+        }
+      />
+    );
   };
 
   const handlePrev = () => setSelectedId((prev) => (prev > 0 ? prev - 1 : 7));

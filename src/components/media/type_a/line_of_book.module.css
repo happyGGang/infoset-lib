@@ -8,6 +8,21 @@
   background-size: cover;
 }
 
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_a/line_of_book_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -70,4 +85,75 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100px * 1.6 */
+  margin-bottom: 52.49px; /* 32.81px * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25px * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #FFF;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1px * 1.6 */
+  color: #8B95A1;
+}
+
+.f_line_of_book {
+  font-family: "SeoulHangang CM", sans-serif;
+  font-size: 60px; /* 37.5px * 1.6 */
+  font-weight: 400;
+  font-style: normal;
+  line-height: 150%;
+  margin-top: 288px; /* 180px * 1.6 */
+  margin-bottom: 30px; /* 18.75px * 1.6 */
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  letter-spacing: -1.2px; /* -0.75px * 1.6 */
+  color: #FFF;
+}
+
+.f_caption {
+  font-family: "Pretendard", sans-serif;
+  font-size: 24px; /* 15px * 1.6 */
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  animation: slideInUp 0.8s ease forwards;
+  text-align: center;
+  color: #ADB5BD;
+}
+
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }

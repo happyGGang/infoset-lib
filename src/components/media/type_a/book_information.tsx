@@ -7,9 +7,10 @@ import { BESTSELLER, NEW_BOOK } from '../../../constants/media.constants';
 
 interface Props {
   isFullScreen: boolean;
+  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
+const BookInformation: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentIndexes, setCurrentIndexes] = useState([0, 0]); // [newBookIndex, bestsellerIndex]
   const [isFading, setIsFading] = useState(false);
 
@@ -35,17 +36,24 @@ const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
   const nextBooks = getNextBooks(NEW_BOOK, currentIndexes[0]);
   const nextBestsellers = getNextBooks(BESTSELLER, currentIndexes[1]);
 
+  const handleZoomClick = () => setIsFullScreen(false);
+
   return (
     <div>
       <Title title={'도서정보'} />
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <div className={styles.header_title_kr}>도서정보</div>
-          <div className={styles.header_title_en}>BOOK INFORMATION</div>
+      <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
+        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
+        <div className={`${isFullScreen ? styles.f_header : styles.header}`}>
+          <div className={`${isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}`}>
+            도서정보
+          </div>
+          <div className={`${isFullScreen ? styles.f_header_title_en : styles.header_title_en}`}>
+            BOOK INFORMATION
+          </div>
         </div>
 
-        <div className={styles.new_book_wrapper}>
-          <div className={styles.label}>
+        <div className={`${isFullScreen ? styles.f_new_book_wrapper : styles.new_book_wrapper}`}>
+          <div className={`${isFullScreen ? styles.f_label : styles.label}`}>
             <div>
               신착
               <br />
@@ -54,20 +62,28 @@ const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
             <img src={line} alt="" />
           </div>
 
-          <div className={`${styles.current} ${isFading ? styles['fade-out'] : styles['fade-in']}`}>
+          <div
+            className={`${isFullScreen ? styles.f_current : styles.current} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
+          >
             <img src={currentBook.thumbnail} alt={currentBook.title} />
             <div>
-              <div className={styles.book_title}>{currentBook.title}</div>
-              <div className={styles.book_info}>{currentBook.info}</div>
-              <div className={styles.book_summary}>{currentBook.summary}</div>
+              <div className={`${isFullScreen ? styles.f_book_title : styles.book_title}`}>
+                {currentBook.title}
+              </div>
+              <div className={`${isFullScreen ? styles.f_book_info : styles.book_info}`}>
+                {currentBook.info}
+              </div>
+              <div className={`${isFullScreen ? styles.f_book_summary : styles.book_summary}`}>
+                {currentBook.summary}
+              </div>
             </div>
           </div>
 
           <div
-            className={`${styles.list_wrapper} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
+            className={`${isFullScreen ? styles.f_list_wrapper : styles.list_wrapper} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
           >
             {nextBooks.map((book) => (
-              <div key={book.id} className={styles.list}>
+              <div key={book.id} className={`${isFullScreen ? styles.f_list : styles.list}`}>
                 <img src={book.thumbnail || dummy} alt={book.title} />
                 <div>{book.title}</div>
               </div>
@@ -75,8 +91,10 @@ const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
           </div>
         </div>
 
-        <div className={styles.bestseller_wrapper}>
-          <div className={styles.label}>
+        <div
+          className={`${isFullScreen ? styles.f_bestseller_wrapper : styles.bestseller_wrapper}`}
+        >
+          <div className={`${isFullScreen ? styles.f_label : styles.label}`}>
             <div>
               인기
               <br />
@@ -85,20 +103,28 @@ const BookInformation: React.FC<Props> = ({ isFullScreen }) => {
             <img src={line} alt="" />
           </div>
 
-          <div className={`${styles.current} ${isFading ? styles['fade-out'] : styles['fade-in']}`}>
+          <div
+            className={`${isFullScreen ? styles.f_current : styles.current} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
+          >
             <img src={currentBestseller.thumbnail} alt={currentBestseller.title} />
             <div>
-              <div className={styles.book_title}>{currentBestseller.title}</div>
-              <div className={styles.book_info}>{currentBestseller.info}</div>
-              <div className={styles.book_summary}>{currentBestseller.summary}</div>
+              <div className={`${isFullScreen ? styles.f_book_title : styles.book_title}`}>
+                {currentBestseller.title}
+              </div>
+              <div className={`${isFullScreen ? styles.f_book_info : styles.book_info}`}>
+                {currentBestseller.info}
+              </div>
+              <div className={`${isFullScreen ? styles.f_book_summary : styles.book_summary}`}>
+                {currentBestseller.summary}
+              </div>
             </div>
           </div>
 
           <div
-            className={`${styles.list_wrapper} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
+            className={`${isFullScreen ? styles.f_list_wrapper : styles.list_wrapper} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
           >
             {nextBestsellers.map((book) => (
-              <div key={book.id} className={styles.list}>
+              <div key={book.id} className={`${isFullScreen ? styles.f_list : styles.list}`}>
                 <img src={book.thumbnail || dummy} alt={book.title} />
                 <div>{book.title}</div>
               </div>

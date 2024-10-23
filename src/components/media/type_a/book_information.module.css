@@ -8,6 +8,20 @@
   background-size: cover;
 }
 
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../assets/img/media/type_a/book_information_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -153,4 +167,167 @@
 .bestseller_wrapper {
   display: flex;
   padding: 56.54px 81.25px 0 50px;
+}
+
+.f_header {
+  display: flex;
+  justify-content: space-between;
+  width: 1760px; /* 1100px * 1.6 */
+  padding: 50px 80px 50px 80px; /* 31.25px * 1.6, 50px * 1.6 */
+}
+
+.f_header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  color: #FFF;
+}
+
+.f_header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px; /* 10px * 1.6 */
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 1.6px; /* 1px * 1.6 */
+  color: #8B95A1;
+}
+
+.f_new_book_wrapper {
+  display: flex;
+  padding: 26.8px 130px 54.3px 80px; /* 16.75px * 1.6, 81.25px * 1.6, 33.94px * 1.6, 50px * 1.6 */
+}
+
+.f_label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 48.8px; /* 30.5px * 1.6 */
+  gap: 10.8px; /* 6.75px * 1.6 */
+}
+
+.f_label div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 30px; /* 18.75px * 1.6 */
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.75px; /* -0.469px * 1.6 */
+  color: #FFF;
+}
+
+.f_label img {
+  width: 44.225px; /* 27.641px * 1.6 */
+}
+
+.f_current {
+  display: flex;
+  margin-right: 131.2px; /* 82px * 1.6 */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  gap: 32px; /* 20px * 1.6 */
+}
+
+.f_current img {
+  width: 206px; /* 129.375px * 1.6 */
+  height: 298.5px; /* 186.563px * 1.6 */
+  border-radius: 10.35px; /* 6.465px * 1.6 */
+  box-shadow: 8.621px 8.621px 34.481px 3.448px rgba(0, 0, 0, 0.20); /* 5.388px * 1.6 */
+}
+
+.f_book_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 40px; /* 25px * 1.6 */
+  font-weight: 600;
+  line-height: 140%;
+  overflow: hidden;
+  width: 100%;
+  max-width: 374.4px; /* 234px * 1.6 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #FFF;
+}
+
+.f_book_info {
+  font-family: "Pretendard", sans-serif;
+  font-size: 24px; /* 15px * 1.6 */
+  font-weight: 500;
+  margin-top: 68px; /* 42.5px * 1.6 */
+  margin-bottom: 8.16px; /* 5.1px * 1.6 */
+  color: #6B7684;
+}
+
+.f_book_summary {
+  font-family: "Pretendard", sans-serif;
+  font-size: 22px; /* 13.75px * 1.6 */
+  font-weight: 400;
+  line-height: 150%;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 497.6px; /* 311px * 1.6 */
+  color: #FFF;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.f_list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* 8.75px * 1.6 */
+}
+
+.f_list img {
+  width: 206px; /* 129.375px * 1.6 */
+  height: 298.5px; /* 186.563px * 1.6 */
+  border-radius: 10.35px; /* 6.465px * 1.6 */
+  box-shadow: 8.621px 8.621px 34.481px 3.448px rgba(0, 0, 0, 0.20); /* 5.388px * 1.6 */
+}
+
+.f_list_wrapper {
+  display: flex;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  gap: 60.176px; /* 37.61px * 1.6 */
+}
+
+.f_list div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px; /* 12.5px * 1.6 */
+  font-weight: 500;
+  overflow: hidden;
+  max-width: 198.4px; /* 124px * 1.6 */
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #ADB5BD;
+}
+
+.f_fade-in {
+  transition: opacity 1.28s ease-in-out, transform 0.8s ease-in-out; /* 0.8s * 1.6 */
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.f_fade-out {
+  transition: opacity 1.28s ease-in-out, transform 0.8s ease-in-out; /* 0.8s * 1.6 */
+  transform: translateX(32px); /* 20px * 1.6 */
+  opacity: 0;
+}
+
+.f_bestseller_wrapper {
+  display: flex;
+  padding: 90.464px 130px 0 80px; /* 56.54px * 1.6, 81.25px * 1.6, 0, 50px * 1.6 */
+}
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none; /* 기본적으로 숨김 */
+  width: 48px;
+  height: 48px;
+  background: url('../../../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block; /* 호버 시 보이도록 */
 }

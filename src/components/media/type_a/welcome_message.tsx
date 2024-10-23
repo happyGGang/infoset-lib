@@ -5,7 +5,7 @@ import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
 
 interface Props {
   isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>; // 추가된 props
+  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
@@ -21,18 +21,13 @@ const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // 줌 클릭 핸들러
-  const handleZoomClick = () => {
-    setIsFullScreen(false);
-  };
+  const handleZoomClick = () => setIsFullScreen(false);
 
   return (
     <div>
       <Title title={'환영메세지'} />
       <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
-        {isFullScreen && (
-          <div className={styles.zoom} onClick={handleZoomClick}></div> // 클릭 핸들러 추가
-        )}
+        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
         <div className={`${isFullScreen ? styles.f_header : styles.header}`}>
           <div className={`${isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}`}>
             환영메세지
