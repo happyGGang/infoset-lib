@@ -1,0 +1,156 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 675px;
+  background: url('../../../assets/img/media/type_a/book_information_bg.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  padding: 31.25px 50px 31.25px 50px;
+}
+
+.header_title_kr {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #FFF;
+}
+
+.header_title_en {
+  font-family: "Pretendard", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #8B95A1;
+}
+
+.new_book_wrapper {
+  display: flex;
+  padding: 16.75px 81.25px 33.94px 50px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30.5px;
+  gap: 6.75px;
+}
+
+.label div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18.75px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.469px;
+  color: #FFF;
+}
+
+.label img {
+  width: 27.641px;
+}
+
+.current {
+  display: flex;
+  margin-right: 82px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.current img {
+  width: 129.375px;
+  height: 186.563px;
+  border-radius: 6.465px;
+  box-shadow: 5.388px 5.388px 21.551px 2.155px rgba(0, 0, 0, 0.20);
+}
+
+.book_title {
+  font-family: "Pretendard", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 140%;
+  overflow: hidden;
+  width: 100%;
+  max-width: 234px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #FFF;
+}
+
+.book_info {
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 42.5px;
+  margin-bottom: 5.1px;
+  color: #6B7684;
+}
+
+.book_summary {
+  font-family: "Pretendard", sans-serif;
+  font-size: 13.75px;
+  font-weight: 400;
+  line-height: 150%;
+  display: -webkit-box;
+  overflow: hidden;
+  max-width: 311px;
+  color: #FFF;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8.75px;
+}
+
+.list img {
+  width: 129.375px;
+  height: 186.563px;
+  border-radius: 6.465px;
+  box-shadow: 5.388px 5.388px 21.551px 2.155px rgba(0, 0, 0, 0.20);
+}
+
+.list_wrapper {
+  display: flex;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  gap: 37.61px;
+}
+
+.list div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  overflow: hidden;
+  max-width: 124px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #ADB5BD;
+}
+
+.fade-in {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-out {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+
+.bestseller_wrapper {
+  display: flex;
+  padding: 56.54px 81.25px 0 50px;
+}
