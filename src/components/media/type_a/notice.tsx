@@ -13,9 +13,9 @@ const Notice: React.FC = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
-    speed: 7000,
+    speed: 3000,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 3000,
     cssEase: 'linear',
     className: 'slide_container',
   };

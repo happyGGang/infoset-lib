@@ -9,22 +9,45 @@ import Slider from 'react-slick';
 const Event: React.FC = () => {
   const settings = {
     arrows: false,
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 7000,
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 7000,
     cssEase: 'linear',
     className: 'slide_container',
+    appendDots: (dots: any) => (
+      <div style={{ bottom: '-62.9px' }}>
+        <ul style={{ display: 'flex', gap: '8.75px', justifyContent: 'center' }}>
+          {dots.map((dot: any, index: number) => (
+            <li
+              key={index}
+              className={dot.props.className}
+              style={{
+                width: '7.5px',
+                height: '7.5px',
+                backgroundColor: dot.props.className.includes('slick-active')
+                  ? '#FFFFFF'
+                  : '#ADB5BD',
+                borderRadius: '50%',
+                transition: 'background-color 0.8s ease',
+              }}
+            />
+          ))}
+        </ul>
+      </div>
+    ),
   };
 
   return (
     <div>
-      <Title title={'공지사항'} />
+      <Title title={'행사안내'} />
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.header_title_kr}>공지사항</div>
-          <div className={styles.header_title_en}>NOTICE</div>
+          <div className={styles.header_title_kr}>행사안내</div>
+          <div className={styles.header_title_en}>LIBRARY EVENT</div>
         </div>
         <Slider {...settings} className={styles.slider_container}>
           {EVENT.map((event) => (
@@ -39,10 +62,7 @@ const Event: React.FC = () => {
                   {event.location}
                 </div>
               </div>
-
-              <h3>{event.title}</h3>
-              <p>{event.time}</p>
-              <p>{event.location}</p>
+              <div className={styles.event_title}>{event.title}</div>
             </div>
           ))}
         </Slider>

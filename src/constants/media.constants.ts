@@ -135,7 +135,7 @@ export const NOTICE = [
 export const EVENT = [
   {
     id: 0,
-    title: '독서 클럽 모임',
+    title: 'BOOK TALK\n' + '작가 이솔로몬을 만나는 시간',
     time: '16:00 ~ 17:30',
     location: 'F3 강좌실',
   },
