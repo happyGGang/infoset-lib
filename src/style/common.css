@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 79.17vw;
+  height: 100vh;
+  background-color: #222222;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  width: 10.42vw;
+  padding: 7.5rem .62rem 0 2.19rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
+  background-color: #222222;
+}

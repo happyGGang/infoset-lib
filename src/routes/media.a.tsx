@@ -1,24 +1,26 @@
-import Tab from '../components/tab';
-import Prev from '../components/prev';
-import styles from '../style/media.module.css';
 import { createFileRoute } from '@tanstack/react-router';
-import { PREV_A } from '../constants/media.constants';
-import Notice from '../components/media/type_a/notice';
+import Tab from '../components/tab';
 import { useState } from 'react';
 import WelcomeMessage from '../components/media/type_a/welcome_message';
-import HoursInformation from '../components/media/type_a/operation_hour_information';
-import ReturnBook from '../components/media/type_a/return_date';
-import LineOfBook from '../components/media/type_a/line_of_book';
-import Event from '../components/media/type_a/event';
+import Notice from '../components/media/type_a/notice';
 import BookInformation from '../components/media/type_a/book_information';
 import Promotion from '../components/media/type_a/promotion';
+import ReturnBook from '../components/media/type_a/return_date';
+import HoursInformation from '../components/media/type_a/operation_hour_information';
+import Event from '../components/media/type_a/event';
+import LineOfBook from '../components/media/type_a/line_of_book';
+import { PREV_A } from '../constants/media.constants';
+import Prev from '../components/prev';
+import styles from '../style/media.module.css';
 
-export const Route = createFileRoute('/a')({
+export const Route = createFileRoute('/media/a')({
   component: MediaWallTypeA,
 });
+
 function MediaWallTypeA() {
+  const [fullScreenStates, setFullScreenStates] = useState<boolean[]>(Array(8).fill(false));
+
   const [selectedId, setSelectedId] = useState<number>(0);
-  const [fullScreenStates, setFullScreenStates] = useState<boolean[]>(Array(8).fill(false)); // 각 컴포넌트의 fullscreen 상태 배열
 
   const renderComponent = () => {
     const components = [
@@ -59,9 +61,9 @@ function MediaWallTypeA() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <Tab link={'/'} />
+    <>
+      <div className={'content'}>
+        <Tab link={'media'} />
         <div className={styles.wrapper}>
           <div onClick={handlePrev} className={styles.prev}></div>
           {renderComponent()}
@@ -70,6 +72,6 @@ function MediaWallTypeA() {
         <div onClick={toggleFullScreen} className={styles.full}></div>
       </div>
       <Prev list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
-    </div>
+    </>
   );
 }

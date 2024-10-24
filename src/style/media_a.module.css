@@ -1,0 +1,11 @@
+.content {
+  width: 79.17vw;
+  height: 100vh;
+  background-color: #222222;
+}
+
+.index {
+  width: 10.42vw;
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
+  background-color: #222222;
+}

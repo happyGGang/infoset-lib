@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  height: 100vh;
 }
 
 ol, ul {
@@ -55,17 +54,17 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 232px;
+  width: 0.4375rem;
+  height: 14.5rem;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 6.25rem;
   background: none
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 100px;
+  border-radius: 6.25rem;
   background: rgba(217, 217, 217, 0.40);
 }
 

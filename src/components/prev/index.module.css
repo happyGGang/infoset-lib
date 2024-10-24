@@ -1,40 +1,23 @@
-.container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 100vh;
-  padding-right: 10px;
-}
-
 .index {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   font-style: normal;
   line-height: normal;
-  margin-top: 132px;
+  padding: 0.75rem 4.47rem .75rem 3.34rem;
   text-align: center;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.04375rem;
   color: #8B95A1;
 }
 
 .index span {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
   font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
-  letter-spacing: 0.7px;
   color:#FFF;
 }
 
 .prev_btn {
   box-sizing: border-box;
-  width: 120px;
+  cursor: pointer;
   border: 2px solid transparent;
 }
 
@@ -42,15 +25,13 @@
   border-color: #40EBEB;
 }
 
-
-
 .scroll {
   display: flex;
   overflow-y: scroll;
   flex-direction: column;
   height: 100%;
-  max-height: calc(100vh - 200px);
-  margin-top: 43px;
-  margin-left: 45px;
-  gap: 16px;
+  max-height: calc(100vh - 12.69rem);
+  margin-top: 2.69rem;
+  padding-right: 1.75rem;
+  gap: 1rem;
 }

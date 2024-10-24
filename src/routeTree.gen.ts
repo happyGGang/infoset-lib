@@ -12,12 +12,11 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as BImport } from './routes/b'
-import { Route as AImport } from './routes/a'
 import { Route as IndexImport } from './routes/index'
-import { Route as SmartIndexImport } from './routes/smart.index'
-import { Route as KioskIndexImport } from './routes/kiosk.index'
 import { Route as SmartBImport } from './routes/smart.b'
 import { Route as SmartAImport } from './routes/smart.a'
+import { Route as MediaBImport } from './routes/media.b'
+import { Route as MediaAImport } from './routes/media.a'
 import { Route as KioskBImport } from './routes/kiosk.b'
 import { Route as KioskAImport } from './routes/kiosk.a'
 
@@ -29,27 +28,9 @@ const BRoute = BImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const ARoute = AImport.update({
-  id: '/a',
-  path: '/a',
-  getParentRoute: () => rootRoute,
-} as any)
-
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const SmartIndexRoute = SmartIndexImport.update({
-  id: '/smart/',
-  path: '/smart/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const KioskIndexRoute = KioskIndexImport.update({
-  id: '/kiosk/',
-  path: '/kiosk/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -62,6 +43,18 @@ const SmartBRoute = SmartBImport.update({
 const SmartARoute = SmartAImport.update({
   id: '/smart/a',
   path: '/smart/a',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MediaBRoute = MediaBImport.update({
+  id: '/media/b',
+  path: '/media/b',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MediaARoute = MediaAImport.update({
+  id: '/media/a',
+  path: '/media/a',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -88,13 +81,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/a': {
-      id: '/a'
-      path: '/a'
-      fullPath: '/a'
-      preLoaderRoute: typeof AImport
-      parentRoute: typeof rootRoute
-    }
     '/b': {
       id: '/b'
       path: '/b'
@@ -116,6 +102,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KioskBImport
       parentRoute: typeof rootRoute
     }
+    '/media/a': {
+      id: '/media/a'
+      path: '/media/a'
+      fullPath: '/media/a'
+      preLoaderRoute: typeof MediaAImport
+      parentRoute: typeof rootRoute
+    }
+    '/media/b': {
+      id: '/media/b'
+      path: '/media/b'
+      fullPath: '/media/b'
+      preLoaderRoute: typeof MediaBImport
+      parentRoute: typeof rootRoute
+    }
     '/smart/a': {
       id: '/smart/a'
       path: '/smart/a'
@@ -130,20 +130,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SmartBImport
       parentRoute: typeof rootRoute
     }
-    '/kiosk/': {
-      id: '/kiosk/'
-      path: '/kiosk'
-      fullPath: '/kiosk'
-      preLoaderRoute: typeof KioskIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/smart/': {
-      id: '/smart/'
-      path: '/smart'
-      fullPath: '/smart'
-      preLoaderRoute: typeof SmartIndexImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -151,100 +137,92 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/a': typeof ARoute
   '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
+  '/media/a': typeof MediaARoute
+  '/media/b': typeof MediaBRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/kiosk': typeof KioskIndexRoute
-  '/smart': typeof SmartIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/a': typeof ARoute
   '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
+  '/media/a': typeof MediaARoute
+  '/media/b': typeof MediaBRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/kiosk': typeof KioskIndexRoute
-  '/smart': typeof SmartIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/a': typeof ARoute
   '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
+  '/media/a': typeof MediaARoute
+  '/media/b': typeof MediaBRoute
   '/smart/a': typeof SmartARoute
   '/smart/b': typeof SmartBRoute
-  '/kiosk/': typeof KioskIndexRoute
-  '/smart/': typeof SmartIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/a'
     | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
+    | '/media/a'
+    | '/media/b'
     | '/smart/a'
     | '/smart/b'
-    | '/kiosk'
-    | '/smart'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/a'
     | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
+    | '/media/a'
+    | '/media/b'
     | '/smart/a'
     | '/smart/b'
-    | '/kiosk'
-    | '/smart'
   id:
     | '__root__'
     | '/'
-    | '/a'
     | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
+    | '/media/a'
+    | '/media/b'
     | '/smart/a'
     | '/smart/b'
-    | '/kiosk/'
-    | '/smart/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ARoute: typeof ARoute
   BRoute: typeof BRoute
   KioskARoute: typeof KioskARoute
   KioskBRoute: typeof KioskBRoute
+  MediaARoute: typeof MediaARoute
+  MediaBRoute: typeof MediaBRoute
   SmartARoute: typeof SmartARoute
   SmartBRoute: typeof SmartBRoute
-  KioskIndexRoute: typeof KioskIndexRoute
-  SmartIndexRoute: typeof SmartIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ARoute: ARoute,
   BRoute: BRoute,
   KioskARoute: KioskARoute,
   KioskBRoute: KioskBRoute,
+  MediaARoute: MediaARoute,
+  MediaBRoute: MediaBRoute,
   SmartARoute: SmartARoute,
   SmartBRoute: SmartBRoute,
-  KioskIndexRoute: KioskIndexRoute,
-  SmartIndexRoute: SmartIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -260,21 +238,17 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/a",
         "/b",
         "/kiosk/a",
         "/kiosk/b",
+        "/media/a",
+        "/media/b",
         "/smart/a",
-        "/smart/b",
-        "/kiosk/",
-        "/smart/"
+        "/smart/b"
       ]
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/a": {
-      "filePath": "a.tsx"
     },
     "/b": {
       "filePath": "b.tsx"
@@ -285,17 +259,17 @@ export const routeTree = rootRoute
     "/kiosk/b": {
       "filePath": "kiosk.b.tsx"
     },
+    "/media/a": {
+      "filePath": "media.a.tsx"
+    },
+    "/media/b": {
+      "filePath": "media.b.tsx"
+    },
     "/smart/a": {
       "filePath": "smart.a.tsx"
     },
     "/smart/b": {
       "filePath": "smart.b.tsx"
-    },
-    "/kiosk/": {
-      "filePath": "kiosk.index.tsx"
-    },
-    "/smart/": {
-      "filePath": "smart.index.tsx"
     }
   }
 }

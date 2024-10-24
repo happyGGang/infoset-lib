@@ -1,45 +1,32 @@
-.container {
-  display: flex;
-  width: calc(100% - 200px);
-  height: 100vh;
-  margin-left: 200px;
-  background-color: #222222;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: calc(100% - 200px);
-  border-right: 1px solid rgba(255, 255, 255, 0.10);
-}
-
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .prev {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
   background: url('../assets/img/arrow.svg') center center no-repeat;
   background-size: cover;
 }
 
 .next {
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
   transform: rotate(180deg);
   background: url('../assets/img/arrow.svg') center center no-repeat;
   background-size: cover;
 }
 
 .full {
-  width: 48px;
-  height: 48px;
-  margin-top: 114px;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 7.14rem;
   cursor: pointer;
   background: url('../assets/img/full.svg') center center no-repeat;
   background-size: cover;

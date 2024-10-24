@@ -6,27 +6,21 @@ const Navigation: React.FC = () => {
   const { pathname } = useLocation();
 
   const menu = [
-    {
-      path: '/',
-      label: '미디어월',
-      active: pathname.startsWith('/a') || pathname.startsWith('/b'),
-    },
-    { path: '/kiosk', label: '이용안내키오스크', active: pathname.startsWith('/kiosk') },
-    { path: '/smart', label: '스마트추천도서', active: pathname.startsWith('/smart') },
+    { path: '/media/a', label: '미디어월', active: pathname.startsWith('/media') },
+    { path: '/kiosk/a', label: '이용안내키오스크', active: pathname.startsWith('/kiosk') },
+    { path: '/smart/a', label: '스마트추천도서', active: pathname.startsWith('/smart') },
   ];
 
   return (
     <div className={styles.navigation}>
       <h1 className={styles.header}>인포셋도서관</h1>
-      <ul className={styles.menu}>
+      <div className={styles.menu}>
         {menu.map(({ path, label, active }) => (
-          <li key={path}>
-            <Link className={active ? styles.active : ''} to={path}>
-              {label}
-            </Link>
-          </li>
+          <Link className={active ? styles.active : ''} to={path} key={path}>
+            {label}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

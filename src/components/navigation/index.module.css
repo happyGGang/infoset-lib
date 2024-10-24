@@ -1,21 +1,17 @@
 .navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  width: 200px;
+  width: 10.42vw;
   height: 100vh;
   background: #080808;
 }
 
 .header {
   font-family: 'Pretendard', sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
-  padding: 48px;
+  margin-bottom: 5.81rem;
+  padding: 3rem 3rem 2.375rem 3rem;
   text-align: center;
   color: #FFF;
 }
@@ -23,25 +19,21 @@
 .menu {
   display: flex;
   flex-direction: column;
-  padding: 93px 44px 44px 44px;
   text-align: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
-.menu li a {
+.menu a {
   font-family: "Pretendard", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   font-style: normal;
   line-height: normal;
+  text-align: center;
   color: #8B95A1;
 }
 
 .active {
-  font-family: "Pretendard", sans-serif;
-  font-weight: 600 !important;
-  font-style: normal;
-  line-height: normal;
   color: #FFFFFF !important;
 }
 
