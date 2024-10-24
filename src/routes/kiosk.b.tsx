@@ -6,7 +6,7 @@ import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
 import { MEDIA_A } from '../constants/component.constants';
 import FullScreen from '../components/full_screen';
-import { PREV_A } from '../constants/media.constants';
+import { PREV_B } from '../constants/kiosk.constants';
 
 export const Route = createFileRoute('/kiosk/b')({
   component: KioskTypeB,
@@ -30,7 +30,7 @@ function KioskTypeB() {
         </NavigationButton>
         <FullScreen selectedId={selectedId} setFullScreenStates={setFullScreenStates} />
       </div>
-      <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
+      <Index list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />
     </>
   );
 }

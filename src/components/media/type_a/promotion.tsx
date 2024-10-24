@@ -2,7 +2,7 @@ import styles from './promotion.module.css';
 import React, { useEffect, useState } from 'react';
 import weather from '../../../assets/img/media/type_a/weather.svg';
 import Zoom from '../../zoom';
-import promotion from '../../../assets/vedio/promotion.mp4';
+import promotion from '../../../assets/media/promotion.mp4';
 
 interface Props {
   isFullScreen: boolean;

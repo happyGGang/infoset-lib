@@ -6,7 +6,7 @@ import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
 import { MEDIA_A } from '../constants/component.constants';
 import FullScreen from '../components/full_screen';
-import { PREV_A } from '../constants/media.constants';
+import { PREV_A } from '../constants/kiosk.constants';
 
 export const Route = createFileRoute('/kiosk/a')({
   component: KioskTypeA,
