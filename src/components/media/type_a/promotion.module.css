@@ -2,38 +2,21 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  height: 675px;
+  width: 75rem;
+  height: 42.1875rem;
   background: url('../../../assets/img/media/type_a/promotion_bg.png') center center no-repeat;
   background-size: cover;
 }
-
-.fullscreen {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  background: url('../../../assets/img/media/type_a/promotion_bg.png') center center no-repeat;
-  background-size: cover;
-}
-
 
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1100px;
-  margin-bottom: 45.81px;
-  padding: 31.25px 50px 31.25px 50px
+  padding: 1.95rem 3.12rem 1.95rem 3.12rem;
 }
 
 .header_title_kr {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
@@ -42,45 +25,46 @@
 
 .header_title_en {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
   text-align: right;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: #8B95A1;
 }
 
 .content {
   display: flex;
   align-items: center;
+  margin-top: 2.86rem;
 }
 
 .clock_wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 32.5px;
+  margin-left: 2.03rem;
 }
 
 .lib {
   font-family: "Pretendard", sans-serif;
-  font-size: 10.625px;
+  font-size: 0.66406rem;
   font-weight: 500;
   font-style: normal;
   line-height: 100%;
-  margin-bottom: 48px;
+  margin-bottom: 3.04rem;
   text-align: center;
-  letter-spacing: 1.913px;
+  letter-spacing: 0.11956rem;
   text-transform: uppercase;
   color: #B7B6B6;
 }
 
 .clock {
   position: relative;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 23px;
+  width: 9.375rem;
+  height: 9.37788rem;
+  margin-bottom: 1.48rem;
   background: url('../../../assets/img/media/type_a/clock.png') center center no-repeat;
   background-size: cover;
 }
@@ -112,32 +96,34 @@
 
 .date {
   font-family: "Pretendard", sans-serif;
-  font-size: 10.5px;
+  font-size: 0.54688rem;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
-  margin-bottom: 5.1px;
+  margin-bottom: 0.2rem;
   text-align: center;
-  letter-spacing: -0.84px;
+  letter-spacing: -0.01638rem;
   text-transform: uppercase;
   color:#FFF;
 }
 
 .time {
   font-family: "Century Gothic", sans-serif;
-  font-size: 26px;
+  font-size: 1.95313rem;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
   text-align: center;
-  letter-spacing: 7px;
+  letter-spacing: 0.13675rem;
   text-transform: uppercase;
   color: #FFF;
 }
 
 .video {
-  margin-right: 31px;
-  margin-left: 31px;
+  width: 48.28125rem;
+  height: 27.14844rem;
+  margin-right: 1.95rem;
+  margin-left: 1.95rem;
 }
 
 .weather_wrapper {
@@ -148,40 +134,40 @@
 
 .label {
   font-family: "Pretendard", sans-serif;
-  font-size: 10.625px;
+  font-size: 0.66406rem;
   font-weight: 500;
   font-style: normal;
   line-height: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 1.84rem;
   text-align: center;
-  letter-spacing: 1.169px;
+  letter-spacing: 0.07306rem;
   text-transform: uppercase;
   color: #fed9a3;
 }
 
 .perceived {
   font-family: "Pretendard", sans-serif;
-  font-size: 19.375px;
+  font-size: 1.21094rem;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
   text-align: center;
-  letter-spacing: -0.387px;
+  letter-spacing: -0.02419rem;
   text-transform: uppercase;
   color: #FFF;
 }
 
 .icon {
-  width: 150px;
+  width: 8rem;
 }
 
 .temperature {
   font-family: "Century Gothic", sans-serif;
-  font-size: 43.75px;
+  font-size: 2.73438rem;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 0.78rem;
   text-align: center;
   text-transform: uppercase;
   color: #FFF;
@@ -189,205 +175,12 @@
 
 .description {
   font-family: "Pretendard", sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
   text-align: center;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.01875rem;
   text-transform: uppercase;
   color: #FFF;
-}
-
-.f_header {
-  display: flex;
-  justify-content: space-between;
-  width: 1760px; /* 1100 * 1.6 */
-  margin-bottom: 73.296px; /* 45.81 * 1.6 */
-  padding: 50px 80px 50px 80px; /* 31.25 * 1.6 */
-}
-
-.f_header_title_kr {
-  font-family: "Pretendard", sans-serif;
-  font-size: 16px; /* 10 * 1.6 */
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  color: #FFF;
-}
-
-.f_header_title_en {
-  font-family: "Pretendard", sans-serif;
-  font-size: 16px; /* 10 * 1.6 */
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  text-align: right;
-  letter-spacing: 1.6px; /* 1 * 1.6 */
-  color: #8B95A1;
-}
-
-.f_content {
-  display: flex;
-  align-items: center;
-}
-
-.f_clock_wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 52px; /* 32.5 * 1.6 */
-}
-
-.f_lib {
-  font-family: "Pretendard", sans-serif;
-  font-size: 17px; /* 10.625 * 1.6 */
-  font-weight: 500;
-  font-style: normal;
-  line-height: 100%;
-  margin-bottom: 76.8px; /* 48 * 1.6 */
-  text-align: center;
-  letter-spacing: 3.061px; /* 1.913 * 1.6 */
-  text-transform: uppercase;
-  color: #B7B6B6;
-}
-
-.f_clock {
-  position: relative;
-  width: 240px; /* 150 * 1.6 */
-  height: 240px; /* 150 * 1.6 */
-  margin-bottom: 36.8px; /* 23 * 1.6 */
-  background: url('../../../assets/img/media/type_a/clock.png') center center no-repeat;
-  background-size: cover;
-}
-
-.f_hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  transform-origin: bottom center;
-  background-color: #FFFFFF;
-}
-
-.f_hand:nth-child(1) {
-  width: 1.6px; /* 1 * 1.6 */
-  height: 64px; /* 40 * 1.6 */
-}
-
-.f_hand:nth-child(2) {
-  width: 1.6px; /* 1 * 1.6 */
-  height: 88px; /* 55 * 1.6 */
-}
-
-.f_hand:nth-child(3) {
-  width: 0.8px; /* 0.5 * 1.6 */
-  height: 91px; /* 57 * 1.6 */
-  background-color: #FFFFFF;
-}
-
-.f_date {
-  font-family: "Pretendard", sans-serif;
-  font-size: 16.8px; /* 10.5 * 1.6 */
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  margin-bottom: 8.16px; /* 5.1 * 1.6 */
-  text-align: center;
-  letter-spacing: -1.344px; /* -0.84 * 1.6 */
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.f_time {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 41.6px; /* 26 * 1.6 */
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 11.2px; /* 7 * 1.6 */
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.f_video {
-  margin-right: 49.6px; /* 31 * 1.6 */
-  margin-left: 49.6px; /* 31 * 1.6 */
-}
-
-.f_weather_wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.f_label {
-  font-family: "Pretendard", sans-serif;
-  font-size: 17px; /* 10.625 * 1.6 */
-  font-weight: 500;
-  font-style: normal;
-  line-height: 100%;
-  margin-bottom: 46.4px; /* 29 * 1.6 */
-  text-align: center;
-  letter-spacing: 1.878px; /* 1.169 * 1.6 */
-  text-transform: uppercase;
-  color: #fed9a3;
-}
-
-.f_perceived {
-  font-family: "Pretendard", sans-serif;
-  font-size: 31px; /* 19.375 * 1.6 */
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: -0.619px; /* -0.387 * 1.6 */
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.f_icon {
-  width: 240px; /* 150 * 1.6 */
-}
-
-.f_temperature {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 70px; /* 43.75 * 1.6 */
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  margin-bottom: 19.2px; /* 12 * 1.6 */
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.f_description {
-  font-family: "Pretendard", sans-serif;
-  font-size: 24px; /* 15 * 1.6 */
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: -0.48px; /* -0.3 * 1.6 */
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.zoom {
-  position: fixed;
-  z-index: 99999;
-  top: 10px;
-  right: 10px;
-  display: none; /* 기본적으로 숨김 */
-  width: 48px;
-  height: 48px;
-  background: url('../../../assets/img/zoom.svg') center center no-repeat;
-  background-size: cover;
-}
-
-.container:hover .zoom,
-.fullscreen:hover .zoom {
-  display: block; /* 호버 시 보이도록 */
 }
