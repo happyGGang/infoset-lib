@@ -1,7 +1,7 @@
 import Tab from '../components/tab';
 import Index from '../components/index';
 import { createFileRoute } from '@tanstack/react-router';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
 import { MEDIA_A } from '../constants/component.constants';

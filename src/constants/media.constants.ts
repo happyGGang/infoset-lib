@@ -30,6 +30,17 @@ import bestseller_1 from '../assets/img/media/type_a/bestseller_1.svg';
 import bestseller_2 from '../assets/img/media/type_a/bestseller_2.svg';
 import bestseller_3 from '../assets/img/media/type_a/bestseller_3.svg';
 
+export const TITLE = [
+  '환영메세지',
+  '공지사항',
+  '도서정보',
+  '홍보동영상',
+  '이용시간안내',
+  '대출반납일',
+  '이벤트',
+  '책속한줄',
+];
+
 export const PREV_A = [
   {
     id: 0,

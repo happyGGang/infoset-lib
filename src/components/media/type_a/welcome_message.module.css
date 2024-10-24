@@ -12,14 +12,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1100px;
-  margin-bottom: 32.81px;
-  padding: 31.25px 50px 31.25px 50px;
+  margin-bottom: 2.05rem;
+  padding: 1.95rem 3.12rem 1.95rem 3.12rem;
 }
 
 .header_title_kr {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
@@ -28,7 +27,7 @@
 
 .header_title_en {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
@@ -39,49 +38,49 @@
 
 .time {
   font-family: "Century Gothic", sans-serif;
-  font-size: 56.25px;
+  font-size: 3.51563rem;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  margin-bottom: 7.5px;
+  margin-bottom: .47rem;
   text-align: center;
   color: #191F28;
 }
 
 .date {
   font-family: "Pretendard", sans-serif;
-  font-size: 18.75px;
+  font-size: 1.17188rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
-  margin-bottom: 214.43px;
+  margin-bottom: 13.21rem;
   text-align: center;
   color: #191F28;
 }
 
 .title {
   font-family: "Pretendard", sans-serif;
-  font-size: 18.75px;
+  font-size: 1.17188rem;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  margin-bottom: 16.44px;
+  margin-bottom: 1.03rem;
   animation: slideInUp 0.8s ease forwards;
   text-align: center;
-  letter-spacing: 1.875px;
+  letter-spacing: 0.11719rem;
   text-transform: uppercase;
   color: #FFF;
 }
 
 .message {
   font-family: "Pretendard", sans-serif;
-  font-size: 37.5px;
+  font-size: 2.34375rem;
   font-weight: 500;
   font-style: normal;
   line-height: 150%;
   animation: slideInUp 0.8s ease forwards;
   text-align: center;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.04688rem;
   color: #FFF;
 }
 
@@ -103,14 +102,14 @@
   display: flex;
   overflow: hidden;
   align-items: center;
-  width: 1200px;
-  height: 40px;
+  width: 100%;
+  height: 2.5rem;
   background: #000;
 }
 
 .ticker_message {
   font-family: "Pretendard", sans-serif;
-  font-size: 13.75px;
+  font-size: 0.85938rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;

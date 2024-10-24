@@ -20,10 +20,13 @@ time, mark, audio, video {
   border: 0;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
+}
+
+html {
+  font-size: calc(14px + (16 * (100vw - 1920px) / 1920));
 }
 
 body {

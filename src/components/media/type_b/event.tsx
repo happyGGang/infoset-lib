@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Title from '../../title';
 import styles from './event.module.css';
 import { EVENT } from '../../../constants/media.constants';
 import 'slick-carousel/slick/slick.css';
@@ -29,48 +28,45 @@ const EventB: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   }, []);
 
   return (
-    <div>
-      <Title title={'행사안내'} />
-      <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
-        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
-        <div className={isFullScreen ? styles.f_header : styles.header}>
-          <div className={isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}>
-            행사안내
+    <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
+      {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
+      <div className={isFullScreen ? styles.f_header : styles.header}>
+        <div className={isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}>
+          행사안내
+        </div>
+        <div className={isFullScreen ? styles.f_header_title_en : styles.header_title_en}>
+          LIBRARY EVENT
+        </div>
+      </div>
+      <div className={isFullScreen ? styles.f_slide_wrapper : styles.slide_wrapper}>
+        <div
+          key={EVENT[currentIndex].id}
+          style={{ height: '625px' }}
+          className={`${styles.event} ${showEvent ? styles.show : styles.hide}`}
+        >
+          <div className={isFullScreen ? styles.f_label : styles.label}>TODAY'S EVENT</div>
+          <div className={isFullScreen ? styles.f_event_title : styles.event_title}>
+            {EVENT[currentIndex].title}
           </div>
-          <div className={isFullScreen ? styles.f_header_title_en : styles.header_title_en}>
-            LIBRARY EVENT
+          <div className={isFullScreen ? styles.f_wrapper : styles.wrapper}>
+            <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
+              <span>시간</span>
+              {EVENT[currentIndex].time}
+            </div>
+            <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
+              <span>장소</span>
+              {EVENT[currentIndex].location}
+            </div>
           </div>
         </div>
-        <div className={isFullScreen ? styles.f_slide_wrapper : styles.slide_wrapper}>
+      </div>
+      <div className={isFullScreen ? styles.f_dot_container : styles.dot_container}>
+        {EVENT.map((_, index) => (
           <div
-            key={EVENT[currentIndex].id}
-            style={{ height: '625px' }}
-            className={`${styles.event} ${showEvent ? styles.show : styles.hide}`}
-          >
-            <div className={isFullScreen ? styles.f_label : styles.label}>TODAY'S EVENT</div>
-            <div className={isFullScreen ? styles.f_event_title : styles.event_title}>
-              {EVENT[currentIndex].title}
-            </div>
-            <div className={isFullScreen ? styles.f_wrapper : styles.wrapper}>
-              <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
-                <span>시간</span>
-                {EVENT[currentIndex].time}
-              </div>
-              <div className={isFullScreen ? styles.f_event_info : styles.event_info}>
-                <span>장소</span>
-                {EVENT[currentIndex].location}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={isFullScreen ? styles.f_dot_container : styles.dot_container}>
-          {EVENT.map((_, index) => (
-            <div
-              key={index}
-              className={`${isFullScreen ? styles.f_dot : styles.dot} ${index === currentIndex ? (isFullScreen ? styles.f_active : styles.active) : ''}`}
-            ></div>
-          ))}
-        </div>
+            key={index}
+            className={`${isFullScreen ? styles.f_dot : styles.dot} ${index === currentIndex ? (isFullScreen ? styles.f_active : styles.active) : ''}`}
+          ></div>
+        ))}
       </div>
     </div>
   );
