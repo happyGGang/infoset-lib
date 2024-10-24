@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
+import Zoom from '../../zoom';
 
 interface Props {
   isFullScreen: boolean;
@@ -31,28 +32,18 @@ const NoticeA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
 
   const displayedItems = NOTICE.slice(currentIndex, currentIndex + itemsPerPage);
 
-  const handleZoomClick = () => setIsFullScreen(false);
-
   return (
-    <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
-      {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
-      <div className={`${isFullScreen ? styles.f_header : styles.header}`}>
-        <div className={`${isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}`}>
-          공지사항
-        </div>
-        <div className={`${isFullScreen ? styles.f_header_title_en : styles.header_title_en}`}>
-          NOTICE
-        </div>
+    <div className={styles.container}>
+      <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
+      <div className={styles.header}>
+        <div className={styles.header_title_kr}>공지사항</div>
+        <div className={styles.header_title_en}>NOTICE</div>
       </div>
-      <div className={`${styles.slide} ${fade ? styles.fadeOut : styles.fadeIn}`}>
+      <div className={styles.fadeIn}>
         {displayedItems.map(({ id, image, title }) => (
-          <div className={`${isFullScreen ? styles.f_wrapper : styles.wrapper}`} key={id}>
-            <img
-              src={image}
-              alt={title}
-              className={`${isFullScreen ? styles.f_img : styles.img}`}
-            />
-            <div className={`${isFullScreen ? styles.f_title : styles.title}`}>{title}</div>
+          <div className={styles.wrapper} key={id}>
+            <img src={image} alt={title} className={styles.img} />
+            <div className={styles.title}>{title}</div>
           </div>
         ))}
       </div>
