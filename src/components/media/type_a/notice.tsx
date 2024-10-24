@@ -8,7 +8,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Notice: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const NoticeA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
   const totalItems = NOTICE.length;
@@ -64,4 +64,4 @@ const Notice: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default Notice;
+export default NoticeA;

@@ -8,7 +8,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Promotion: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const PromotionA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -91,4 +91,4 @@ const Promotion: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default Promotion;
+export default PromotionA;

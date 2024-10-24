@@ -1,0 +1,9 @@
+.full {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 7.12rem;
+  cursor: pointer;
+  background: url('../../assets/img/full.svg') center center no-repeat;
+  background-size: cover;
+}

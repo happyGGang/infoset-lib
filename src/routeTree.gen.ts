@@ -11,7 +11,6 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as BImport } from './routes/b'
 import { Route as IndexImport } from './routes/index'
 import { Route as SmartBImport } from './routes/smart.b'
 import { Route as SmartAImport } from './routes/smart.a'
@@ -21,12 +20,6 @@ import { Route as KioskBImport } from './routes/kiosk.b'
 import { Route as KioskAImport } from './routes/kiosk.a'
 
 // Create/Update Routes
-
-const BRoute = BImport.update({
-  id: '/b',
-  path: '/b',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -81,13 +74,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/b': {
-      id: '/b'
-      path: '/b'
-      fullPath: '/b'
-      preLoaderRoute: typeof BImport
-      parentRoute: typeof rootRoute
-    }
     '/kiosk/a': {
       id: '/kiosk/a'
       path: '/kiosk/a'
@@ -137,7 +123,6 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/media/a': typeof MediaARoute
@@ -148,7 +133,6 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/media/a': typeof MediaARoute
@@ -160,7 +144,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/b': typeof BRoute
   '/kiosk/a': typeof KioskARoute
   '/kiosk/b': typeof KioskBRoute
   '/media/a': typeof MediaARoute
@@ -173,7 +156,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/media/a'
@@ -183,7 +165,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/media/a'
@@ -193,7 +174,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/b'
     | '/kiosk/a'
     | '/kiosk/b'
     | '/media/a'
@@ -205,7 +185,6 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BRoute: typeof BRoute
   KioskARoute: typeof KioskARoute
   KioskBRoute: typeof KioskBRoute
   MediaARoute: typeof MediaARoute
@@ -216,7 +195,6 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BRoute: BRoute,
   KioskARoute: KioskARoute,
   KioskBRoute: KioskBRoute,
   MediaARoute: MediaARoute,
@@ -238,7 +216,6 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/b",
         "/kiosk/a",
         "/kiosk/b",
         "/media/a",
@@ -249,9 +226,6 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/b": {
-      "filePath": "b.tsx"
     },
     "/kiosk/a": {
       "filePath": "kiosk.a.tsx"

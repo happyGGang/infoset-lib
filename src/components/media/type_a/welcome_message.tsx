@@ -8,9 +8,9 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
-  const [currentTime, setCurrentTime] = useState<string>(getCurrentTime());
-  const [currentDate, setCurrentDate] = useState<string>(getCurrentDate());
+const WelcomeMessageA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+  const [currentTime, setCurrentTime] = useState(getCurrentTime());
+  const [currentDate, setCurrentDate] = useState(getCurrentDate());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -21,29 +21,21 @@ const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const handleZoomClick = () => setIsFullScreen(false);
-
   return (
     <div>
       <Title title={'환영메세지'} />
-      <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
-        {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
-        <div className={`${isFullScreen ? styles.f_header : styles.header}`}>
-          <div className={`${isFullScreen ? styles.f_header_title_kr : styles.header_title_kr}`}>
-            환영메세지
-          </div>
-          <div className={`${isFullScreen ? styles.f_header_title_en : styles.header_title_en}`}>
-            WELCOME
-          </div>
+      <div className={styles.container}>
+        {isFullScreen && <div className={'zoom'} onClick={() => setIsFullScreen(false)}></div>}
+        <div className={styles.header}>
+          <div className={styles.header_title_kr}>환영메세지</div>
+          <div className={styles.header_title_en}>WELCOME</div>
         </div>
-        <div className={`${isFullScreen ? styles.f_time : styles.time}`}>{currentTime}</div>
-        <div className={`${isFullScreen ? styles.f_date : styles.date}`}>{currentDate}</div>
-        <div className={`${isFullScreen ? styles.f_title : styles.title}`}>INFOSET LIBRARY</div>
-        <div className={`${isFullScreen ? styles.f_message : styles.message}`}>
-          인포셋도서관에 오신 것을 환영합니다.
-        </div>
-        <div className={`${isFullScreen ? styles.f_ticker : styles.ticker}`}>
-          <div className={`${isFullScreen ? styles.f_ticker_message : styles.ticker_message}`}>
+        <div className={styles.time}>{currentTime}</div>
+        <div className={styles.date}>{currentDate}</div>
+        <div className={styles.title}>INFOSET LIBRARY</div>
+        <div className={styles.message}>인포셋도서관에 오신 것을 환영합니다.</div>
+        <div className={styles.ticker}>
+          <div className={styles.ticker_message}>
             도서관초대석 (불편한편의점) 일정이 김호연 작가의 개인사정으로 인해 변경되었습니다.
             이용에 참고하여 주시기 바랍니다. 여기는 텍스트 흘러가는 티커영역 입니다. 긴급 공지용으로
             사용해주세요!
@@ -54,4 +46,4 @@ const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default WelcomeMessage;
+export default WelcomeMessageA;

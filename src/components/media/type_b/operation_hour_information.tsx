@@ -7,7 +7,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const HoursInformation: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const HoursInformationB: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const handleZoomClick = () => setIsFullScreen(false);
 
   return (
@@ -20,4 +20,4 @@ const HoursInformation: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) =>
   );
 };
 
-export default HoursInformation;
+export default HoursInformationB;

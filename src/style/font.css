@@ -79,25 +79,6 @@
   url(@/assets/font/Pretendard-Black.otf) format('opentype');
 }
 
-/*@font-face {*/
-/*  font-family: 'Century Gothic';*/
-/*  font-style: normal;*/
-/*  font-weight: 100;*/
-/*  src:*/
-/*      local('GOTHIC'),*/
-/*      local('GOTHIC'),*/
-/*      url(@/assets/font/GOTHIC.ttf) format('truetype');*/
-/*}*/
-/*@font-face {*/
-/*  font-family: 'Century Gothic';*/
-/*  font-style: normal;*/
-/*  font-weight: 800;*/
-/*  src:*/
-/*      local('GOTHICB'),*/
-/*      local('GOTHICB'),*/
-/*      url(@/assets/font/GOTHICB.ttf) format('truetype');*/
-/*}*/
-
 @font-face {
   font-family: 'SeoulHangang-Light';
   font-style: normal;

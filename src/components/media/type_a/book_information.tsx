@@ -10,7 +10,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BookInformation: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const BookInformationA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentIndexes, setCurrentIndexes] = useState([0, 0]); // [newBookIndex, bestsellerIndex]
   const [isFading, setIsFading] = useState(false);
 
@@ -136,4 +136,4 @@ const BookInformation: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => 
   );
 };
 
-export default BookInformation;
+export default BookInformationA;

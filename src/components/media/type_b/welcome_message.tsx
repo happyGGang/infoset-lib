@@ -8,7 +8,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const WelcomeMessageB: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentTime, setCurrentTime] = useState<string>(getCurrentTime());
   const [currentDate, setCurrentDate] = useState<string>(getCurrentDate());
 
@@ -56,4 +56,4 @@ const WelcomeMessage: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default WelcomeMessage;
+export default WelcomeMessageB;

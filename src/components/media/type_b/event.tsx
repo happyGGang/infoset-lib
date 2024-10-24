@@ -10,7 +10,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Event: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const EventB: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showEvent, setShowEvent] = useState(true);
 
@@ -76,4 +76,4 @@ const Event: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default Event;
+export default EventB;

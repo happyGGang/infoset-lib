@@ -15,3 +15,20 @@
   border-left: 1px solid rgba(255, 255, 255, 0.10);
   background-color: #222222;
 }
+
+.zoom {
+  position: fixed;
+  z-index: 99999;
+  top: 10px;
+  right: 10px;
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  background: url('../assets/img/zoom.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container:hover .zoom,
+.fullscreen:hover .zoom {
+  display: block;
+}

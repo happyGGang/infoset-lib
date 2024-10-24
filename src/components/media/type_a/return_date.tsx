@@ -7,7 +7,7 @@ interface Props {
   setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ReturnBook: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const ReturnBookA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const handleZoomClick = () => setIsFullScreen(false);
 
   return (
@@ -20,4 +20,4 @@ const ReturnBook: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   );
 };
 
-export default ReturnBook;
+export default ReturnBookA;
