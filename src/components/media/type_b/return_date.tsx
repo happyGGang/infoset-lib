@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './return_date.module.css';
+import Zoom from '../../zoom';
 
 interface Props {
   isFullScreen: boolean;
@@ -7,11 +8,9 @@ interface Props {
 }
 
 const ReturnBookB: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
-  const handleZoomClick = () => setIsFullScreen(false);
-
   return (
-    <div className={`${styles.container} ${isFullScreen ? styles.fullscreen : ''}`}>
-      {isFullScreen && <div className={styles.zoom} onClick={handleZoomClick}></div>}
+    <div className={styles.container}>
+      <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
     </div>
   );
 };

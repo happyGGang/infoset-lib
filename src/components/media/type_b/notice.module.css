@@ -2,22 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  height: 675px;
-  background: url('../../../assets/img/media/type_b/notice_bg.png') center center no-repeat;
-  background-size: cover;
-}
-
-.fullscreen {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: 75rem;
+  height: 42.1875rem;
   background: url('../../../assets/img/media/type_b/notice_bg.png') center center no-repeat;
   background-size: cover;
 }
@@ -25,29 +11,27 @@
 .header {
   display: flex;
   justify-content: space-between;
-  width: 1100px;
-  margin-bottom: 44.23px;
-  padding: 31.25px 50px 31.25px 50px
+  margin-bottom: 2.76rem;
+  padding: 1.95rem 3.12rem 1.95rem 3.12rem;
 }
 
 .header_title_kr {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
   color: #FFF;
 }
 
-
 .header_title_en {
   font-family: "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   font-style: normal;
   line-height: normal;
   text-align: right;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: #8B95A1;
 }
 
@@ -60,47 +44,47 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.56rem;
 }
 
 .img {
-  width: 281.25px;
+  width: 17.57813rem;
   max-width: 100%;
-  height: 396.875px;
+  height: 24.80469rem;
   max-height: 100%;
-  border-radius: 12.5px;
+  border-radius: 0.78125rem;
   box-shadow: 9.375px 12.5px 9.375px 0 rgba(0, 0, 0, 0.10);
   object-fit: contain;
 }
 
 .text_wrapper {
   display: flex;
-  gap: 9.3px;
+  gap: 0.59rem;
 }
 
 .index {
   font-family: "Century Gothic", sans-serif;
-  font-size: 21.875px;
+  font-size: 1.36719rem;
   font-weight: 700;
   font-style: normal;
   line-height: 100%;
-  letter-spacing: -0.437px;
+  letter-spacing: -0.02731rem;
   text-transform: uppercase;
   color:  #191F28;
 }
 
 .title {
   font-family: "Pretendard", sans-serif;
-  font-size: 16px;
+  font-size: 1.01563rem;
   font-weight: 500;
   font-style: normal;
   line-height: 140%;
   overflow: hidden;
   width: 100%;
-  max-width: 229.375px;
+  max-width: 15.234rem;
   text-align: left;
   white-space: nowrap;
-  letter-spacing: -0.375px;
+  letter-spacing: -0.02031rem;
   text-overflow: ellipsis;
   color: #191F28;
 }
@@ -113,114 +97,4 @@
 .fadeOut {
   transition: opacity 0.9s ease-out;
   opacity: 0;
-}
-
-.f_header {
-  display: flex;
-  justify-content: space-between;
-  width: 1760px; /* 1100px * 1.6 */
-  margin-bottom: 70.77px; /* 44.23px * 1.6 */
-  padding: 50px 80px 50px 80px; /* 31.25px * 1.6 */
-}
-
-.f_header_title_kr {
-  font-family: "Pretendard", sans-serif;
-  font-size: 16px; /* 10px * 1.6 */
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  color: #FFF;
-}
-
-.f_header_title_en {
-  font-family: "Pretendard", sans-serif;
-  font-size: 16px; /* 10px * 1.6 */
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  text-align: right;
-  letter-spacing: 1.6px; /* 1px * 1.6 */
-  color: #8B95A1;
-}
-
-.f_slide {
-  display: flex;
-  justify-content: center;
-  gap: 120px; /* 75px * 1.6 */
-}
-
-.f_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 38.4px; /* 24px * 1.6 */
-}
-
-.f_img {
-  width: 450px; /* 281.25px * 1.6 */
-  max-width: 100%;
-  height: 635px; /* 396.875px * 1.6 */
-  max-height: 100%;
-  border-radius: 20px; /* 12.5px * 1.6 */
-  box-shadow: 15px 20px 15px 0 rgba(0, 0, 0, 0.10); /* 9.375px * 1.6 */
-  object-fit: contain;
-}
-
-.f_text_wrapper {
-  display: flex;
-  gap: 14.88px; /* 9.3px * 1.6 */
-}
-
-.f_index {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 35px; /* 21.875px * 1.6 */
-  font-weight: 700;
-  font-style: normal;
-  line-height: 100%;
-  letter-spacing: -0.7px; /* -0.437px * 1.6 */
-  text-transform: uppercase;
-  color:  #191F28;
-}
-
-.f_title {
-  font-family: "Pretendard", sans-serif;
-  font-size: 25.6px; /* 16px * 1.6 */
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%;
-  overflow: hidden;
-  width: 100%;
-  max-width: 367px; /* 229.375px * 1.6 */
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: -0.6px; /* -0.375px * 1.6 */
-  text-overflow: ellipsis;
-  color: #191F28;
-}
-
-.f_fadeIn {
-  transition: opacity 0.9s ease-in; /* 0.9s * 1.6 */
-  opacity: 1;
-}
-
-.f_fadeOut {
-  transition: opacity 0.9s ease-out; /* 0.9s * 1.6 */
-  opacity: 0;
-}
-
-
-.zoom {
-  position: fixed;
-  z-index: 99999;
-  top: 10px;
-  right: 10px;
-  display: none; /* 기본적으로 숨김 */
-  width: 48px;
-  height: 48px;
-  background: url('../../../assets/img/zoom.svg') center center no-repeat;
-  background-size: cover;
-}
-
-.container:hover .zoom,
-.fullscreen:hover .zoom {
-  display: block; /* 호버 시 보이도록 */
 }
