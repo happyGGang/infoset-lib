@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Tab from '../components/tab';
-import Prev from '../components/prev';
+import Index from '../components/index';
 import FullScreen from '../components/full_screen';
 import { PREV_B } from '../constants/media.constants';
 import { createFileRoute } from '@tanstack/react-router';
@@ -30,7 +30,7 @@ function MediaWallTypeB() {
         </NavigationButton>
         <FullScreen selectedId={selectedId} setFullScreenStates={setFullScreenStates} />
       </div>
-      <Prev list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />
+      <Index list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />
     </>
   );
 }

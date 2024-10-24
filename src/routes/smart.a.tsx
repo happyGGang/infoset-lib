@@ -1,5 +1,5 @@
 import Tab from '../components/tab';
-import Prev from '../components/prev';
+import Index from '../components/index';
 import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
 import NavigationButton from '../components/navigation_button';
@@ -30,7 +30,7 @@ function SmartTypeA() {
         </NavigationButton>
         <FullScreen selectedId={selectedId} setFullScreenStates={setFullScreenStates} />
       </div>
-      <Prev list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
+      <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
     </>
   );
 }

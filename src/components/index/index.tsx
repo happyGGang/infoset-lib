@@ -7,7 +7,7 @@ interface PrevProps {
   list: { id: number; img: string }[];
 }
 
-const Prev: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
+const Index: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
   const handleClick = (id: number) => onSelect(id);
 
   return (
@@ -30,4 +30,4 @@ const Prev: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
   );
 };
 
-export default Prev;
+export default Index;
