@@ -4,7 +4,7 @@
   font-weight: 300;
   font-style: normal;
   line-height: normal;
-  padding: 0.75rem 4.47rem .75rem 2.5rem;
+  padding: 0.75rem 4.47rem .75rem 2rem;
   text-align: center;
   letter-spacing: 0.04375rem;
   color: #8B95A1;
@@ -19,6 +19,10 @@
   box-sizing: border-box;
   cursor: pointer;
   border: 2px solid transparent;
+}
+
+.prev_btn:last-child {
+  padding-bottom: 1rem;
 }
 
 .active {
