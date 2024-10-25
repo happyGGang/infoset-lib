@@ -25,6 +25,9 @@ import notice_2 from '../assets/img/kiosk/type_a/notice_2.svg';
 import notice_3 from '../assets/img/kiosk/type_a/notice_3.svg';
 import notice_4 from '../assets/img/kiosk/type_a/notice_4.svg';
 
+import facility_y from '../assets/img/kiosk/type_a/facility_item_y.svg';
+import facility_x from '../assets/img/kiosk/type_a/facility_item_x.svg';
+
 export const PREV_A = [
   {
     id: 0,
@@ -164,5 +167,27 @@ export const NOTICE = [
   {
     id: 9,
     img: notice_4,
+  },
+];
+
+export const FACILITY_A = [
+  {
+    id: 1,
+    img: facility_y,
+  },
+  {
+    id: 2,
+    img: facility_y,
+  },
+];
+
+export const FACILITY_B = [
+  {
+    id: 1,
+    img: facility_x,
+  },
+  {
+    id: 2,
+    img: facility_x,
   },
 ];
