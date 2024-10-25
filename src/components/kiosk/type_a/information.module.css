@@ -1,0 +1,63 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/information_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container_x {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/information_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.content {
+  padding: 9.77rem 3.52rem 5.08rem 9.77rem;
+}
+
+.scroll {
+  display: flex;
+  height: 100%;
+  max-height: 30rem;
+  gap: 3.52rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 27.34375rem;
+  gap: 2.48rem;
+}
+
+.time {
+  width: 27.34375rem;
+  height: 12.03125rem;
+}
+
+.rest {
+  width: 27.34375rem;
+  height: 10.34375rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 29.29688rem;
+  height: 100%;
+  padding-right: 1.41rem;
+}
+
+.return {
+  width: 29.29688rem;
+  height: 27.34375rem;
+}
