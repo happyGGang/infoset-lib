@@ -4,9 +4,10 @@ import { createFileRoute } from '@tanstack/react-router';
 import React, { useState } from 'react';
 import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
-import { MEDIA_A } from '../constants/component.constants';
+import { MEDIA_A } from '../constants/media_component.constants';
 import FullScreen from '../components/full_screen';
-import { PREV_B } from '../constants/kiosk.constants';
+import { PREV_B, TITLE } from '../constants/kiosk.constants';
+import Title from '../components/title';
 
 export const Route = createFileRoute('/kiosk/b')({
   component: KioskTypeB,
@@ -20,6 +21,7 @@ function KioskTypeB() {
     <>
       <div className={'content'}>
         <Tab link={'kiosk'} />
+        <Title title={TITLE[selectedId]} />
         <NavigationButton selectedId={selectedId} totalLength={8} onSelect={setSelectedId}>
           <SelectedComponent
             components={MEDIA_A}

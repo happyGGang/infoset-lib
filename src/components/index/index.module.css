@@ -22,7 +22,7 @@
 }
 
 .prev_btn:last-child {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .active {

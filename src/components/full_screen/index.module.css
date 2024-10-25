@@ -1,9 +1,21 @@
-.full {
+.wrapper {
   display: flex;
+  margin-top: 7.12rem;
+  gap: 1rem;
+}
+
+.full {
   width: 3rem;
   height: 3rem;
-  margin-top: 7.12rem;
   cursor: pointer;
-  background: url('../../assets/img/full.svg') center center no-repeat;
-  background-size: cover;
+}
+
+.tilt {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.disabled {
+  fill: #585858
 }
