@@ -16,6 +16,7 @@ export const Route = createFileRoute('/media/a')({
 function MediaWallTypeA() {
   const [selectedId, setSelectedId] = useState(0);
   const [fullScreenStates, setFullScreenStates] = useState<boolean[]>(Array(8).fill(false));
+  const [horizontalMode, setHorizontalMode] = useState<boolean[]>(Array(8).fill(false));
 
   return (
     <>
@@ -27,6 +28,7 @@ function MediaWallTypeA() {
             components={MEDIA_A}
             selectedId={selectedId}
             fullScreenStates={fullScreenStates}
+            horizontalMode={horizontalMode}
             setFullScreenStates={setFullScreenStates}
           />
         </NavigationButton>

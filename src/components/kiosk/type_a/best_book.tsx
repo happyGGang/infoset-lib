@@ -1,7 +1,10 @@
 import React from 'react';
 
 interface Props {
-  mode: 'x' | 'y';
+  isFullScreen: boolean;
+  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
+  horizontalMode: boolean;
+  setHorizontalMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const HorizontalMode: React.FC = () => {
@@ -12,8 +15,8 @@ const VerticalMode: React.FC = () => {
   return <div>세로 모드입니다!</div>;
 };
 
-const BestBookA: React.FC<Props> = ({ mode }) => {
-  return <>{mode === 'x' ? <HorizontalMode /> : <VerticalMode />}</>;
+const NoticeA: React.FC<Props> = ({ horizontalMode }) => {
+  return <>{horizontalMode ? <HorizontalMode /> : <VerticalMode />}</>;
 };
 
-export default BestBookA;
+export default NoticeA;

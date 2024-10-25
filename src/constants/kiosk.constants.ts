@@ -19,6 +19,12 @@ import k_7_b from '../assets/img/kiosk/type_b/k_7.svg';
 import k_8_b from '../assets/img/kiosk/type_b/k_8.svg';
 import k_9_b from '../assets/img/kiosk/type_b/k_9.svg';
 
+import notice_0 from '../assets/img/kiosk/type_a/notice_0.svg';
+import notice_1 from '../assets/img/kiosk/type_a/notice_1.svg';
+import notice_2 from '../assets/img/kiosk/type_a/notice_2.svg';
+import notice_3 from '../assets/img/kiosk/type_a/notice_3.svg';
+import notice_4 from '../assets/img/kiosk/type_a/notice_4.svg';
+
 export const PREV_A = [
   {
     id: 0,
@@ -116,4 +122,47 @@ export const TITLE = [
   '강좌안내',
   '강좌정보',
   '강좌신청',
+];
+
+export const NOTICE = [
+  {
+    id: 0,
+    img: notice_0,
+  },
+  {
+    id: 1,
+    img: notice_1,
+  },
+  {
+    id: 2,
+    img: notice_2,
+  },
+  {
+    id: 3,
+    img: notice_3,
+  },
+  {
+    id: 4,
+    img: notice_4,
+  },
+  {
+    id: 5,
+    img: notice_0,
+  },
+  {
+    id: 6,
+    img: notice_1,
+  },
+  {
+    id: 7,
+    img: notice_2,
+  },
+  {
+    id: 8,
+    img: notice_3,
+  },
+  {
+    id: 9,
+    img: notice_4,
+  },
 ];
