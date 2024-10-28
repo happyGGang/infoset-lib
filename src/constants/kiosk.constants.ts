@@ -31,6 +31,11 @@ import facility_x from '../assets/img/kiosk/type_a/facility_item_x.svg';
 import new_book_y from '../assets/img/kiosk/type_a/new_book_list_y.svg';
 import new_book_x from '../assets/img/kiosk/type_a/new_book_list_x.svg';
 
+import best_book_0_y from '../assets/img/kiosk/type_a/best_book_list_0_y.svg';
+import best_book_1_y from '../assets/img/kiosk/type_a/best_book_list_1_y.svg';
+import best_book_0_x from '../assets/img/kiosk/type_a/best_book_list_0_x.svg';
+import best_book_1_x from '../assets/img/kiosk/type_a/best_book_list_1_x.svg';
+
 export const PREV_A = [
   {
     id: 0,
@@ -214,5 +219,27 @@ export const NEW_BOOK_B = [
   {
     id: 2,
     img: new_book_x,
+  },
+];
+
+export const BEST_BOOK_Y = [
+  {
+    id: 1,
+    img: best_book_0_y,
+  },
+  {
+    id: 2,
+    img: best_book_1_y,
+  },
+];
+
+export const BEST_BOOK_X = [
+  {
+    id: 1,
+    img: best_book_0_x,
+  },
+  {
+    id: 2,
+    img: best_book_1_x,
   },
 ];
