@@ -10,10 +10,91 @@
   background-size: cover;
 }
 
+.popup_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_popup_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.popup_content_y {
+  position: relative;
+  width: 19.76838rem;
+  height: 27.21444rem;
+  margin-top: 4.73rem;
+}
+
+.close_y {
+  position: absolute;
+  bottom: 10.9rem;
+  left: 10.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.21rem;
+}
+
+.close_y div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65894rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #191F28;
+}
+
+.close_y img {
+  width: 0.83756rem;
+  height: 0.83756rem;
+}
+
 .map_container_y {
   position: relative;
   margin-top: 3.9972rem;
 
+}
+
+.popup_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_popup_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.close_x {
+  position: absolute;
+  bottom: 6rem;
+  left: 40rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.37rem;
+}
+
+.close_x img {
+  width: 1.48438rem;
+  height: 1.48438rem;
+}
+
+.close_x div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.17188rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #191F28;
 }
 
 .map_y {
@@ -57,9 +138,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 2.64709rem;
   cursor: pointer;
   color: #ADB5BD;
   gap: 0.17rem;
+}
+
+.floor_btn_y img {
+  width: 0.97138rem;
 }
 
 .active {
@@ -68,7 +154,7 @@
 
 .swiper_y {
   width: 19.76838rem;
-  height: 14.5rem;
+  height: 15rem;
   margin-top: 2.75rem;
 }
 
