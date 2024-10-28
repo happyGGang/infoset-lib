@@ -10,13 +10,8 @@ import { FACILITY_A, FACILITY_B, NOTICE } from '../../../constants/kiosk.constan
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-  horizontalMode: boolean;
-  setHorizontalMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import Tilt from '../../tilt';
+import Full from '../../full_screen';
 
 const HorizontalMode: React.FC = () => {
   const [selectedFloor, setSelectedFloor] = useState(1);
@@ -167,8 +162,21 @@ const VerticalMode: React.FC = () => {
   );
 };
 
-const FacilityA: React.FC<Props> = ({ horizontalMode }) => {
-  return <>{horizontalMode ? <HorizontalMode /> : <VerticalMode />}</>;
+const FacilityA = () => {
+  const [horizontalMode, setHorizontalMode] = useState(false);
+  const [full, setFull] = useState(false);
+
+  const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  return (
+    <>
+      {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
+      <div className={styles.wrapper}>
+        <Tilt onClick={handleClick} />
+        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+      </div>
+    </>
+  );
 };
 
 export default FacilityA;

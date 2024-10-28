@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './index.module.css';
 
 interface SelectedComponentProps {
   components: React.ElementType[];
@@ -8,7 +9,11 @@ interface SelectedComponentProps {
 const SelectedComponent: React.FC<SelectedComponentProps> = ({ components, selectedId }) => {
   const SelectedComponent = components[selectedId] || components[0];
 
-  return <SelectedComponent />;
+  return (
+    <div className={styles.wrapper}>
+      <SelectedComponent />
+    </div>
+  );
 };
 
 export default SelectedComponent;

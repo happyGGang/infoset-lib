@@ -105,3 +105,8 @@
   width: 18.75rem;
   height: 26.52344rem;
 }
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

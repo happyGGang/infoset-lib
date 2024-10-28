@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
 import styles from './welcome_message.module.css';
-
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-  horizontalMode: boolean;
-  setHorizontalMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import Tilt from '../../tilt';
+import Full from '../../full_screen';
 
 const HorizontalMode: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
@@ -57,8 +52,21 @@ const VerticalMode: React.FC = () => {
   );
 };
 
-const WelcomeMessageA: React.FC<Props> = ({ horizontalMode }) => {
-  return <>{horizontalMode ? <HorizontalMode /> : <VerticalMode />}</>;
+const WelcomeMessageA: React.FC = () => {
+  const [horizontalMode, setHorizontalMode] = useState(false);
+  const [full, setFull] = useState(false);
+
+  const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  return (
+    <>
+      {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
+      <div className={styles.wrapper}>
+        <Tilt onClick={handleClick} />
+        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+      </div>
+    </>
+  );
 };
 
 export default WelcomeMessageA;

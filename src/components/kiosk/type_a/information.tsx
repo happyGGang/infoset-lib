@@ -1,15 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './information.module.css';
 import section_0 from '../../../assets/img/kiosk/type_a/section_0.svg';
 import section_1 from '../../../assets/img/kiosk/type_a/section_1.svg';
 import section_2 from '../../../assets/img/kiosk/type_a/section_2.svg';
-
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-  horizontalMode: boolean;
-  setHorizontalMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import Tilt from '../../tilt';
+import Full from '../../full_screen';
 
 const HorizontalMode: React.FC = () => {
   return (
@@ -33,8 +28,21 @@ const VerticalMode: React.FC = () => {
   return <div className={styles.container_y}></div>;
 };
 
-const InformationA: React.FC<Props> = ({ horizontalMode }) => {
-  return <>{horizontalMode ? <HorizontalMode /> : <VerticalMode />}</>;
+const InformationA = () => {
+  const [horizontalMode, setHorizontalMode] = useState(false);
+  const [full, setFull] = useState(false);
+
+  const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  return (
+    <>
+      {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
+      <div className={styles.wrapper}>
+        <Tilt onClick={handleClick} />
+        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+      </div>
+    </>
+  );
 };
 
 export default InformationA;

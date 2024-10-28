@@ -141,3 +141,8 @@
   background: url('../../../assets/img/kiosk/type_a/arrow.svg') center center no-repeat;
   background-size: cover;
 }
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
