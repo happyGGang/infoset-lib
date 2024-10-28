@@ -1,0 +1,26 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/course_detail_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.container_x {
+  display: flex;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/course_detail_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

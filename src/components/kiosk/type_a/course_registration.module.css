@@ -1,0 +1,205 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/course_registration_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.content_y {
+  width: 19.76838rem;
+  height: 27.47343rem;
+  margin-top: 4.33rem;
+  border: 0.176px solid #ADB5BD;
+  border-radius: 0.43931rem;
+  background: #FFF;
+}
+
+.form_title_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65894rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin: 0 1.64738rem;;
+  padding: 0.65894rem 0;
+  text-align: center;
+  letter-spacing: -0.0165rem;
+  text-transform: uppercase;
+  color: #191F28;
+  border-bottom: 1px solid #6B7684;
+}
+
+.label_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  margin-top: 0.44rem;
+  margin-left: 2.09rem;
+  color: #191F28;
+  gap: 1rem;
+}
+
+.radio_wrapper_y {
+  display: flex;
+  align-items: center;
+  gap: 0.22rem;
+}
+
+.input_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  width: 15.9rem;
+  margin-top: 0.26rem;
+  margin-left: 1.65rem;
+  padding: 0.52719rem 0.43931rem;
+  color: #191F28;
+  border: none;
+  border-radius: 0.21963rem;
+  background: #EBEBEB;
+}
+
+.input_y::placeholder {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #6B7684;
+}
+
+.btn_wrapper_y {
+  display: flex;
+  margin-left: 1.65rem;
+  gap: 0.44rem;
+}
+
+.btn_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.3rem;
+  height: 0.75rem;
+  margin-top: 0.26rem;
+  padding: 0.54913rem 0.87863rem;
+  cursor: pointer;
+  text-align: center;
+  color: #6B7684;
+  border: 0.351px solid transparent;
+  border-radius: 0.21963rem;
+  background: #EBEBEB;
+  gap: 0.10981rem;
+}
+
+.active_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #191F28 !important;
+  border-color:#191F28;
+  background: #FFF !important;
+}
+
+.birthdate_wrapper_y {
+  display: flex;
+  align-items: center;
+  width: 15.7rem;
+  margin-top: 0.26rem;
+  margin-left: 1.65rem;
+  gap: 0.3rem;
+}
+
+.select_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  position: relative;
+  width: 11rem !important;
+  height: 1.8rem;
+  padding-right: 3.4rem;
+  padding-left: 0.654rem;
+  color: #191F28;
+  border: none;
+  border-radius: 0.21963rem;
+  background: #EBEBEB url('../../../assets/img/kiosk/type_a/arrow_down.svg') no-repeat right 0.3rem center;
+  background-size: 1.05431rem;
+  appearance: none;
+}
+
+.divider_y {
+  width: 0.33881rem;
+  height: 0.011rem;
+  color : #FFFFFF;
+  background: #000;
+}
+
+.phone_wrapper_y {
+  display: flex;
+  align-items: center;
+  margin-top: 0.26rem;
+  margin-left: 1.65rem;
+  gap: 0.16rem;
+}
+
+.phone_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.57106rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  width: 4.3rem;
+  padding: 0.52719rem 0.43931rem;
+  color: #191F28;
+  border: none;
+  border-radius: 0.21963rem;
+  background: #EBEBEB;
+}
+
+.caption_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.48325rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 140%;
+  width: 16rem;
+  margin-top: 0.26rem;
+  margin-left: 1.65rem;
+  padding: 0.44rem;
+  color: #191F28;
+  border-radius: 0.21963rem;
+  background: #EBEBEB;
+}
+
+.container_x {
+  display: flex;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/course_registration_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,22 +1,31 @@
-import React from 'react';
-
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-  horizontalMode: boolean;
-  setHorizontalMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import React, { useState } from 'react';
+import styles from './course_detail.module.css';
+import Tilt from '../../tilt';
+import Full from '../../full_screen';
 
 const HorizontalMode: React.FC = () => {
-  return <div>가로 모드입니다!</div>;
+  return <div className={styles.container_x} />;
 };
 
 const VerticalMode: React.FC = () => {
-  return <div>세로 모드입니다!</div>;
+  return <div className={styles.container_y} />;
 };
 
-const NoticeA: React.FC<Props> = ({ horizontalMode }) => {
-  return <>{horizontalMode ? <HorizontalMode /> : <VerticalMode />}</>;
+const CourseDetailA = () => {
+  const [horizontalMode, setHorizontalMode] = useState(false);
+  const [full, setFull] = useState(false);
+
+  const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  return (
+    <>
+      {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
+      <div className={styles.wrapper}>
+        <Tilt onClick={handleClick} />
+        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+      </div>
+    </>
+  );
 };
 
-export default NoticeA;
+export default CourseDetailA;
