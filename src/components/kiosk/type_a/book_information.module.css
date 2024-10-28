@@ -10,6 +10,44 @@
   background-size: cover;
 }
 
+.popup_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/book_information_popup_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+
+.close_y {
+  position: absolute;
+  bottom: 15.7rem;
+  left: 6rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.22rem;
+}
+
+.close_y img {
+  width: 0.87856rem;
+  height: 0.87856rem;
+}
+
+.close_y div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65894rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #242424;
+}
+
 .swiper_y {
   width: 20.20769rem;
   height: 6.87939rem;
@@ -98,6 +136,42 @@
   transition: all 0.5s ease;
   background: url('../../../assets/img/kiosk/type_a/book_information_bg_x.svg') center center no-repeat;
   background-size: cover;
+}
+
+.popup_x {
+  position: relative;
+  display: flex;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/book_information_popup_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.close_x {
+  position: absolute;
+  bottom: 7.8rem;
+  left: 30rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.39rem;
+}
+
+.close_x img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+
+.close_x div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.17188rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #242424;
+
 }
 
 .selected_book_x {

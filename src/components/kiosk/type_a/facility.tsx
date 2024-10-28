@@ -45,7 +45,7 @@ const HorizontalMode: React.FC = () => {
         <div className={styles.popup_x}>
           <div onClick={() => setIsOpen(false)} className={styles.close_x}>
             <img src={close} alt="" />
-            닫기
+            <div>닫기</div>
           </div>
         </div>
       ) : (
@@ -143,7 +143,7 @@ const VerticalMode: React.FC = () => {
           <img src={popup_content_y} alt="" className={styles.popup_content_y} />
           <div onClick={() => setIsOpen(false)} className={styles.close_y}>
             <img src={close} alt="" />
-            닫기
+            <div>닫기</div>
           </div>
         </div>
       ) : (
