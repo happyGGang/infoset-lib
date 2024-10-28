@@ -84,7 +84,6 @@ const BookInformationA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) =>
           </div>
           <img src={line} alt="" />
         </div>
-
         <div className={`${styles.current} ${isFading ? styles['fade-out'] : styles['fade-in']}`}>
           <img src={currentBestseller.thumbnail} alt={currentBestseller.title} />
           <div>
@@ -93,7 +92,6 @@ const BookInformationA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) =>
             <div className={styles.book_summary}>{currentBestseller.summary}</div>
           </div>
         </div>
-
         <div
           className={`${styles.list_wrapper} ${isFading ? styles['fade-out'] : styles['fade-in']}`}
         >

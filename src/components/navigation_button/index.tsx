@@ -14,15 +14,17 @@ const NavigationButton: React.FC<NavigationProps> = ({
   selectedId,
   totalLength,
 }) => {
-  const handlePrev = () => onSelect(selectedId > 0 ? selectedId - 1 : totalLength - 1);
-
-  const handleNext = () => onSelect(selectedId < totalLength - 1 ? selectedId + 1 : 0);
-
   return (
     <div className={styles.wrapper}>
-      <div onClick={handlePrev} className={styles.prev}></div>
+      <div
+        className={styles.prev}
+        onClick={() => onSelect(selectedId > 0 ? selectedId - 1 : totalLength - 1)}
+      />
       {children}
-      <div onClick={handleNext} className={styles.next}></div>
+      <div
+        className={styles.next}
+        onClick={() => onSelect(selectedId < totalLength - 1 ? selectedId + 1 : 0)}
+      />
     </div>
   );
 };
