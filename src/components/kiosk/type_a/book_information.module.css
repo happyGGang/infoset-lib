@@ -1,0 +1,194 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/book_information_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.swiper_y {
+  width: 20.20769rem;
+  height: 6.87939rem;
+  margin-top: 6.27rem;
+}
+
+.img_y {
+  width: 2.63581rem;
+  height: 3.734rem;
+  cursor: pointer;
+}
+
+.selected_book_y {
+  position: relative;
+  margin-top: 4.39rem;
+}
+
+.selected_book_y img {
+  width: 8.34663rem;
+  height: 12.08069rem;
+  border-radius: 0.17575rem;
+}
+
+.title_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.3075rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  margin-top: 0.31rem;
+  margin-bottom: 0.09rem;
+  letter-spacing: -0.00769rem;
+  color: #191F28;
+}
+
+.writer_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.28556rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.00713rem;
+  color: #4E5968;
+}
+
+.badge_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.54913rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  position: absolute;
+  right: -1.2rem;
+  bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.32825rem;
+  height: 2.32825rem;
+  letter-spacing: -0.01375rem;
+  color: #FFF;
+  border-radius: 50%;
+  background: #113B9E;
+}
+
+.btn_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.52719rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  width: 20.20769rem;
+  margin-top: 6.5rem;
+  padding: 0.31rem;
+  cursor: pointer;
+  text-align: center;
+  color: #FFF;
+  border-radius: 0.10981rem;
+  background: #6B7684;
+}
+
+.container_x {
+  display: flex;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/book_information_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.selected_book_x {
+  position: relative;
+  margin-top: 7.81rem;
+  margin-left: 12.7rem;
+}
+
+.selected_book_x img {
+  width: 14.84375rem;
+  height: 21.48438rem;
+  border-radius: 0.46875rem;
+  box-shadow: 6.25px 6.25px 25px 2.5px rgba(0, 0, 0, 0.20);
+}
+
+.badge_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.97656rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  position: absolute;
+  right: -2rem;
+  bottom: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.14063rem;
+  height: 4.14063rem;
+  letter-spacing: -0.02444rem;
+  color: #FFF;
+  border-radius: 50%;
+  background: #113B9E;
+}
+
+.btn_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  width: 35.9375rem;
+  margin-top: 13.38rem;
+  margin-left: 6.84rem;
+  padding: 0.54688rem 0;
+  cursor: pointer;
+  text-align: center;
+  color: #FFF;
+  border-radius: 0.19531rem;
+  background: #6B7684;
+}
+
+
+.swiper_x {
+  width: 35.9375rem;
+  height: 11.71875rem;
+  margin-top: 11.36rem;
+  margin-left: 6.84rem;
+}
+
+.img_x {
+  width: 4.6875rem;
+  height: 6.64063rem;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+}
+
+.title_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.54688rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  margin-top: 0.55rem;
+  margin-bottom: 0.16rem;
+  letter-spacing: -0.01369rem;
+  color:  #191F28;
+}
+
+.writer_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.50781rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.01269rem;
+  color: #4E5968;
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

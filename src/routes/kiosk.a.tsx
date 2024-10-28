@@ -6,7 +6,7 @@ import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
 import { PREV_A, TITLE } from '../constants/kiosk.constants';
 import Title from '../components/title';
-import { KIOSK_A } from '../constants/smart_component.constants';
+import { KIOSK_A } from '../constants/kiosk_component.constants';
 
 export const Route = createFileRoute('/kiosk/a')({
   component: KioskTypeA,

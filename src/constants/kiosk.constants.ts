@@ -36,6 +36,13 @@ import best_book_1_y from '../assets/img/kiosk/type_a/best_book_list_1_y.svg';
 import best_book_0_x from '../assets/img/kiosk/type_a/best_book_list_0_x.svg';
 import best_book_1_x from '../assets/img/kiosk/type_a/best_book_list_1_x.svg';
 
+import book_0_y from '../assets/img/kiosk/type_a/book_1.png';
+import book_1_y from '../assets/img/kiosk/type_a/book_2.png';
+import book_2_y from '../assets/img/kiosk/type_a/book_3.png';
+import book_3_y from '../assets/img/kiosk/type_a/book_4.png';
+import book_4_y from '../assets/img/kiosk/type_a/book_5.png';
+import book_5_y from '../assets/img/kiosk/type_a/book_6.png';
+
 export const PREV_A = [
   {
     id: 0,
@@ -241,5 +248,80 @@ export const BEST_BOOK_X = [
   {
     id: 2,
     img: best_book_1_x,
+  },
+];
+
+export const BOOK_INFORMATION = [
+  {
+    id: 0,
+    title: '결국 해내면 그만이다',
+    writer: '정영욱',
+    img: book_0_y,
+  },
+  {
+    id: 1,
+    title: '미래의 나를 만난 후',
+    writer: '할 허시필드',
+    img: book_1_y,
+  },
+  {
+    id: 2,
+    title: '불변의 법칙',
+    writer: '모건 하우절',
+    img: book_2_y,
+  },
+  {
+    id: 3,
+    title: '한 컷 쏙 과학사',
+    writer: '윤상석',
+    img: book_3_y,
+  },
+  {
+    id: 4,
+    title: '나는 읽고 쓰고 버린다',
+    writer: '손웅정',
+    img: book_4_y,
+  },
+  {
+    id: 5,
+    title: '브랜드 아틀라스',
+    writer: '엘리나 휠러, 조엘 카츠',
+    img: book_5_y,
+  },
+  {
+    id: 6,
+    title: '결국 해내면 그만이다',
+    writer: '정영욱',
+    img: book_0_y,
+  },
+  {
+    id: 7,
+    title: '미래의 나를 만난 후',
+    writer: '할 허시필드',
+    img: book_1_y,
+  },
+  {
+    id: 8,
+    title: '불변의 법칙',
+    writer: '모건 하우절',
+    img: book_2_y,
+  },
+  {
+    id: 9,
+    title: '한 컷 쏙 과학사',
+    writer: '윤상석',
+    img: book_3_y,
+  },
+  {
+    id: 10,
+    title: '나는 읽고 쓰고 버린다',
+    writer: '손웅정',
+    img: book_4_y,
+  },
+  {
+    id: 11,
+    title: '미래의 나를 만난 후',
+    writer: '할 허시필드',
+    img: book_5_y,
   },
 ];
