@@ -43,6 +43,9 @@ import book_3_y from '../assets/img/kiosk/type_a/book_4.png';
 import book_4_y from '../assets/img/kiosk/type_a/book_5.png';
 import book_5_y from '../assets/img/kiosk/type_a/book_6.png';
 
+import course_y from '../assets/img/kiosk/type_a/course_information_list_y.svg';
+import course_x from '../assets/img/kiosk/type_a/course_information_list_x.svg';
+
 export const PREV_A = [
   {
     id: 0,
@@ -323,5 +326,27 @@ export const BOOK_INFORMATION = [
     title: '미래의 나를 만난 후',
     writer: '할 허시필드',
     img: book_5_y,
+  },
+];
+
+export const COURSE_Y = [
+  {
+    id: 0,
+    img: course_y,
+  },
+  {
+    id: 1,
+    img: course_y,
+  },
+];
+
+export const COURSE_X = [
+  {
+    id: 0,
+    img: course_x,
+  },
+  {
+    id: 1,
+    img: course_x,
   },
 ];

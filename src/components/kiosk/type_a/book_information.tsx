@@ -3,7 +3,7 @@ import styles from './book_information.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
 import { Pagination } from 'swiper/modules';
-import { BOOK_INFORMATION, NEW_BOOK_A, NEW_BOOK_B } from '../../../constants/kiosk.constants';
+import { BOOK_INFORMATION } from '../../../constants/kiosk.constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
