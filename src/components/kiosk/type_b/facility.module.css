@@ -1,0 +1,245 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.popup_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_popup_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.popup_content_y {
+  position: relative;
+  width: 19.76838rem;
+  height: 27.21444rem;
+  margin-top: 4.73rem;
+}
+
+.close_y {
+  position: absolute;
+  bottom: 10.9rem;
+  left: 10.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.21rem;
+}
+
+.close_y div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65894rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #191F28;
+}
+
+.close_y img {
+  width: 0.83756rem;
+  height: 0.83756rem;
+}
+
+.map_container_y {
+  position: relative;
+  margin-top: 3.9972rem;
+
+}
+
+.popup_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_popup_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.close_x {
+  position: absolute;
+  bottom: 6rem;
+  left: 40rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.37rem;
+}
+
+.close_x img {
+  width: 1.48438rem;
+  height: 1.48438rem;
+}
+
+.close_x div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.17188rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #191F28;
+}
+
+.map_y {
+  width: 19.81813rem;
+  height: 13.92625rem;
+}
+
+.selected_floor_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 3.734rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  position: absolute;
+  bottom: -38px;
+  left: 5px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
+  text-align: center;
+  color: #FFF;
+}
+
+
+.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.floor_list_y {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 1.93794rem;
+}
+
+.floor_btn_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.87863rem;
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 2.64709rem;
+  cursor: pointer;
+  color: #ADB5BD;
+  gap: 0.17rem;
+}
+
+.floor_btn_y img {
+  width: 0.97138rem;
+}
+
+.active {
+  color: #FEC962 !important;
+}
+
+.swiper_y {
+  width: 19.76838rem;
+  height: 15rem;
+  margin-top: 2.75rem;
+}
+
+.swiper_slide_y {
+  width: 19.76838rem;
+  height: 12.08177rem;
+}
+
+.container_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/facility_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10.23rem;
+}
+
+.map_container_x {
+  position: relative;
+}
+
+.map_x {
+  width: 35.24481rem;
+  height: 24.80481rem;
+}
+
+.selected_floor_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 6.64063rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 6.64063rem;
+  position: absolute;
+  bottom: -49px;
+  left: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
+  text-align: center;
+  color: #FFF;
+}
+
+.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.floor_list_x {
+  display: flex;
+  margin-top: 3.59rem;
+  gap: 3.45rem;
+}
+
+.floor_btn_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ADB5BD;
+  gap: 0.3rem;
+}
+
+.swiper_x {
+  width: 23.67969rem;
+  height: 30.46938rem
+}
+
+.swiper_slide_x {
+  width: 21.67969rem;
+  height: 30.46938rem
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

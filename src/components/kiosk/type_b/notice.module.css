@@ -1,0 +1,112 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/notice_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.header_en_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.35144rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 1.32rem;
+  margin-bottom: 0.18rem;
+  text-align: center;
+  letter-spacing: 0.07031rem;
+  color:  #8B95A1;
+}
+
+.header_kr_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.01038rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 1.27rem;
+  text-align: center;
+  color:  #191F28;
+}
+
+.selected_item_y {
+  width: 19.12038rem;
+  height: 27.03875rem;
+  margin-bottom: 0.88rem;
+  object-fit: cover;
+}
+
+.swiper_y {
+  width: 19.12038rem;
+  height: 5.4rem;
+}
+
+.swiper_slide_y {
+  box-sizing: border-box;
+  width: 2.72363rem;
+  height: 3.85481rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-shadow: 3.514px 3.514px 7.029px 0 rgba(0, 0, 0, 0.10);
+  object-fit: cover;
+}
+
+.active {
+  border-color: #000;
+}
+
+.container_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/notice_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.header_en_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 2.34rem;
+  margin-bottom: 0.31rem;
+  text-align: center;
+  letter-spacing: 0.125rem;
+  color: #8B95A1;
+}
+
+.header_kr_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.48438rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 2.66rem;
+  text-align: center;
+  color: #191F28;
+}
+
+.swiper_x {
+  width: 60.9375rem;
+  height: 29.52344rem;
+}
+
+.swiper_slide_x {
+  width: 18.75rem;
+  height: 26.52344rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

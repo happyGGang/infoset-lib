@@ -1,0 +1,148 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/welcome_message_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.time_y {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 2.63581rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 6.43rem;
+  margin-bottom: 0.62rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.date_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.79075rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 1.72rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.message_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 2.63581rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 0.44rem;
+  animation: slideUp 1s ease-in-out forwards;
+  text-align: center;
+  color: #FFF;
+}
+
+.caption_y {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65894rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  animation: slideUp 1s ease-in-out forwards;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.arrow_y {
+  width: 3.51438rem;
+  height: 3.51438rem;
+  margin-top: 18.17rem;
+  background: url('../../../assets/img/kiosk/type_a/arrow.svg') center center no-repeat;
+  background-size: cover;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.caption_y, .message_y, .caption_x, .message_x {
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+.container_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/welcome_message_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.time_x {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 4.6875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 7.39rem;
+  color:#FFF;
+}
+
+.date_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.40625rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color:#FFF;
+}
+
+.message_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 4.6875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 3.07rem;
+  margin-bottom: 0.78rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.caption_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.17188rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 7.89rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.arrow_x {
+  width: 6.25rem;
+  height: 6.25rem;
+  background: url('../../../assets/img/kiosk/type_a/arrow.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,51 @@
+.container_y {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 23.7275rem;
+  height: 42.18225rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/best_book_bg_y.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.swiper_y {
+  width: 19.73544rem;
+  height: 32.98019rem;
+  margin-top: 3.9972rem;
+}
+
+.img_y {
+  width: 19.73544rem;
+  height: 29.94019rem;
+}
+
+.container_x {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/kiosk/type_a/best_book_bg_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.swiper_x {
+  width: 61.71875rem;
+  height: 25.79688rem;
+  margin-top: 4rem;
+  margin-left: 10rem;
+}
+
+.img_x {
+  width: 61.71875rem;
+  height: 21.79688rem;
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
