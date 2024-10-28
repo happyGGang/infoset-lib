@@ -28,6 +28,9 @@ import notice_4 from '../assets/img/kiosk/type_a/notice_4.svg';
 import facility_y from '../assets/img/kiosk/type_a/facility_item_y.svg';
 import facility_x from '../assets/img/kiosk/type_a/facility_item_x.svg';
 
+import new_book_y from '../assets/img/kiosk/type_a/new_book_list_y.svg';
+import new_book_x from '../assets/img/kiosk/type_a/new_book_list_x.svg';
+
 export const PREV_A = [
   {
     id: 0,
@@ -189,5 +192,27 @@ export const FACILITY_B = [
   {
     id: 2,
     img: facility_x,
+  },
+];
+
+export const NEW_BOOK_A = [
+  {
+    id: 1,
+    img: new_book_y,
+  },
+  {
+    id: 2,
+    img: new_book_y,
+  },
+];
+
+export const NEW_BOOK_B = [
+  {
+    id: 1,
+    img: new_book_x,
+  },
+  {
+    id: 2,
+    img: new_book_x,
   },
 ];
