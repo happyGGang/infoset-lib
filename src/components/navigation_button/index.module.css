@@ -1,6 +1,5 @@
 .wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: 2.5rem;
@@ -9,6 +8,7 @@
 .prev {
   width: 3rem;
   height: 3rem;
+  margin-top: 19.56rem;
   margin-left: 4.5rem;
   cursor: pointer;
   background: url('../../assets/img/arrow.svg') center center no-repeat;
@@ -19,6 +19,7 @@
   display: inline-block;
   width: 3rem;
   height: 3rem;
+  margin-top: 19.56rem;
   margin-right: 4.5rem;
   cursor: pointer;
   transform: rotate(180deg);
