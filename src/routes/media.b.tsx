@@ -30,7 +30,6 @@ function MediaWallTypeB() {
             setFullScreenStates={setFullScreenStates}
           />
         </NavigationButton>
-        <FullScreen selectedId={selectedId} setFullScreenStates={setFullScreenStates} />
       </div>
       <Index list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />
     </>

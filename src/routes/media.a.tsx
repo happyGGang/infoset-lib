@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Tab from '../components/tab';
 import Index from '../components/index';
-import FullScreen from '../components/full_screen';
 import { PREV_A, TITLE } from '../constants/media.constants';
 import { createFileRoute } from '@tanstack/react-router';
 import { MEDIA_A } from '../constants/media_component.constants';
@@ -15,8 +14,6 @@ export const Route = createFileRoute('/media/a')({
 
 function MediaWallTypeA() {
   const [selectedId, setSelectedId] = useState(0);
-  const [fullScreenStates, setFullScreenStates] = useState<boolean[]>(Array(8).fill(false));
-  const [horizontalMode, setHorizontalMode] = useState<boolean[]>(Array(8).fill(false));
 
   return (
     <>
@@ -24,15 +21,8 @@ function MediaWallTypeA() {
         <Tab link={'media'} />
         <Title title={TITLE[selectedId]} />
         <NavigationButton selectedId={selectedId} totalLength={8} onSelect={setSelectedId}>
-          <SelectedComponent
-            components={MEDIA_A}
-            selectedId={selectedId}
-            fullScreenStates={fullScreenStates}
-            horizontalMode={horizontalMode}
-            setFullScreenStates={setFullScreenStates}
-          />
+          <SelectedComponent components={MEDIA_A} selectedId={selectedId} />
         </NavigationButton>
-        <FullScreen selectedId={selectedId} setFullScreenStates={setFullScreenStates} />
       </div>
       <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
     </>
