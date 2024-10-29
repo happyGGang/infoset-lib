@@ -126,7 +126,7 @@
 
 .floor_list_y {
   display: flex;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   gap: 1.93794rem;
 }
 
@@ -154,7 +154,7 @@
 
 .swiper_y {
   width: 19.76838rem;
-  height: 15rem;
+  height: 14rem;
   margin-top: 2.75rem;
 }
 
