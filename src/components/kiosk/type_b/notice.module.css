@@ -6,39 +6,22 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/notice_bg_y.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/notice_bg_y.svg') center center no-repeat;
   background-size: cover;
-}
-
-.header_en_y {
-  font-family: "Pretendard", sans-serif;
-  font-size: 0.35144rem;
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  margin-top: 1.32rem;
-  margin-bottom: 0.18rem;
-  text-align: center;
-  letter-spacing: 0.07031rem;
-  color:  #8B95A1;
-}
-
-.header_kr_y {
-  font-family: "Pretendard", sans-serif;
-  font-size: 1.01038rem;
-  font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-  margin-bottom: 1.27rem;
-  text-align: center;
-  color:  #191F28;
 }
 
 .selected_item_y {
   width: 19.12038rem;
   height: 27.03875rem;
+  margin-top: 4.61rem;
   margin-bottom: 0.88rem;
+  border-radius: 0.65863rem;
   object-fit: cover;
+}
+
+.selected_item_y img {
+  border-radius: 0.65863rem;
+  box-shadow: 5.269px 7.025px 10.538px 0 rgba(0, 0, 0, 0.20);
 }
 
 .swiper_y {
@@ -52,6 +35,7 @@
   height: 3.85481rem;
   cursor: pointer;
   border: 1px solid transparent;
+  border-radius: 0.21956rem;
   box-shadow: 3.514px 3.514px 7.029px 0 rgba(0, 0, 0, 0.10);
   object-fit: cover;
 }
@@ -68,42 +52,21 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/notice_bg_x.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/notice_bg_x.svg') center center no-repeat;
   background-size: cover;
-}
-
-.header_en_x {
-  font-family: "Pretendard", sans-serif;
-  font-size: 0.625rem;
-  font-weight: 600;
-  font-style: normal;
-  line-height: normal;
-  margin-top: 2.34rem;
-  margin-bottom: 0.31rem;
-  text-align: center;
-  letter-spacing: 0.125rem;
-  color: #8B95A1;
-}
-
-.header_kr_x {
-  font-family: "Pretendard", sans-serif;
-  font-size: 1.48438rem;
-  font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-  margin-bottom: 2.66rem;
-  text-align: center;
-  color: #191F28;
 }
 
 .swiper_x {
   width: 60.9375rem;
   height: 29.52344rem;
+  margin-top: 7.81rem;
 }
 
 .swiper_slide_x {
   width: 18.75rem;
   height: 26.52344rem;
+  border-radius: 0.78125rem;
+  object-fit: cover;
 }
 
 .wrapper {

@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import { NOTICE } from '../../../constants/kiosk.constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import '../../../style/kiosk_swiper_a.css';
+import '../../../style/kiosk_swiper_b.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
 
@@ -20,13 +20,11 @@ const HorizontalMode: React.FC = () => {
   return (
     <div className={styles.container_x}>
       <div style={{ paddingLeft: '6.25rem' }}>
-        <div className={styles.header_en_x}>LIBRARY NOTICE</div>
-        <div className={styles.header_kr_x}>공지사항</div>
         <Swiper
           loop
           slidesPerView={3}
           slidesPerGroup={3}
-          spaceBetween={50}
+          spaceBetween={40}
           pagination={pagination}
           modules={[Pagination]}
           className={styles.swiper_x}
@@ -34,7 +32,11 @@ const HorizontalMode: React.FC = () => {
           {NOTICE.map((item, index) => (
             <SwiperSlide
               key={item.id}
-              style={{ width: '18.75rem !important', height: '26.52344rem' }}
+              style={{
+                width: '18.75rem !important',
+                height: '26.52344rem',
+                borderRadius: '0.78125rem',
+              }}
             >
               <img src={item.img} alt="" className={styles.swiper_slide_x} />
             </SwiperSlide>
@@ -59,8 +61,6 @@ const VerticalMode: React.FC = () => {
 
   return (
     <div className={styles.container_y}>
-      <div className={styles.header_en_y}>LIBRARY NOTICE</div>
-      <div className={styles.header_kr_y}>공지사항</div>
       <img className={styles.selected_item_y} src={NOTICE[selectedIndex].img} alt="" />
       <Swiper
         loop
