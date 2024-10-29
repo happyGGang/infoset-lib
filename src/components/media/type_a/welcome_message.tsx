@@ -1,15 +1,9 @@
 import styles from './welcome_message.module.css';
 import React, { useEffect, useState } from 'react';
 import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
-import Zoom from '../../zoom';
 import Full from '../../full_screen';
 
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const WelcomeMessageA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const WelcomeMessageA: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
   const [currentDate, setCurrentDate] = useState(getCurrentDate());
 
@@ -25,7 +19,6 @@ const WelcomeMessageA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
         <div className={styles.header}>
           <div className={styles.header_title_kr}>환영메세지</div>
           <div className={styles.header_title_en}>WELCOME</div>

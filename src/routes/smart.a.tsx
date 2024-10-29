@@ -1,11 +1,13 @@
 import Tab from '../components/tab';
 import Index from '../components/index';
 import { createFileRoute } from '@tanstack/react-router';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
-import { MEDIA_A } from '../constants/media_component.constants';
-import { PREV_A } from '../constants/media.constants';
+import { PREV_A } from '../constants/smart.constants';
+import Title from '../components/title';
+import { TITLE_A } from '../constants/smart.constants';
+import { SMART_A } from '../constants/smart_component.constants';
 
 export const Route = createFileRoute('/smart/a')({
   component: SmartTypeA,
@@ -18,8 +20,9 @@ function SmartTypeA() {
     <>
       <div className={'content'}>
         <Tab link={'smart'} />
+        <Title title={TITLE_A[selectedId]} />
         <NavigationButton selectedId={selectedId} totalLength={8} onSelect={setSelectedId}>
-          <SelectedComponent components={MEDIA_A} selectedId={selectedId} />
+          <SelectedComponent components={SMART_A} selectedId={selectedId} />
         </NavigationButton>
       </div>
       <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
