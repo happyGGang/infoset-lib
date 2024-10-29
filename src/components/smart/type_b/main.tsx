@@ -11,7 +11,7 @@ const VerticalMode: React.FC = () => {
   return <div className={styles.container_y}></div>;
 };
 
-const MainB: React.FC = () => {
+const MainA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
   const [full, setFull] = useState(false);
 
@@ -28,4 +28,4 @@ const MainB: React.FC = () => {
   );
 };
 
-export default MainB;
+export default MainA;
