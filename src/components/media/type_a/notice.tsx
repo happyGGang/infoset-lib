@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
 import Zoom from '../../zoom';
+import Full from '../../full_screen';
 
 interface Props {
   isFullScreen: boolean;
@@ -33,20 +34,23 @@ const NoticeA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
   const displayedItems = NOTICE.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <div className={styles.container}>
-      <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
-      <div className={styles.header}>
-        <div className={styles.header_title_kr}>공지사항</div>
-        <div className={styles.header_title_en}>NOTICE</div>
+    <div className={styles.f_wrapper}>
+      <div className={styles.container}>
+        <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
+        <div className={styles.header}>
+          <div className={styles.header_title_kr}>공지사항</div>
+          <div className={styles.header_title_en}>NOTICE</div>
+        </div>
+        <div className={styles.fadeIn}>
+          {displayedItems.map(({ id, image, title }) => (
+            <div className={styles.wrapper} key={id}>
+              <img src={image} alt={title} className={styles.img} />
+              <div className={styles.title}>{title}</div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className={styles.fadeIn}>
-        {displayedItems.map(({ id, image, title }) => (
-          <div className={styles.wrapper} key={id}>
-            <img src={image} alt={title} className={styles.img} />
-            <div className={styles.title}>{title}</div>
-          </div>
-        ))}
-      </div>
+      <Full disabled={false} onClick={() => console.log(123)} />
     </div>
   );
 };

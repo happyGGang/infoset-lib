@@ -1,25 +1,22 @@
 import styles from './line_of_book.module.css';
 import React from 'react';
-import Zoom from '../../zoom';
+import Full from '../../full_screen';
 
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const LineOfBookA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const LineOfBookA: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <Zoom isFullScreen={isFullScreen} onClick={() => setIsFullScreen(false)} />
-      <div className={styles.header}>
-        <div className={styles.header_title_kr}>책속한줄</div>
-        <div className={styles.header_title_en}>A LINE OF BOOK</div>
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div className={styles.header_title_kr}>책속한줄</div>
+          <div className={styles.header_title_en}>A LINE OF BOOK</div>
+        </div>
+        <div className={styles.line_of_book}>
+          그림 안의 시간은 한순간에 얼어붙었다기보다 <br />
+          흘러들어 고인 느낌이다.
+        </div>
+        <div className={styles.caption}>'나는 메트로폴리탄 미술관의 경비원입니다' 중에서</div>
       </div>
-      <div className={styles.line_of_book}>
-        그림 안의 시간은 한순간에 얼어붙었다기보다 <br />
-        흘러들어 고인 느낌이다.
-      </div>
-      <div className={styles.caption}>'나는 메트로폴리탄 미술관의 경비원입니다' 중에서</div>
+      <Full disabled={false} onClick={() => console.log(123)} />
     </div>
   );
 };

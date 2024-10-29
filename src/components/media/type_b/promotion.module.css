@@ -1,3 +1,11 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7.12rem;
+}
+
+
 .container {
   position: relative;
   display: flex;
