@@ -4,15 +4,25 @@ import s_2_a from '../assets/img/smart/type_a/s_2.svg';
 import s_3_a from '../assets/img/smart/type_a/s_3.svg';
 import s_4_a from '../assets/img/smart/type_a/s_4.svg';
 import s_5_a from '../assets/img/smart/type_a/s_5.svg';
+import s_6_a from '../assets/img/smart/type_a/s_6.svg';
 
 import s_0_b from '../assets/img/smart/type_b/s_0.svg';
 import s_1_b from '../assets/img/smart/type_b/s_1.svg';
 import s_2_b from '../assets/img/smart/type_b/s_2.svg';
 import s_3_b from '../assets/img/smart/type_b/s_3.svg';
+import s_4_b from '../assets/img/smart/type_b/s_4.svg';
 
-export const TITLE_A = ['메인', '키워드 추천', '추천결과', '사서추천', '빅데이터추천', '도서정보'];
+export const TITLE_A = [
+  '메인',
+  '키워드 추천',
+  '추천결과',
+  '맞춤형도서',
+  '사서추천',
+  '빅데이터추천',
+  '도서정보',
+];
 
-export const TITLE_B = ['메인', '키워드 추천', '추천결과', '도서정보'];
+export const TITLE_B = ['메인', '키워드 추천', '추천결과', '맞춤형도서', '도서정보'];
 
 export const PREV_A = [
   {
@@ -25,18 +35,22 @@ export const PREV_A = [
   },
   {
     id: 2,
-    img: s_2_a,
+    img: s_6_a,
   },
   {
     id: 3,
-    img: s_3_a,
+    img: s_2_a,
   },
   {
     id: 4,
-    img: s_4_a,
+    img: s_3_a,
   },
   {
     id: 5,
+    img: s_4_a,
+  },
+  {
+    id: 6,
     img: s_5_a,
   },
 ];
@@ -52,10 +66,14 @@ export const PREV_B = [
   },
   {
     id: 2,
-    img: s_2_b,
+    img: s_4_b,
   },
   {
     id: 3,
+    img: s_2_b,
+  },
+  {
+    id: 4,
     img: s_3_b,
   },
 ];
