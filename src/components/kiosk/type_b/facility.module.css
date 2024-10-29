@@ -6,7 +6,7 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/facility_bg_y.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/facility_bg_y.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -18,7 +18,7 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/facility_popup_y.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/facility_popup_y.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -31,7 +31,7 @@
 
 .close_y {
   position: absolute;
-  bottom: 10.9rem;
+  bottom: 10.5rem;
   left: 10.5rem;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
 
 .close_y div {
   font-family: "Pretendard", sans-serif;
-  font-size: 0.65894rem;
+  font-size: 0.65863rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
@@ -50,14 +50,13 @@
 }
 
 .close_y img {
-  width: 0.83756rem;
-  height: 0.83756rem;
+  width: 0.83713rem;
+  height: 0.83713rem;
 }
 
 .map_container_y {
   position: relative;
-  margin-top: 3.9972rem;
-
+  margin-top: 4.39rem;
 }
 
 .popup_x {
@@ -68,7 +67,7 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/facility_popup_x.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/facility_popup_x.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -104,13 +103,13 @@
 
 .selected_floor_y {
   font-family: "Pretendard", sans-serif;
-  font-size: 3.734rem;
+  font-size: 3.293rem;
   font-weight: 500;
   font-style: normal;
   line-height: normal;
   position: absolute;
-  bottom: -38px;
-  left: 5px;
+  top: -38px;
+  right: 5px;
   transition: opacity 0.5s ease, transform 0.5s ease;
   transform: translateY(10px);
   text-align: center;
@@ -126,22 +125,25 @@
 
 .floor_list_y {
   display: flex;
-  margin-top: 0.5rem;
-  gap: 1.93794rem;
+  margin-top: 2.6rem;
+  gap: 0.88rem;
 }
 
 .floor_btn_y {
   font-family: "Pretendard", sans-serif;
-  font-size: 0.87863rem;
+  font-size: 0.87813rem;
   font-weight: 600;
   font-style: normal;
+  line-height: normal;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 2.64709rem;
+  justify-content: center;
+  width: 3.25781rem;
+  height: 1.50156rem;
   cursor: pointer;
-  color: #ADB5BD;
-  gap: 0.17rem;
+  color: #8B95A1;
+  border-radius: 5.48831rem;
+  background: #F5F0EE;
 }
 
 .floor_btn_y img {
@@ -149,13 +151,14 @@
 }
 
 .active {
-  color: #FEC962 !important;
+  color: #FFF;
+  background: #191F28;
 }
 
 .swiper_y {
   width: 19.76838rem;
-  height: 15rem;
-  margin-top: 2.75rem;
+  height: 14rem;
+  margin-top: 0.64rem;
 }
 
 .swiper_slide_y {
@@ -166,23 +169,24 @@
 .container_x {
   position: relative;
   display: flex;
-  align-items: center;
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/facility_bg_x.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/facility_bg_x.svg') center center no-repeat;
   background-size: cover;
+  gap: 6.54rem
 }
 
 .left {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 10.23rem;
+  margin-left: 9.5rem;
 }
 
 .map_container_x {
   position: relative;
+  margin-top: 9.26rem;
 }
 
 .map_x {
@@ -197,8 +201,8 @@
   font-style: normal;
   line-height: 6.64063rem;
   position: absolute;
-  bottom: -49px;
-  left: 0;
+  top: -49px;
+  right: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   transform: translateY(10px);
   text-align: center;
@@ -212,8 +216,9 @@
 
 .floor_list_x {
   display: flex;
-  margin-top: 3.59rem;
-  gap: 3.45rem;
+  justify-content: center;
+  margin-top: 5.86rem;
+  margin-bottom: 1.15rem;
 }
 
 .floor_btn_x {
@@ -224,19 +229,36 @@
   line-height: normal;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2.65625rem;
+  color: #8B95A1;
+  border-radius: 9.76563rem;
+  background: #F5F0EE;
+}
+
+.active_x {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  color: #ADB5BD;
-  gap: 0.3rem;
+  color: #FFFFFF;
+  border-radius: 9.76563rem;
+  background: #191F28;
 }
 
 .swiper_x {
-  width: 23.67969rem;
-  height: 30.46938rem
+  width: 19.53125rem;
+  height: 28.85938rem
 }
 
 .swiper_slide_x {
-  width: 21.67969rem;
-  height: 30.46938rem
+  width: 19.53125rem;
+  height: 25.85938rem
 }
 
 .wrapper {

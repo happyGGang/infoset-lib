@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './facility.module.css';
-import grayLine from '../../../assets/img/kiosk/type_a/gray_line.svg';
-import yellowLine from '../../../assets/img/kiosk/type_a/yellow_line.svg';
 import map_1 from '../../../assets/img/kiosk/type_a/map_1F.png';
 import map_2 from '../../../assets/img/kiosk/type_a/map_2F.svg';
 import map_3 from '../../../assets/img/kiosk/type_a/map_3F.svg';
 import { Pagination } from 'swiper/modules';
-import { FACILITY_A, FACILITY_B } from '../../../constants/kiosk.constants';
+import { FACILITY_X, FACILITY_Y } from '../../../constants/kiosk.constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -61,13 +59,13 @@ const HorizontalMode: React.FC = () => {
                 {selectedFloor}F
               </div>
             </div>
-
+          </div>
+          <div>
             <div className={styles.floor_list_x}>
               {Array.from({ length: 3 }, (_, index) => {
                 const floorNumber = index + 1;
                 const isActive = selectedFloor === floorNumber;
-                const lineImage = isActive ? yellowLine : grayLine;
-                const activeClass = isActive ? styles.active : '';
+                const activeClass = isActive ? styles.active_x : '';
 
                 return (
                   <div
@@ -76,36 +74,33 @@ const HorizontalMode: React.FC = () => {
                     className={`${styles.floor_btn_x} ${activeClass}`}
                   >
                     <div>{floorNumber}F</div>
-                    <img src={lineImage} alt="" />
                   </div>
                 );
               })}
             </div>
+            <Swiper
+              loop
+              slidesPerView={1}
+              slidesPerGroup={1}
+              pagination={pagination}
+              modules={[Pagination]}
+              className={styles.swiper_x}
+            >
+              {FACILITY_X.map((item, index) => (
+                <SwiperSlide
+                  key={item.id}
+                  style={{ width: 'width: 19.53125rem;', height: '25.85938rem' }}
+                >
+                  <img
+                    src={item.img}
+                    alt=""
+                    className={styles.swiper_slide_x}
+                    onClick={() => setIsOpen(true)}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-
-          <Swiper
-            loop
-            direction={'vertical'}
-            slidesPerView={1}
-            slidesPerGroup={1}
-            pagination={pagination}
-            modules={[Pagination]}
-            className={styles.swiper_x}
-          >
-            {FACILITY_B.map((item, index) => (
-              <SwiperSlide
-                key={item.id}
-                style={{ width: 'width: 21.67969rem;', height: '30.46938rem' }}
-              >
-                <img
-                  src={item.img}
-                  alt=""
-                  className={styles.swiper_slide_x}
-                  onClick={() => setIsOpen(true)}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
       )}
     </>
@@ -159,6 +154,24 @@ const VerticalMode: React.FC = () => {
             </div>
           </div>
 
+          <div className={styles.floor_list_y}>
+            {Array.from({ length: 3 }, (_, index) => {
+              const floorNumber = index + 1;
+              const isActive = selectedFloor === floorNumber;
+              const activeClass = isActive ? styles.active : '';
+
+              return (
+                <div
+                  key={floorNumber}
+                  onClick={() => setSelectedFloor(floorNumber)}
+                  className={`${styles.floor_btn_y} ${activeClass}`}
+                >
+                  <div>{floorNumber}F</div>
+                </div>
+              );
+            })}
+          </div>
+
           <Swiper
             loop
             slidesPerView={1}
@@ -167,7 +180,7 @@ const VerticalMode: React.FC = () => {
             modules={[Pagination]}
             className={styles.swiper_y}
           >
-            {FACILITY_A.map((item, index) => (
+            {FACILITY_Y.map((item, index) => (
               <SwiperSlide
                 key={item.id}
                 style={{ width: '19.76838rem !important', height: '12.08177rem' }}
@@ -181,26 +194,6 @@ const VerticalMode: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          <div className={styles.floor_list_y}>
-            {Array.from({ length: 3 }, (_, index) => {
-              const floorNumber = index + 1;
-              const isActive = selectedFloor === floorNumber;
-              const lineImage = isActive ? yellowLine : grayLine;
-              const activeClass = isActive ? styles.active : '';
-
-              return (
-                <div
-                  key={floorNumber}
-                  onClick={() => setSelectedFloor(floorNumber)}
-                  className={`${styles.floor_btn_y} ${activeClass}`}
-                >
-                  <div>{floorNumber}F</div>
-                  <img src={lineImage} alt="" />
-                </div>
-              );
-            })}
-          </div>
         </div>
       )}
     </>

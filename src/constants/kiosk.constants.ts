@@ -26,7 +26,9 @@ import notice_3 from '../assets/img/kiosk/type_a/notice_3.svg';
 import notice_4 from '../assets/img/kiosk/type_a/notice_4.svg';
 
 import facility_y from '../assets/img/kiosk/type_a/facility_item_y.svg';
+import facility_item_b_y from '../assets/img/kiosk/type_b/facility_item_b_y.svg';
 import facility_x from '../assets/img/kiosk/type_a/facility_item_x.svg';
+import facility_item_b_x from '../assets/img/kiosk/type_b/facility_item_b_x.svg';
 
 import new_book_y from '../assets/img/kiosk/type_a/new_book_list_y.svg';
 import new_book_x from '../assets/img/kiosk/type_a/new_book_list_x.svg';
@@ -207,6 +209,28 @@ export const FACILITY_B = [
   {
     id: 2,
     img: facility_x,
+  },
+];
+
+export const FACILITY_Y = [
+  {
+    id: 1,
+    img: facility_item_b_y,
+  },
+  {
+    id: 2,
+    img: facility_item_b_y,
+  },
+];
+
+export const FACILITY_X = [
+  {
+    id: 1,
+    img: facility_item_b_x,
+  },
+  {
+    id: 2,
+    img: facility_item_b_x,
   },
 ];
 
