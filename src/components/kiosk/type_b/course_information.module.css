@@ -6,7 +6,7 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/course_information_bg_y.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/course_information_bg_y.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -18,7 +18,7 @@
 
 .img_y {
   width: 19.73544rem;
-  height: 29.94019rem;
+  height: 30.94019rem;
 }
 
 .container_x {
@@ -28,7 +28,7 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/course_information_bg_x.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/course_information_bg_x.svg') center center no-repeat;
   background-size: cover;
 }
 
