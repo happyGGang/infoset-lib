@@ -6,63 +6,56 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/welcome_message_bg_y.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/welcome_message_bg_y.svg') center center no-repeat;
   background-size: cover;
 }
 
 .time_y {
   font-family: "Century Gothic", sans-serif;
-  font-size: 2.63581rem;
+  font-size: 2.63438rem;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  margin-top: 6.43rem;
-  margin-bottom: 0.62rem;
+  margin-top: 5.84rem;
+  margin-bottom: 0.26rem;
   text-align: center;
   color: #FFF;
 }
 
 .date_y {
   font-family: "Pretendard", sans-serif;
-  font-size: 0.79075rem;
+  font-size: 0.79031rem;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  margin-bottom: 1.72rem;
+  margin-bottom: 20.73rem;
   text-align: center;
   color: #FFF;
 }
 
 .message_y {
   font-family: "Pretendard", sans-serif;
-  font-size: 2.63581rem;
+  font-size: 1.31719rem;
   font-weight: 500;
   font-style: normal;
-  line-height: normal;
-  margin-bottom: 0.44rem;
+  line-height: 140%;
+  margin-bottom: 0.66rem;
   animation: slideUp 1s ease-in-out forwards;
   text-align: center;
-  color: #FFF;
+  letter-spacing: -0.02638rem;
+  color: #191F28;
 }
 
 .caption_y {
   font-family: "Pretendard", sans-serif;
-  font-size: 0.65894rem;
+  font-size: 0.57081rem;
   font-weight: 400;
   font-style: normal;
-  line-height: normal;
+  line-height: 150%;
   animation: slideUp 1s ease-in-out forwards;
   text-align: center;
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.arrow_y {
-  width: 3.51438rem;
-  height: 3.51438rem;
-  margin-top: 18.17rem;
-  background: url('../../../assets/img/kiosk/type_a/arrow.svg') center center no-repeat;
-  background-size: cover;
+  letter-spacing: 0.09131rem;
+  color: #8B95A1;
 }
 
 @keyframes slideUp {
@@ -88,58 +81,52 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_a/welcome_message_bg_x.svg') center center no-repeat;
+  background: url('../../../assets/img/kiosk/type_b/welcome_message_bg_x.svg') center center no-repeat;
   background-size: cover;
 }
 
 .time_x {
   font-family: "Century Gothic", sans-serif;
-  font-size: 4.6875rem;
+  font-size: 3.51563rem;
   font-weight: 400;
   font-style: normal;
   line-height: normal;
-  margin-top: 7.39rem;
-  color:#FFF;
+  margin-top: 5.08rem;
+  margin-bottom: 0.47rem;
+  color: #FFF;
 }
 
 .date_x {
   font-family: "Pretendard", sans-serif;
-  font-size: 1.40625rem;
-  font-weight: 400;
+  font-size: 1.17188rem;
+  font-weight: 500;
   font-style: normal;
   line-height: normal;
-  color:#FFF;
+  margin-bottom: 22.91rem;
+  color: #FFF;
 }
 
 .message_x {
   font-family: "Pretendard", sans-serif;
-  font-size: 4.6875rem;
+  font-size: 2.34375rem;
   font-weight: 500;
   font-style: normal;
-  line-height: normal;
-  margin-top: 3.07rem;
-  margin-bottom: 0.78rem;
+  line-height: 140%;
+  margin-bottom: 0.39rem;
   text-align: center;
-  color: #FFF;
+  letter-spacing: -0.04688rem;
+  color: #191F28;
 }
 
 .caption_x {
   font-family: "Pretendard", sans-serif;
-  font-size: 1.17188rem;
+  font-size: 1.01563rem;
   font-weight: 400;
   font-style: normal;
-  line-height: normal;
-  margin-bottom: 7.89rem;
+  line-height: 150%;
   text-align: center;
-  text-transform: uppercase;
-  color: #FFF;
-}
-
-.arrow_x {
-  width: 6.25rem;
-  height: 6.25rem;
-  background: url('../../../assets/img/kiosk/type_a/arrow.svg') center center no-repeat;
-  background-size: cover;
+  letter-spacing: 0.1625rem;
+  color: #8B95A1;
 }
 
 .wrapper {

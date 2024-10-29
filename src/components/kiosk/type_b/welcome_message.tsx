@@ -21,9 +21,8 @@ const HorizontalMode: React.FC = () => {
     <div className={styles.container_x}>
       <div className={styles.time_x}>{currentTime}</div>
       <div className={styles.date_x}>{currentDate}</div>
-      <div className={styles.message_x}>welcome</div>
-      <div className={styles.caption_x}>INFOSET LIBRARY</div>
-      <div className={styles.arrow_x}></div>
+      <div className={styles.message_x}>인포셋도서관에 오신 것을 환영합니다.</div>
+      <div className={styles.caption_x}>Welcome to Infoset Library</div>
     </div>
   );
 };
@@ -45,9 +44,12 @@ const VerticalMode: React.FC = () => {
     <div className={styles.container_y}>
       <div className={styles.time_y}>{currentTime}</div>
       <div className={styles.date_y}>{currentDate}</div>
-      <div className={styles.message_y}>welcome</div>
-      <div className={styles.caption_y}>INFOSET LIBRARY</div>
-      <div className={styles.arrow_y}></div>
+      <div className={styles.message_y}>
+        인포셋도서관에
+        <br />
+        오신 것을 환영합니다.
+      </div>
+      <div className={styles.caption_y}>Welcome to Infoset Library</div>
     </div>
   );
 };
