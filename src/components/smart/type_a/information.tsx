@@ -43,9 +43,9 @@ const HorizontalMode: React.FC = () => {
   };
 
   return isOpen ? (
-    <div className={styles.popup_y}>
-      <div className={styles.close_wrapper_y} onClick={() => setIsOpen(false)}>
-        <img src={close} alt="" className={styles.close_y} />
+    <div className={styles.popup_x}>
+      <div className={styles.close_wrapper_x} onClick={() => setIsOpen(false)}>
+        <img src={close} alt="" className={styles.close_x} />
         <div>닫기</div>
       </div>
     </div>
@@ -64,9 +64,9 @@ const HorizontalMode: React.FC = () => {
         <div className={styles.popup_open_x} onClick={() => setIsOpen(true)}>
           소장도서 서가위치보기
         </div>
-        <div className={styles.slide_y}>
+        <div className={styles.slide_x}>
           <img src={arrow} className={styles.prev_x} alt="Previous" onClick={handlePrev} />
-          <div className={`${styles.item_y} ${styles[fadeClass]}`}>
+          <div className={`${styles.item_x} ${styles[fadeClass]}`}>
             {currentItems.map((item) => (
               <div
                 key={item.id}

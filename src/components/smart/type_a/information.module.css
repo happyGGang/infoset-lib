@@ -25,6 +25,41 @@
   background-size: cover;
 }
 
+.popup_x {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  height: 42.1875rem;
+  transition: all 0.5s ease;
+  background: url('../../../assets/img/smart/type_a/information_popup_x.svg') center center no-repeat;
+  background-size: cover;
+}
+
+.close_wrapper_x {
+  position: absolute;
+  top: 32.9rem;
+  left: 30rem;
+  display: flex;
+  cursor: pointer;
+  gap: 0.39rem;
+}
+
+.close_x {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+
+.close_wrapper_x div {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.17188rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #242424;
+}
+
 .selected_book_wrapper_y {
   position: relative;
   display: flex;
@@ -320,13 +355,13 @@
   border-radius: 0.19531rem;
 }
 
-.slide_y {
+.slide_x {
   display: flex;
   margin-top: 14.21rem;
   margin-left: 3.63rem;
 }
 
-.item_y {
+.item_x {
   display: flex;
   gap: 2.44rem;
 }
@@ -416,4 +451,5 @@
     opacity: 0;
   }
 }
+
 
