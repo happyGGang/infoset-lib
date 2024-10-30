@@ -18,6 +18,8 @@ import result_x from '../assets/img/smart/type_a/result_list_x.svg';
 import custom_y from '../assets/img/smart/type_a/custom_list_y.svg';
 import custom_x from '../assets/img/smart/type_a/custom_list_x.svg';
 
+import bigdata_y from '../assets/img/smart/type_a/bigdata_list_y.svg';
+
 export const TITLE_A = [
   '메인',
   '키워드 추천',
@@ -405,6 +407,24 @@ export const CUSTOM_Y = [
 ];
 
 export const CUSTOM_X = [
+  {
+    img: custom_x,
+  },
+  {
+    img: custom_x,
+  },
+];
+
+export const BIGDATA_Y = [
+  {
+    img: bigdata_y,
+  },
+  {
+    img: bigdata_y,
+  },
+];
+
+export const BIGDATA_X = [
   {
     img: custom_x,
   },

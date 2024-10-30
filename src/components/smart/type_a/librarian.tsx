@@ -83,7 +83,7 @@ const VerticalMode: React.FC = () => {
   );
 };
 
-const CustomA: React.FC = () => {
+const LibrarianA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
   const [full, setFull] = useState(false);
 
@@ -100,4 +100,4 @@ const CustomA: React.FC = () => {
   );
 };
 
-export default CustomA;
+export default LibrarianA;
