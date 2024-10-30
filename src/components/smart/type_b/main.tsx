@@ -2,13 +2,28 @@ import React, { useState } from 'react';
 import styles from './main.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
+import character from '../../../assets/img/smart/type_b/character.svg';
+import book from '../../../assets/img/smart/type_b/book.svg';
+import search from '../../../assets/img/smart/type_b/search.svg';
 
 const HorizontalMode: React.FC = () => {
-  return <div className={styles.container_x}></div>;
+  return (
+    <div className={styles.container_x}>
+      <img src={character} alt="" className={styles.character_x} />
+      <img src={book} alt="" className={styles.book_x} />
+      <img src={search} alt="" className={styles.search_x} />
+    </div>
+  );
 };
 
 const VerticalMode: React.FC = () => {
-  return <div className={styles.container_y}></div>;
+  return (
+    <div className={styles.container_y}>
+      <img src={character} alt="" className={styles.character_y} />
+      <img src={book} alt="" className={styles.book_y} />
+      <img src={search} alt="" className={styles.search_y} />
+    </div>
+  );
 };
 
 const MainA: React.FC = () => {

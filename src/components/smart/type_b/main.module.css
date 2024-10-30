@@ -15,6 +15,46 @@
   background-size: cover;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.character_y {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 20.52556rem;
+  height: 16.43144rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.book_y {
+  position: absolute;
+  top: 6.5rem;
+  right: 4rem;
+  width: 4.12706rem;
+  height: 5.40031rem;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.search_y {
+  position: absolute;
+  top: 20.5rem;
+  right: 3.6rem;
+  width: 2.56844rem;
+  height: 2.766rem;
+  animation: float 3.2s ease-in-out infinite;
+}
+
+
 .container_x {
   position: relative;
   display: flex;
@@ -25,4 +65,31 @@
   transition: all 0.5s ease;
   background: url('../../../assets/img/smart/type_b/main_bg_x.svg') center center no-repeat;
   background-size: cover;
+}
+
+.character_x {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 33.69144rem;
+  height: 26.95313rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.book_x {
+  position: absolute;
+  top: 11rem;
+  left: 30rem;
+  width: 6.36719rem;
+  height: 8.30081rem;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.search_x {
+  position: absolute;
+  top: 28rem;
+  left: 26rem;
+  width: 4.41406rem;
+  height: 4.74613rem;
+  animation: float 3.2s ease-in-out infinite;
 }
