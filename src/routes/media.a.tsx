@@ -7,6 +7,7 @@ import { MEDIA_A } from '../constants/media_component.constants';
 import NavigationButton from '../components/navigation_button';
 import SelectedComponent from '../components/selected_component';
 import Title from '../components/title';
+import Layout from '../components/layout';
 
 export const Route = createFileRoute('/media/a')({
   component: MediaWallTypeA,
@@ -16,7 +17,7 @@ function MediaWallTypeA() {
   const [selectedId, setSelectedId] = useState(0);
 
   return (
-    <>
+    <Layout>
       <div className={'content'}>
         <Tab link={'media'} />
         <Title title={TITLE[selectedId]} />
@@ -25,6 +26,6 @@ function MediaWallTypeA() {
         </NavigationButton>
       </div>
       <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
-    </>
+    </Layout>
   );
 }

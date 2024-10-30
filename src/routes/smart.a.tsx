@@ -8,6 +8,7 @@ import { PREV_A } from '../constants/smart.constants';
 import Title from '../components/title';
 import { TITLE_A } from '../constants/smart.constants';
 import { SMART_A } from '../constants/smart_component.constants';
+import Layout from '../components/layout';
 
 export const Route = createFileRoute('/smart/a')({
   component: SmartTypeA,
@@ -17,7 +18,7 @@ function SmartTypeA() {
   const [selectedId, setSelectedId] = useState(0);
 
   return (
-    <>
+    <Layout>
       <div className={'content'}>
         <Tab link={'smart'} />
         <Title title={TITLE_A[selectedId]} />
@@ -26,6 +27,6 @@ function SmartTypeA() {
         </NavigationButton>
       </div>
       <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
-    </>
+    </Layout>
   );
 }

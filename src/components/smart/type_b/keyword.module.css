@@ -210,3 +210,60 @@
   border-radius: 2.19525rem;
   background: #191F28;
 }
+
+.lib_title_y {
+  color: #191F28;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.31713rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.03294rem;
+}
+
+.lib_caption_y {
+  margin-top: 0.31rem;
+  color: #6B7684;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65856rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.01644rem;
+}
+
+.lib_swiper_y {
+  width: 19.09867rem;
+  height: 27.82688rem;
+  margin-top: .5rem;
+}
+
+.lib_img_y {
+  width: 19.09867rem;
+  height: 25.52688rem;
+}
+
+.bigdata_title_y {
+  color: #191F28;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.31713rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.03294rem;
+}
+
+.bigdata_caption_y {
+  margin-top: 0.31rem;
+  color: #6B7684;
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65856rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.01644rem;
+}

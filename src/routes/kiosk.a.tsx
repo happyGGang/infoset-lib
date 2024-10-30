@@ -7,6 +7,7 @@ import SelectedComponent from '../components/selected_component';
 import { PREV_A, TITLE } from '../constants/kiosk.constants';
 import Title from '../components/title';
 import { KIOSK_A } from '../constants/kiosk_component.constants';
+import Layout from '../components/layout';
 
 export const Route = createFileRoute('/kiosk/a')({
   component: KioskTypeA,
@@ -16,7 +17,7 @@ function KioskTypeA() {
   const [selectedId, setSelectedId] = useState(0);
 
   return (
-    <>
+    <Layout>
       <div className={'content'}>
         <Tab link={'kiosk'} />
         <Title title={TITLE[selectedId]} />
@@ -25,6 +26,6 @@ function KioskTypeA() {
         </NavigationButton>
       </div>
       <Index list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />
-    </>
+    </Layout>
   );
 }

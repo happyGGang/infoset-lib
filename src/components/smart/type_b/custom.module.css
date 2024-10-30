@@ -15,6 +15,17 @@
   background-size: cover;
 }
 
+.lib_swiper_y {
+  width: 19.09867rem;
+  height: 27.82688rem;
+  margin-top: 10.5rem;
+}
+
+.lib_img_y {
+  width: 19.09867rem;
+  height: 25.52688rem;
+}
+
 .container_x {
   position: relative;
   display: flex;

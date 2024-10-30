@@ -3,9 +3,14 @@ import styles from './keyword.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
-import { KEYWORD_X_A, KEYWORD_Y } from '../../../constants/smart.constants';
+import { CUSTOM_Y, KEYWORD_X_A, KEYWORD_Y } from '../../../constants/smart.constants';
 import refresh from '../../../assets/img/smart/type_a/refresh.svg';
 import cancel from '../../../assets/img/smart/type_a/cancel.svg';
+import { Pagination } from 'swiper/modules';
+import { COURSE_Y } from '../../../constants/kiosk.constants';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const HorizontalMode: React.FC = () => {
   return <div className={styles.container_x}></div>;
@@ -32,11 +37,16 @@ function TabPanel(props: { children?: React.ReactNode; index: number; value: num
 }
 
 const VerticalMode: React.FC = () => {
-  const [value, setValue] = useState(0);
+  const [data, setData] = useState(0);
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
   const [animate, setAnimate] = useState(true);
   const [selectedGender, setSelectedGender] = useState<string>('');
   const [selectedAge, setSelectedAge] = useState<string>('');
+  const [value, setValue] = React.useState(0);
+
+  const handleChangeData = (event: React.SyntheticEvent, newValue: number) => {
+    setData(newValue);
+  };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -72,6 +82,13 @@ const VerticalMode: React.FC = () => {
 
   const handleKeywordRemove = (keyword: string) => {
     setSelectedKeywords((prevSelected) => prevSelected.filter((k) => k !== keyword));
+  };
+
+  const pagination = {
+    clickable: true,
+    renderBullet: (index: number, className: string) => {
+      return `<span class="${className}" style="width: 0.26356rem; height: 0.26356rem; border-radius: 50%; opacity: 1;"></span>`;
+    },
   };
 
   return (
@@ -205,10 +222,46 @@ const VerticalMode: React.FC = () => {
 
       </TabPanel>
       <TabPanel value={value} index={1}>
-        두 번째 아이템의 내용입니다.
+        <div className={styles.lib_title_y}>
+          우리 도서관 사서 선생님의 선택
+        </div>
+        <div className={styles.lib_caption_y}>
+          사서 선생님들이 이용자들을 위해 고른 추천도서는 어떠세요?
+        </div>
+        <Swiper
+          loop
+          slidesPerView={1}
+          slidesPerGroup={1}
+          pagination={pagination}
+          modules={[Pagination]}
+          className={styles.lib_swiper_y}
+        >
+          {CUSTOM_Y.map((item, index) => (
+            <SwiperSlide
+              key={index}
+              style={{ width: '19.09867rem !important', height: '25.52688rem' }}
+            >
+              <img src={item.img} alt="" className={styles.lib_img_y} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        세 번째 아이템의 내용입니다.
+        <div className={styles.bigdata_title_y}>빅데이터는 어떤 책을 추천했을까요?</div>
+        <div className={styles.bigdata_caption_y}>전국 공공도서관 연령대별 추천도서를 만나보세요</div>
+        <Tabs
+          value={data}
+          onChange={handleChangeData}
+          variant="scrollable"
+          scrollButtons={false}
+          aria-label="scrollable prevent tabs example"
+        >
+          <Tab label="아동" />
+          <Tab label="청소년" />
+          <Tab label="20~30대" />
+          <Tab label="40~50대" />
+          <Tab label="60대 이상" />
+        </Tabs>
       </TabPanel>
     </div>
   );
