@@ -15,6 +15,87 @@
   background-size: cover;
 }
 
+.prev_y {
+  width: 1.75619rem;
+  height: 1.75619rem;
+  cursor: pointer;
+}
+
+.next_y {
+  width: 1.75619rem;
+  height: 1.75619rem;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.slide_y {
+  display: flex;
+  align-items: center;
+  margin-top: 3.77581rem;
+}
+
+.item_y {
+  width: 18.65963rem;
+  height: 29.89673rem;
+}
+
+
+.pagination_y {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.43906rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: -0.011rem;
+  color: #666;
+}
+
+.pagination span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.43906rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: -0.011rem;
+  color: #FFF;
+}
+
+.custom_btn_y {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 4rem;
+  width: 9.43956rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
 .container_x {
   position: relative;
   display: flex;
@@ -25,4 +106,78 @@
   transition: all 0.5s ease;
   background: url('../../../assets/img/smart/type_a/result_bg_x.svg') center center no-repeat;
   background-size: cover;
+}
+
+.slide_x {
+  display: flex;
+  align-items: center;
+  margin-top: 6.25rem;
+  margin-left: 6rem;
+}
+
+.prev_x {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+}
+
+.next_x {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.item_x {
+  width: 58.59375rem;
+  height: 28.57631rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.pagination_x {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.70313rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 1.61rem;
+  margin-left: 6rem;
+  text-align: center;
+  letter-spacing: -0.01756rem;
+  color: #666;
+}
+
+.pagination_x span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.70313rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: -0.01756rem;
+  color: #FFF;
+}
+
+.custom_btn_x {
+  position: absolute;
+  right: 3rem;
+  bottom: 0.5rem;
+  width: 16.79688rem;
 }
