@@ -20,6 +20,13 @@ import custom_x from '../assets/img/smart/type_a/custom_list_x.svg';
 
 import bigdata_y from '../assets/img/smart/type_a/bigdata_list_y.svg';
 
+import book_1 from '../assets/img/smart/type_a/book_1.svg';
+import book_2 from '../assets/img/smart/type_a/book_2.svg';
+import book_3 from '../assets/img/smart/type_a/book_3.svg';
+import book_4 from '../assets/img/smart/type_a/book_4.svg';
+import book_5 from '../assets/img/smart/type_a/book_5.svg';
+import book_6 from '../assets/img/smart/type_a/book_6.svg';
+
 export const TITLE_A = [
   '메인',
   '키워드 추천',
@@ -430,5 +437,58 @@ export const BIGDATA_X = [
   },
   {
     img: custom_x,
+  },
+];
+
+export const BOOK_Y = [
+  {
+    id: 1,
+    title: '미래의 나를 만난 후 오늘이 달라졌다',
+    img: book_1,
+  },
+  {
+    id: 2,
+    title: '사피엔스',
+    img: book_2,
+  },
+  {
+    id: 3,
+    title: '야무진 고양이는 오늘도 우울',
+    img: book_3,
+  },
+  {
+    id: 4,
+    title: '위저드 베이커리',
+    img: book_4,
+  },
+  {
+    id: 5,
+    title: '문과 출신도 웃으면서 보는 양자물리학 만화',
+    img: book_5,
+  },
+  {
+    id: 6,
+    title: '언젠가 우리가 같은 별을 바라본다면',
+    img: book_6,
+  },
+  {
+    id: 7,
+    title: '미래의 나를 만난 후 오늘이 달라졌다',
+    img: book_1,
+  },
+  {
+    id: 8,
+    title: '사피엔스',
+    img: book_2,
+  },
+  {
+    id: 9,
+    title: '야무진 고양이는 오늘도 우울',
+    img: book_3,
+  },
+  {
+    id: 10,
+    title: '위저드 베이커리',
+    img: book_4,
   },
 ];
