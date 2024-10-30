@@ -15,6 +15,81 @@
   background-size: cover;
 }
 
+.prev_y {
+  width: 1.75619rem;
+  height: 1.75619rem;
+  cursor: pointer;
+}
+
+.next_y {
+  width: 1.75619rem;
+  height: 1.75619rem;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.slide_y {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.item_y {
+  width: 18.65961rem;
+  height: 26.24757rem;
+}
+
+
+.pagination_y {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.43906rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: -0.011rem;
+  color: #666;
+}
+
+.pagination_y span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.43906rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: -0.011rem;
+  color: #191F28;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
 .container_x {
   position: relative;
   display: flex;
@@ -25,4 +100,71 @@
   transition: all 0.5s ease;
   background: url('../../../assets/img/smart/type_a/custom_bg_x.svg') center center no-repeat;
   background-size: cover;
+}
+
+.slide_x {
+  display: flex;
+  align-items: center;
+  margin-top: 17.6rem;
+  margin-left: 6rem;
+}
+
+.prev_x {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+}
+
+.next_x {
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
+.item_x {
+  width: 58.59375rem;
+  height: 16.47266rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.pagination_x {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.70313rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 1.61rem;
+  margin-left: 6rem;
+  text-align: center;
+  letter-spacing: -0.01756rem;
+  color: #666;
+}
+
+.pagination_x span {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.70313rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: -0.01756rem;
+  color: #191F28;
 }

@@ -15,6 +15,9 @@ import s_4_b from '../assets/img/smart/type_b/s_4.svg';
 import result_y from '../assets/img/smart/type_a/result_list_y.svg';
 import result_x from '../assets/img/smart/type_a/result_list_x.svg';
 
+import custom_y from '../assets/img/smart/type_a/custom_list_y.svg';
+import custom_x from '../assets/img/smart/type_a/custom_list_x.svg';
+
 export const TITLE_A = [
   '메인',
   '키워드 추천',
@@ -389,5 +392,23 @@ export const RESULT_X = [
   },
   {
     img: result_x,
+  },
+];
+
+export const CUSTOM_Y = [
+  {
+    img: custom_y,
+  },
+  {
+    img: custom_y,
+  },
+];
+
+export const CUSTOM_X = [
+  {
+    img: custom_x,
+  },
+  {
+    img: custom_x,
   },
 ];
