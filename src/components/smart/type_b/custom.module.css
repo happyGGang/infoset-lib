@@ -26,6 +26,17 @@
   height: 25.52688rem;
 }
 
+.lib_swiper_x {
+  width: 62.08513rem;
+  height: 18.83988rem;
+  margin-top: 16.72063rem;
+}
+
+.lib_img_x {
+  width: 62.08513rem;
+  height: 15.83988rem;
+}
+
 .container_x {
   position: relative;
   display: flex;

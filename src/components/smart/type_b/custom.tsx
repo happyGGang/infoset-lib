@@ -3,13 +3,40 @@ import styles from './custom.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
 import { Pagination } from 'swiper/modules';
-import { CUSTOM_Y } from '../../../constants/smart.constants';
+import { BIGDATA_X_B, CUSTOM_Y, LIB_Y } from '../../../constants/smart.constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 const HorizontalMode: React.FC = () => {
-  return <div className={styles.container_x}></div>;
+  const pagination = {
+    clickable: true,
+    renderBullet: (index: number, className: string) => {
+      return `<span class="${className}" style="width: 0.46875rem; height: 0.46875rem; border-radius: 50%; opacity: 1;"></span>`;
+    },
+  };
+
+  return (
+    <div className={styles.container_x}>
+      <Swiper
+        loop
+        slidesPerView={1}
+        slidesPerGroup={1}
+        pagination={pagination}
+        modules={[Pagination]}
+        className={styles.lib_swiper_x}
+      >
+        {BIGDATA_X_B.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ width: '62.08513rem !important', height: '15.83988rem' }}
+          >
+            <img src={item.img} alt="" className={styles.lib_img_x} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 const VerticalMode: React.FC = () => {
@@ -20,26 +47,27 @@ const VerticalMode: React.FC = () => {
     },
   };
 
-  return <div className={styles.container_y}>
-    <Swiper
-      loop
-      slidesPerView={1}
-      slidesPerGroup={1}
-      pagination={pagination}
-      modules={[Pagination]}
-      className={styles.lib_swiper_y}
-    >
-      {CUSTOM_Y.map((item, index) => (
-        <SwiperSlide
-          key={index}
-          style={{ width: '19.09867rem !important', height: '25.52688rem' }}
-        >
-          <img src={item.img} alt="" className={styles.lib_img_y} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>;
-
+  return (
+    <div className={styles.container_y}>
+      <Swiper
+        loop
+        slidesPerView={1}
+        slidesPerGroup={1}
+        pagination={pagination}
+        modules={[Pagination]}
+        className={styles.lib_swiper_y}
+      >
+        {LIB_Y.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            style={{ width: '19.09867rem !important', height: '25.52688rem' }}
+          >
+            <img src={item.img} alt="" className={styles.lib_img_y} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 const CustomB: React.FC = () => {

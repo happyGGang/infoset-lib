@@ -15,10 +15,20 @@ import s_4_b from '../assets/img/smart/type_b/s_4.svg';
 import result_y from '../assets/img/smart/type_a/result_list_y.svg';
 import result_x from '../assets/img/smart/type_a/result_list_x.svg';
 
+import result_y_b from '../assets/img/smart/type_b/result_b_y.svg';
+import result_x_b from '../assets/img/smart/type_b/result_b_x.svg';
+
 import custom_y from '../assets/img/smart/type_a/custom_list_y.svg';
 import custom_x from '../assets/img/smart/type_a/custom_list_x.svg';
 
+import lib_y from '../assets/img/smart/type_b/lib_list_y.svg';
+import lib_x from '../assets/img/smart/type_b/lib_list_x.svg';
+
 import bigdata_y from '../assets/img/smart/type_a/bigdata_list_y.svg';
+
+import bigdata_x_b from '../assets/img/smart/type_b/bigdata_b_x.svg';
+
+import bigdata_y_b from '../assets/img/smart/type_b/bigdata_b_y.svg';
 
 import book_1 from '../assets/img/smart/type_a/book_1.svg';
 import book_2 from '../assets/img/smart/type_a/book_2.svg';
@@ -386,6 +396,93 @@ export const KEYWORD_X_A = [
   },
 ];
 
+export const KEYWORD_X = [
+  {
+    label: '뮤지컬',
+    size: '6.01563rem',
+    color: '#A6C944',
+    top: '4rem',
+    left: '18.8rem',
+  },
+  {
+    label: '고전\n명작동화',
+    size: '6.64063rem',
+    color: '#1773EB',
+    top: '3.5rem',
+    left: '25.5rem',
+  },
+  {
+    label: '할리우드\n영화',
+    color: '#1773EB',
+    size: '8.98438rem',
+    top: '0.5rem',
+    left: '32.5rem',
+  },
+  {
+    label: '환경',
+    size: '4.82319rem',
+    color: '#2BA675',
+    top: '0.5rem',
+    left: '45rem',
+  },
+  {
+    label: '여행',
+    size: '4.9805rem',
+    color: '#2BA675',
+    top: '5.5rem',
+    left: '11.58em',
+  },
+  {
+    label: '명언',
+    size: '3.90625rem',
+    color: '#FDA92B',
+    top: '0rem',
+    left: '23rem',
+  },
+  {
+    label: '중단편\n소설',
+    size: '5.95069rem',
+    color: '#1773EB',
+    top: '0rem',
+    left: '13.8rem',
+  },
+  {
+    label: '생명\n과학',
+    size: '7.32875rem',
+    color: '#45C4EC',
+    top: '1.5rem',
+    left: '54.8rem',
+  },
+  {
+    label: '그림책',
+    size: '5.95069rem',
+    color: '#A6C944',
+    top: '2.6rem',
+    left: '0rem',
+  },
+  {
+    label: '한국사',
+    size: '7.32875rem',
+    color: '#F3666C',
+    top: '0rem',
+    left: '6rem',
+  },
+  {
+    label: '요리',
+    size: '4.82319rem',
+    color: '#FDA92B',
+    top: '4.8rem',
+    left: '42rem',
+  },
+  {
+    label: '문학상',
+    size: '5.95069rem',
+    color: '#7E6AA7',
+    top: '4.2rem',
+    left: '48.5rem',
+  },
+];
+
 export const KEYWORD_Y = [
   {
     label: '뮤지컬',
@@ -402,7 +499,7 @@ export const KEYWORD_Y = [
     left: '5.5rem',
   },
   {
-    label: '할리우드',
+    label: '할리우드\n영화',
     color: '#1773EB',
     size: '6.18006rem',
     top: '0rem',
@@ -437,7 +534,7 @@ export const KEYWORD_Y = [
     left: '8.8rem',
   },
   {
-    label: '과학',
+    label: '생명\n과학',
     size: '4.757rem',
     color: '#45C4EC',
     top: '6rem',
@@ -473,156 +570,6 @@ export const KEYWORD_Y = [
   },
 ];
 
-export const KEYWORD_X = [
-  {
-    label: '경제학자',
-    color: '#FFFFFF',
-    size: '1.5625rem',
-    top: '0rem',
-    left: '24rem',
-  },
-  {
-    label: '가족',
-    color: '#53E14D',
-    size: '3.125rem',
-    top: '0rem',
-    left: '33rem',
-  },
-  {
-    label: '우주',
-    color: '#A60EF2',
-    size: '1.5625rem',
-    top: '0rem',
-    left: '17rem',
-  },
-  {
-    label: '소설',
-    color: '#4EFEFC',
-    size: '3.125rem',
-    top: '6rem',
-    left: '7rem',
-  },
-  {
-    label: '평등',
-    color: '#FFFFFF',
-    size: '3.125rem',
-    top: '5rem',
-    left: '30rem',
-  },
-  {
-    label: '학습',
-    color: '#FF9500',
-    size: '3.125rem',
-    top: '0.1rem',
-    left: '52rem',
-  },
-  {
-    label: '작가',
-    color: '#444',
-    size: '1.5625rem',
-    top: '5.5rem',
-    left: '57.1rem',
-  },
-  {
-    label: '마르크스',
-    color: '#4EFEFC',
-    size: '3.125rem',
-    top: '4rem',
-    left: '17rem',
-  },
-  {
-    label: '지구',
-    color: '#1A49BA',
-    size: '3.51563rem',
-    top: '4rem',
-    left: '38rem',
-  },
-  {
-    label: '유럽',
-    color: '#FFFFFF',
-    size: '2.34375rem',
-    top: '0rem',
-    left: '44rem',
-  },
-  {
-    label: '교육',
-    color: '#444444',
-    size: '1.5625rem',
-    top: '9rem',
-    left: '20rem',
-  },
-  {
-    label: '수필사',
-    color: '#FFFFFF',
-    size: '1.5625rem',
-    top: '6rem',
-    left: '0rem',
-  },
-  {
-    label: '맛집',
-    color: '#FFFFFF',
-    size: '3.51563rem',
-    top: '0.5rem',
-    left: '7.5rem',
-  },
-  {
-    label: '행복',
-    color: '#FFFFFF',
-    size: '2.34375rem',
-    top: '9.3rem',
-    left: '26rem',
-  },
-  {
-    label: '고양이',
-    color: '#FFFFFF',
-    size: '1.5625rem',
-    top: '10rem',
-    left: '35rem',
-  },
-  {
-    label: '경영',
-    color: '#1A49BA',
-    size: '2.34375rem',
-    top: '8.8rem',
-    left: '53rem',
-  },
-  {
-    label: '로맨스',
-    color: '#444',
-    size: '1.5625rem',
-    top: '2rem',
-    left: '2rem',
-  },
-  {
-    label: '야구',
-    color: '#FFFFFF',
-    size: '1.5625rem',
-    top: '5.5rem',
-    left: '51.5rem',
-  },
-  {
-    label: '고민',
-    color: '#FFFFFF',
-    size: '1.5625rem',
-    top: '10rem',
-    left: '14rem',
-  },
-  {
-    label: '인공지능',
-    color: '#53E14D',
-    size: '2.34375rem',
-    top: '8.9rem',
-    left: '42.5rem',
-  },
-  {
-    label: '현대',
-    color: '#A60EF2',
-    size: '2.34375rem',
-    top: '4.5rem',
-    left: '45.5rem',
-  },
-];
-
 export const RESULT_Y = [
   {
     img: result_y,
@@ -638,6 +585,42 @@ export const RESULT_X = [
   },
   {
     img: result_x,
+  },
+];
+
+export const RESULT_Y_B = [
+  {
+    img: result_y_b,
+  },
+  {
+    img: result_y_b,
+  },
+];
+
+export const RESULT_X_B = [
+  {
+    img: result_x_b,
+  },
+  {
+    img: result_x_b,
+  },
+];
+
+export const LIB_X = [
+  {
+    img: lib_x,
+  },
+  {
+    img: lib_x,
+  },
+];
+
+export const LIB_Y = [
+  {
+    img: lib_y,
+  },
+  {
+    img: lib_y,
   },
 ];
 
@@ -674,6 +657,24 @@ export const BIGDATA_X = [
   },
   {
     img: custom_x,
+  },
+];
+
+export const BIGDATA_Y_B = [
+  {
+    img: bigdata_y_b,
+  },
+  {
+    img: bigdata_y_b,
+  },
+];
+
+export const BIGDATA_X_B = [
+  {
+    img: bigdata_x_b,
+  },
+  {
+    img: bigdata_x_b,
   },
 ];
 

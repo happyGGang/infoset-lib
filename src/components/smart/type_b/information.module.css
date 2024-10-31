@@ -5,7 +5,7 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_b/book_information_bg_y.svg') center center no-repeat;
+  background: url('../../../assets/img/smart/type_b/information_bg_y.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -17,14 +17,14 @@
   width: 23.7275rem;
   height: 42.18225rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_b/book_information_popup_y.svg') center center no-repeat;
+  background: url('../../../assets/img/smart/type_b/information_popup_y.svg') center center no-repeat;
   background-size: cover;
 }
 
 
 .close_y {
   position: absolute;
-  bottom: 15.7rem;
+  bottom: 13.7rem;
   left: 6rem;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
 .swiper_y {
   width: 20.20769rem;
   height: 6.87939rem;
-  margin-top: 3.29rem;
+  margin-top: 7rem;
 }
 
 .img_y {
@@ -172,7 +172,7 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_b/book_information_bg_x.svg') center center no-repeat;
+  background: url('../../../assets/img/smart/type_b/information_bg_x.svg') center center no-repeat;
   background-size: cover;
 }
 
@@ -182,14 +182,14 @@
   width: 75rem;
   height: 42.1875rem;
   transition: all 0.5s ease;
-  background: url('../../../assets/img/kiosk/type_b/book_information_popup_x.svg') center center no-repeat;
+  background: url('../../../assets/img/smart/type_b/information_popup_x.svg') center center no-repeat;
   background-size: cover;
 }
 
 .close_x {
   position: absolute;
   bottom: 7.8rem;
-  left: 30rem;
+  left: 27rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -215,7 +215,7 @@
 .selected_book_x {
   position: relative;
   margin-top: 11.43rem;
-  margin-left: 14.4rem;
+  margin-left: 8.5rem;
 }
 
 .selected_book_x img {
@@ -257,7 +257,7 @@
   width: 9.02381rem;
   height: 2.34375rem;
   margin-top: 18.3rem;
-  margin-left: 24.43rem;
+  margin-left: 27rem;
   cursor: pointer;
   color: #FFF;
   border-radius: 9.76563rem;
@@ -271,10 +271,10 @@
   font-style: normal;
   line-height: 160%;
   overflow-y: scroll;
-  width: 28.90625rem;
+  width: 30.90625rem;
   height: 6.42581rem;
   margin-top: 3.89rem;
-  margin-left: 3.85rem;
+  margin-left: 4.6rem;
   padding-right: 0.54rem;
   color: #191F28;
 }
@@ -304,7 +304,7 @@
   width: 4.57031rem;
   height: 39.28rem;
   margin-top: 2.93rem;
-  margin-left: 7rem;
+  margin-left: 10.5rem;
 }
 
 .img_x {

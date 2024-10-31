@@ -105,6 +105,7 @@
 }
 
 .select_box_wrapper_y select {
+  font-size: 0.65856rem;
   width: 7.46388rem;
   height: 1.97575rem;
   padding: 0.44rem 0.88rem 0.44rem 2.2rem;
@@ -130,7 +131,7 @@
   font-style: normal;
   line-height: normal;
   position: absolute;
-  top: 0.6rem;
+  top: 0.67rem;
   left: 0.7rem;
   color: #333D4B;
 }

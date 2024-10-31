@@ -63,7 +63,7 @@ const HorizontalMode: React.FC = () => {
             direction={'vertical'}
             slidesPerView={6}
             slidesPerGroup={6}
-            spaceBetween={180}
+            spaceBetween={95}
             className={styles.swiper_x}
           >
             {BOOK_INFORMATION.map((item, index) => (
@@ -123,7 +123,7 @@ const VerticalMode: React.FC = () => {
             loop
             slidesPerView={6}
             slidesPerGroup={6}
-            spaceBetween={12.5}
+            spaceBetween={5}
             className={styles.swiper_y}
           >
             {BOOK_INFORMATION.map((item, index) => (
