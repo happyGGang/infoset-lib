@@ -22,7 +22,7 @@ function SmartTypeB() {
       <div className={'content'}>
         <Tab link={'smart'} />
         <Title title={TITLE_B[selectedId]} />
-        <NavigationButton selectedId={selectedId} totalLength={8} onSelect={setSelectedId}>
+        <NavigationButton selectedId={selectedId} totalLength={7} onSelect={setSelectedId}>
           <SelectedComponent components={SMART_B} selectedId={selectedId} />
         </NavigationButton>
       </div>

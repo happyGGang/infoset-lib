@@ -21,7 +21,7 @@ function KioskTypeB() {
       <div className={'content'}>
         <Tab link={'kiosk'} />
         <Title title={TITLE[selectedId]} />
-        <NavigationButton selectedId={selectedId} totalLength={8} onSelect={setSelectedId}>
+        <NavigationButton selectedId={selectedId} totalLength={10} onSelect={setSelectedId}>
           <SelectedComponent components={KIOSK_B} selectedId={selectedId} />
         </NavigationButton>
       </div>
