@@ -86,20 +86,21 @@
 }
 
 .hand:nth-child(1) {
-  width: 1px;
-  height: 40px;
+  width: 0.0625rem; /* 1px = 1/16rem */
+  height: 2.5rem;   /* 40px = 40/16rem */
 }
 
 .hand:nth-child(2) {
-  width: 1px;
-  height: 55px;
+  width: 0.0625rem; /* 1px = 1/16rem */
+  height: 3.4375rem; /* 55px = 55/16rem */
 }
 
 .hand:nth-child(3) {
-  width: 0.5px;
-  height: 57px;
+  width: 0.03125rem; /* 0.5px = 0.5/16rem */
+  height: 3.5625rem; /* 57px = 57/16rem */
   background-color: #FFFFFF;
 }
+
 
 .date {
   font-family: "Pretendard", sans-serif;

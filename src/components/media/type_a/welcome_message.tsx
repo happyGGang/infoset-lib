@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
 import Full from '../../full_screen';
 import { useFullPageStore } from '../../../store/full_page.store';
+import { log } from 'node:util';
 
 const WelcomeMessageA: React.FC = () => {
   const { isFullPage, toggleFullPage } = useFullPageStore();
@@ -57,7 +58,7 @@ const WelcomeMessageA: React.FC = () => {
               </div>
             </div>
           </div>
-          <Full disabled={false} onClick={toggleFullPage} />
+          <Full disabled={false} onClick={() => console.log(123)} />
         </div>
       )}
     </>
