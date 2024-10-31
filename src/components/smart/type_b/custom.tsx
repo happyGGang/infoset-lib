@@ -7,6 +7,8 @@ import { BIGDATA_X_B, CUSTOM_Y, LIB_Y } from '../../../constants/smart.constants
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const pagination = {
@@ -72,16 +74,22 @@ const VerticalMode: React.FC = () => {
 
 const CustomB: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

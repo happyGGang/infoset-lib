@@ -5,6 +5,8 @@ import section_1 from '../../../assets/img/kiosk/type_a/section_1.svg';
 import section_2 from '../../../assets/img/kiosk/type_a/section_2.svg';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   return (
@@ -30,16 +32,22 @@ const VerticalMode: React.FC = () => {
 
 const InformationA = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

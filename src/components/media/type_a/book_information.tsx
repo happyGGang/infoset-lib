@@ -5,15 +5,12 @@ import dummy from '../../../assets/img/media/type_a/new_book_0.svg';
 import { BESTSELLER, NEW_BOOK } from '../../../constants/media.constants';
 import Zoom from '../../zoom';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const BookInformationA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const BookInformationA: React.FC = () => {
   const [currentIndexes, setCurrentIndexes] = useState([0, 0]);
   const [isFading, setIsFading] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,7 +102,7 @@ const BookInformationA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) =>
           </div>
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

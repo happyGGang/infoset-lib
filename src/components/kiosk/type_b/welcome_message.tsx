@@ -3,6 +3,8 @@ import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
 import styles from './welcome_message.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
@@ -56,16 +58,22 @@ const VerticalMode: React.FC = () => {
 
 const WelcomeMessageB: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

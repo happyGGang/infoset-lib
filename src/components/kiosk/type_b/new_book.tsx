@@ -7,6 +7,7 @@ import { NEW_BOOK_A, NEW_BOOK_B } from '../../../constants/kiosk.constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const HorizontalMode: React.FC = () => {
   const pagination = {
@@ -72,7 +73,7 @@ const VerticalMode: React.FC = () => {
 
 const NewBookB = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
 
@@ -81,7 +82,7 @@ const NewBookB = () => {
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={toggleFullPage} />
       </div>
     </>
   );

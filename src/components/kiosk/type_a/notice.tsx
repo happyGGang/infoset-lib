@@ -8,6 +8,8 @@ import { Pagination } from 'swiper/modules';
 import '../../../style/kiosk_swiper_a.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const pagination = {
@@ -88,16 +90,22 @@ const VerticalMode: React.FC = () => {
 
 const NoticeA = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

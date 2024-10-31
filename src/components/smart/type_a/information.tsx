@@ -7,6 +7,8 @@ import dummy from '../../../assets/img/smart/type_a/book_1.svg';
 import award from '../../../assets/img/smart/type_a/award.svg';
 import close from '../../../assets/img/kiosk/type_a/close.svg';
 import { BOOK_Y } from '../../../constants/smart.constants';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const ITEMS_PER_PAGE = 5;
 
@@ -168,16 +170,22 @@ const VerticalMode: React.FC = () => {
 
 const InformationA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

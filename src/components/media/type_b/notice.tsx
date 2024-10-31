@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styles from './notice.module.css';
 import { NOTICE } from '../../../constants/media.constants';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const NoticeB: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 3;
   const totalItems = NOTICE.length;
   const [fade, setFade] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
 
   const getNextIndex = (index: number) => {
     return (index + itemsPerPage) % totalItems;
@@ -46,7 +48,7 @@ const NoticeB: React.FC = () => {
           ))}
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

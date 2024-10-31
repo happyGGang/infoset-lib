@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from './event.module.css';
 import { EVENT } from '../../../constants/media.constants';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const EventA: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,7 +52,7 @@ const EventA: React.FC = () => {
           ))}
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Full from '../../full_screen';
 import custom from '../../../assets/img/smart/type_a/custom_btn.svg';
 import arrow from '../../../assets/img/smart/type_a/slide_arrow.svg';
 import { RESULT_X, RESULT_Y } from '../../../constants/smart.constants';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,16 +90,22 @@ const VerticalMode: React.FC = () => {
 
 const ResultA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

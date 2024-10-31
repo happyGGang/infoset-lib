@@ -1,8 +1,11 @@
 import styles from './line_of_book.module.css';
 import React from 'react';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const LineOfBookA: React.FC = () => {
+  const { toggleFullPage } = useFullPageStore();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -16,7 +19,7 @@ const LineOfBookA: React.FC = () => {
         </div>
         <div className={styles.caption}>'나는 메트로폴리탄 미술관의 경비원입니다' 중에서</div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

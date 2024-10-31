@@ -5,6 +5,8 @@ import Full from '../../full_screen';
 import { KEYWORD_X_A, KEYWORD_Y_A } from '../../../constants/smart.constants';
 import refresh from '../../../assets/img/smart/type_a/refresh.svg';
 import cancel from '../../../assets/img/smart/type_a/cancel.svg';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
@@ -213,16 +215,22 @@ const VerticalMode: React.FC = () => {
 
 const KeywordA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

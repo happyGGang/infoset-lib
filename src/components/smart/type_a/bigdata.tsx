@@ -4,6 +4,8 @@ import Tilt from '../../tilt';
 import Full from '../../full_screen';
 import arrow from '../../../assets/img/smart/type_a/slide_arrow.svg';
 import { BIGDATA_X, BIGDATA_Y } from '../../../constants/smart.constants';
+import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -117,16 +119,22 @@ const VerticalMode: React.FC = () => {
 
 const BigDataA: React.FC = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
-  const [full, setFull] = useState(false);
+  const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    toggleLandscape();
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={!horizontalMode} onClick={() => console.log(123)} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

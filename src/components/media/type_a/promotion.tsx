@@ -4,14 +4,11 @@ import weather from '../../../assets/img/media/type_a/weather.svg';
 import Zoom from '../../zoom';
 import promotion from '../../../assets/media/promotion.mp4';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
-interface Props {
-  isFullScreen: boolean;
-  setIsFullScreen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const PromotionA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
+const PromotionA: React.FC = () => {
   const [time, setTime] = useState(new Date());
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -61,7 +58,7 @@ const PromotionA: React.FC<Props> = ({ isFullScreen, setIsFullScreen }) => {
           </div>
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

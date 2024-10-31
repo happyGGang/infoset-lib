@@ -4,10 +4,12 @@ import { EVENT } from '../../../constants/media.constants';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const EventB: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showEvent, setShowEvent] = useState(true);
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -57,7 +59,7 @@ const EventB: React.FC = () => {
           ))}
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

@@ -2,10 +2,12 @@ import styles from './welcome_message.module.css';
 import React, { useEffect, useState } from 'react';
 import { getCurrentDate, getCurrentTime } from '../../../util/date_time';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const WelcomeMessageB: React.FC = () => {
   const [currentTime, setCurrentTime] = useState<string>(getCurrentTime());
   const [currentDate, setCurrentDate] = useState<string>(getCurrentDate());
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -35,7 +37,7 @@ const WelcomeMessageB: React.FC = () => {
           </div>
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };

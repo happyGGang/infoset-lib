@@ -9,6 +9,7 @@ import SelectedComponent from '../components/selected_component';
 import Title from '../components/title';
 import Layout from '../components/layout';
 import { useFullPageStore } from '../store/full_page.store';
+import zoom from '../assets/img/zoom.svg';
 
 export const Route = createFileRoute('/media/a')({
   component: MediaWallTypeA,
@@ -16,12 +17,14 @@ export const Route = createFileRoute('/media/a')({
 
 function MediaWallTypeA() {
   const [selectedId, setSelectedId] = useState(0);
-  const { isFullPage } = useFullPageStore();
+  const { toggleFullPage, isFullPage } = useFullPageStore();
 
   return (
     <>
       {isFullPage ? (
-        <SelectedComponent components={MEDIA_A} selectedId={selectedId} />
+        <div className={'full'} style={{ backgroundImage: `url(${PREV_A[selectedId].img})` }}>
+          <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+        </div>
       ) : (
         <Layout>
           <div className={'content'}>

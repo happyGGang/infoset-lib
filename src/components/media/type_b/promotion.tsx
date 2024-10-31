@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import weather from '../../../assets/img/media/type_a/weather.svg';
 import promotion from '../../../assets/media/promotion.mp4';
 import Full from '../../full_screen';
+import { useFullPageStore } from '../../../store/full_page.store';
 
 const PromotionB: React.FC = () => {
   const [time, setTime] = useState(new Date());
+  const { toggleFullPage } = useFullPageStore();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -55,7 +57,7 @@ const PromotionB: React.FC = () => {
           </div>
         </div>
       </div>
-      <Full disabled={false} onClick={() => console.log(123)} />
+      <Full disabled={false} onClick={toggleFullPage} />
     </div>
   );
 };
