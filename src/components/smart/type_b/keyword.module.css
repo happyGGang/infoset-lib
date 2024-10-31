@@ -32,52 +32,52 @@
 }
 
 .keyword_title_y {
-  color: #242424;
-  text-align: center;
   font-family: "Pretendard", sans-serif;
   font-size: 1.31713rem;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   line-height: 130%;
+  text-align: center;
   letter-spacing: -0.03294rem;
+  color: #242424;
 }
 
 .keyword_caption_y {
-  text-align: center;
-  margin-bottom: 1.18rem;
-  margin-top: 0.31rem;
-  color: #6B7684;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
+  margin-top: 0.31rem;
+  margin-bottom: 1.18rem;
+  text-align: center;
   letter-spacing: -0.01644rem;
+  color: #6B7684;
 }
 
 .bubble_chart_y {
+  position: relative;
   width: 19.14506rem;
   height: 16.02963rem;
-  position: relative;
 }
 
 .bubble_item_y {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #FFF;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   line-height: normal;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transform: translate(-50%, -50%);
   animation: bounce 0.5s ease forwards;
   text-align: center;
   white-space: nowrap;
+  color: #FFF;
+  border-radius: 50%;
 }
 
 @keyframes bounce {
@@ -91,8 +91,8 @@
 
 .refresh_wrapper_y {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 1.05rem;
   cursor: pointer;
   gap: 0.28rem;
@@ -104,37 +104,37 @@
 }
 
 .refresh_wrapper_y div {
-  color: #6B7684;
   font-family: "Pretendard", sans-serif;
   font-size: 0.57075rem;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
   letter-spacing: -0.01425rem;
+  color: #6B7684;
 }
 
 .selected_keyword_list_y {
   display: flex;
+  justify-content: center;
   height: 1.53667rem;
   margin-top: 1.17rem;
   gap: 0.26rem;
-  justify-content: center;
 }
 
 .selected_keyword_list_y .keyword_item_y {
-  color: #1773EB;
   font-family: Pretendard;
   font-size: 0.57075rem;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 1.53667rem;
   padding: 0 0.66rem 0 0.88rem;
-  border-radius: 1.31713rem;
+  color: #1773EB;
   border: 0.702px solid #1773EB;
+  border-radius: 1.31713rem;
   background: #FFF;
   gap: 0.44rem;
 }
@@ -154,20 +154,20 @@
 }
 
 .select_box_wrapper_y select {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.65856rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
   width: 7.46388rem;
   height: 1.90988rem;
   padding: 0.44rem 0.88rem 0.44rem 3.5rem;
+  color: #191F28;
   border: 0.351px solid #272A49;
   border-radius: 1.31713rem;
   background: #FFFFFF url('../../../assets/img/smart/type_a/arrow.svg') no-repeat right 0.3rem center;
   background-size: 1.05375rem;
   appearance: none;
-  color: #191F28;
-  font-family: "Pretendard", sans-serif;
-  font-size: 0.65856rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .select_box_wrapper_y select:focus {
@@ -179,19 +179,18 @@
 }
 
 .select_y label {
-  color: #6B7684;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
   position: absolute;
   top: 0.54rem;
   left: 0.7rem;
+  color: #6B7684;
 }
 
 .recommendation_y {
-  margin-left: 2rem;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
   font-weight: 600;
@@ -203,6 +202,7 @@
   width: 15.19113rem;
   height: 2.41477rem;
   margin-top: 0.66rem;
+  margin-left: 2rem;
   cursor: pointer;
   text-align: center;
   letter-spacing: -0.01644rem;
@@ -212,26 +212,26 @@
 }
 
 .lib_title_y {
-  color: #191F28;
-  text-align: center;
   font-family: "Pretendard", sans-serif;
   font-size: 1.31713rem;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   line-height: 130%;
+  text-align: center;
   letter-spacing: -0.03294rem;
+  color: #191F28;
 }
 
 .lib_caption_y {
-  margin-top: 0.31rem;
-  color: #6B7684;
-  text-align: center;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
+  margin-top: 0.31rem;
+  text-align: center;
   letter-spacing: -0.01644rem;
+  color: #6B7684;
 }
 
 .lib_swiper_y {
@@ -246,24 +246,35 @@
 }
 
 .bigdata_title_y {
-  color: #191F28;
-  text-align: center;
   font-family: "Pretendard", sans-serif;
   font-size: 1.31713rem;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   line-height: 130%;
+  text-align: center;
   letter-spacing: -0.03294rem;
+  color: #191F28;
 }
 
 .bigdata_caption_y {
-  margin-top: 0.31rem;
-  color: #6B7684;
-  text-align: center;
   font-family: "Pretendard", sans-serif;
   font-size: 0.65856rem;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
+  margin-top: 0.31rem;
+  margin-bottom: 1.32rem;
+  text-align: center;
   letter-spacing: -0.01644rem;
+  color: #6B7684;
+}
+
+.bigdata_swiper_y {
+  width: 19.09867rem;
+  height: 23.39045rem;
+}
+
+.bigdata__img_y {
+  width: 19.09867rem;
+  height: 22.39045rem;
 }

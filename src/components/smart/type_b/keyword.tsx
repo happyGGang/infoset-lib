@@ -3,7 +3,7 @@ import styles from './keyword.module.css';
 import Tilt from '../../tilt';
 import Full from '../../full_screen';
 import { Tabs, Tab, Box, Typography } from '@mui/material';
-import { CUSTOM_Y, KEYWORD_X_A, KEYWORD_Y } from '../../../constants/smart.constants';
+import { BIGDATA_Y, CUSTOM_Y, KEYWORD_X_A, KEYWORD_Y } from '../../../constants/smart.constants';
 import refresh from '../../../assets/img/smart/type_a/refresh.svg';
 import cancel from '../../../assets/img/smart/type_a/cancel.svg';
 import { Pagination } from 'swiper/modules';
@@ -158,7 +158,9 @@ const VerticalMode: React.FC = () => {
       </Tabs>
       <TabPanel value={value} index={0}>
         <div className={styles.keyword_title_y}>회원님의 관심사는 무엇인가요?</div>
-        <div className={styles.keyword_caption_y}>관심 키워드를 분석해 알맞은 책을 추천해드려요</div>
+        <div className={styles.keyword_caption_y}>
+          관심 키워드를 분석해 알맞은 책을 추천해드려요
+        </div>
         <div className={styles.bubble_chart_y}>
           {KEYWORD_Y.map((keyword, index) => (
             <div
@@ -191,8 +193,8 @@ const VerticalMode: React.FC = () => {
               <img
                 src={cancel}
                 alt="Remove"
-                onClick={() => handleKeywordRemove(item)} // 클릭 시 키워드 제거
-                style={{ cursor: 'pointer' }} // 커서 포인터 스타일 추가
+                onClick={() => handleKeywordRemove(item)}
+                style={{ cursor: 'pointer' }}
               />
             </div>
           ))}
@@ -218,13 +220,9 @@ const VerticalMode: React.FC = () => {
         </div>
 
         <div className={styles.recommendation_y}>도서 추천받기</div>
-
-
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className={styles.lib_title_y}>
-          우리 도서관 사서 선생님의 선택
-        </div>
+        <div className={styles.lib_title_y}>우리 도서관 사서 선생님의 선택</div>
         <div className={styles.lib_caption_y}>
           사서 선생님들이 이용자들을 위해 고른 추천도서는 어떠세요?
         </div>
@@ -248,20 +246,125 @@ const VerticalMode: React.FC = () => {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <div className={styles.bigdata_title_y}>빅데이터는 어떤 책을 추천했을까요?</div>
-        <div className={styles.bigdata_caption_y}>전국 공공도서관 연령대별 추천도서를 만나보세요</div>
+        <div className={styles.bigdata_caption_y}>
+          전국 공공도서관 연령대별 추천도서를 만나보세요
+        </div>
         <Tabs
           value={data}
           onChange={handleChangeData}
-          variant="scrollable"
-          scrollButtons={false}
-          aria-label="scrollable prevent tabs example"
+          sx={{
+            width: '19.75725rem',
+            borderRadius: '1.5rem',
+            background: '#8B95A1',
+            minHeight: '1.75619rem',
+            '& .MuiTabs-indicator': {
+              display: 'none',
+            },
+          }}
         >
-          <Tab label="아동" />
-          <Tab label="청소년" />
-          <Tab label="20~30대" />
-          <Tab label="40~50대" />
-          <Tab label="60대 이상" />
+          <Tab
+            label="아동"
+            sx={{
+              borderRadius: '1.5rem',
+              minHeight: '1.75619rem',
+              height: '1.75619rem',
+              minWidth: '3.95144rem',
+              padding: '1.1rem 0 1.1rem 0',
+              fontSize: '0.54881rem',
+              color: '#FFFFFF',
+              fontWeight: '700',
+              '&.Mui-selected': {
+                color: '#FFFFFF',
+                background: '#191F28',
+              },
+            }}
+          />
+          <Tab
+            label="청소년"
+            sx={{
+              borderRadius: '1.5rem',
+              minHeight: '1.75619rem',
+              height: '1.75619rem',
+              minWidth: '3.95144rem',
+              padding: '1.1rem 0 1.1rem 0',
+              fontSize: '0.54881rem',
+              color: '#FFFFFF',
+              fontWeight: '700',
+              '&.Mui-selected': {
+                color: '#FFFFFF',
+                background: '#191F28',
+              },
+            }}
+          />
+          <Tab
+            label="20~30대"
+            sx={{
+              borderRadius: '1.5rem',
+              minHeight: '1.75619rem',
+              height: '1.75619rem',
+              minWidth: '3.95144rem',
+              padding: '1.1rem 0 1.1rem 0',
+              fontSize: '0.54881rem',
+              color: '#FFFFFF',
+              fontWeight: '700',
+              '&.Mui-selected': {
+                color: '#FFFFFF',
+                background: '#191F28',
+              },
+            }}
+          />
+          <Tab
+            label="40~50대"
+            sx={{
+              borderRadius: '1.5rem',
+              minHeight: '1.75619rem',
+              height: '1.75619rem',
+              minWidth: '3.95144rem',
+              padding: '1.1rem 0 1.1rem 0',
+              fontSize: '0.54881rem',
+              color: '#FFFFFF',
+              fontWeight: '700',
+              '&.Mui-selected': {
+                color: '#FFFFFF',
+                background: '#191F28',
+              },
+            }}
+          />
+          <Tab
+            label="60대 이상"
+            sx={{
+              borderRadius: '1.5rem',
+              minHeight: '1.75619rem',
+              height: '1.75619rem',
+              minWidth: '3.95144rem',
+              padding: '1.1rem 0 1.1rem 0',
+              fontSize: '0.54881rem',
+              color: '#FFFFFF',
+              fontWeight: '700',
+              '&.Mui-selected': {
+                color: '#FFFFFF',
+                background: '#191F28',
+              },
+            }}
+          />
         </Tabs>
+        <Swiper
+          loop
+          slidesPerView={1}
+          slidesPerGroup={1}
+          pagination={pagination}
+          modules={[Pagination]}
+          className={styles.bigdata_swiper_y}
+        >
+          {BIGDATA_Y.map((item, index) => (
+            <SwiperSlide
+              key={index}
+              style={{ width: '19.09867rem !important', height: '22.39045rem' }}
+            >
+              <img src={item.img} alt="" className={styles.bigdata__img_y} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </TabPanel>
     </div>
   );
