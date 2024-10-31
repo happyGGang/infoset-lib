@@ -37,6 +37,7 @@
   font-weight: 600;
   font-style: normal;
   line-height: 130%;
+  margin-top: 1rem;
   text-align: center;
   letter-spacing: -0.03294rem;
   color: #242424;
@@ -217,6 +218,7 @@
   font-weight: 600;
   font-style: normal;
   line-height: 130%;
+  margin-top: 1rem;
   text-align: center;
   letter-spacing: -0.03294rem;
   color: #191F28;
@@ -251,6 +253,7 @@
   font-weight: 600;
   font-style: normal;
   line-height: 130%;
+  margin-top: 1rem;
   text-align: center;
   letter-spacing: -0.03294rem;
   color: #191F28;
@@ -277,4 +280,23 @@
 .bigdata__img_y {
   width: 19.09867rem;
   height: 22.39045rem;
+}
+
+.result_swiper_y {
+  width: 18.43988rem;
+  height: 31.70175rem;
+  margin-top: 1rem;
+}
+
+.result__img_y {
+  width: 18.43988rem;
+  height: 29.70175rem;
+}
+
+.custom_btn_y {
+  position: absolute;
+  right: 5.5rem;
+  bottom: 0;
+  width: 9.57131rem;
+  cursor: pointer;
 }

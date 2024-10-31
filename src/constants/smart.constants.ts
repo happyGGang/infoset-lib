@@ -426,15 +426,15 @@ export const KEYWORD_Y = [
     label: '명언',
     size: '3.31069rem',
     color: '#FDA92B',
-    top: '7rem',
-    left: '4.5rem',
+    top: '7.5rem',
+    left: '4.9rem',
   },
   {
     label: '소설',
     size: '3.86256rem',
     color: '#1773EB',
     top: '6.5rem',
-    left: '8rem',
+    left: '8.8rem',
   },
   {
     label: '과학',
