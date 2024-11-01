@@ -35,7 +35,7 @@
   flex-direction: column;
   height: 100%;
   max-height: calc(100vh - 12.69rem);
-  margin-top: 2.69rem;
+  margin-top: 2.25rem;
   padding-right: 1.75rem;
   gap: 1rem;
 }
