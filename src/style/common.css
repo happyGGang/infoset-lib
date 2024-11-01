@@ -23,6 +23,32 @@
   background-size: cover;
 }
 
+.full_y {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color:#000000 ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.full_y img {
+  position: absolute;
+  z-index: 9999;
+  top: 1rem;
+  right: 47rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.full_y:hover img {
+  opacity: 1;
+}
 
 .full img {
   position: absolute;
@@ -32,10 +58,10 @@
   width: 3rem;
   height: 3rem;
   cursor: pointer;
-  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
-  opacity: 0; /* 기본적으로 투명하게 설정 */
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 .full:hover img {
-  opacity: 1; /* 호버 시 이미지가 보이도록 설정 */
+  opacity: 1;
 }

@@ -177,7 +177,7 @@ const InformationA: React.FC = () => {
 
   function handleFullPage() {
     toggleFullPage();
-    toggleLandscape();
+    horizontalMode ? toggleLandscape(true) : toggleLandscape(false);
   }
 
   return (

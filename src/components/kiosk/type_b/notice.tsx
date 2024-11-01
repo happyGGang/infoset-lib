@@ -97,7 +97,7 @@ const NoticeB = () => {
 
   function handleFullPage() {
     toggleFullPage();
-    toggleLandscape();
+    horizontalMode ? toggleLandscape(true) : toggleLandscape(false);
   }
 
   return (

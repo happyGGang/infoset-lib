@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useFullPageStore } from '../../../store/full_page.store';
+import { useOrientationStore } from '../../../store/landscape.store';
 
 const HorizontalMode: React.FC = () => {
   const pagination = {
@@ -74,15 +75,21 @@ const VerticalMode: React.FC = () => {
 const NewBookB = () => {
   const [horizontalMode, setHorizontalMode] = useState(false);
   const { toggleFullPage } = useFullPageStore();
+  const { toggleLandscape } = useOrientationStore();
 
   const handleClick = () => setHorizontalMode((prev) => !prev);
+
+  function handleFullPage() {
+    toggleFullPage();
+    horizontalMode ? toggleLandscape(true) : toggleLandscape(false);
+  }
 
   return (
     <>
       {horizontalMode ? <HorizontalMode /> : <VerticalMode />}
       <div className={styles.wrapper}>
         <Tilt onClick={handleClick} />
-        <Full disabled={false} onClick={toggleFullPage} />
+        <Full disabled={false} onClick={handleFullPage} />
       </div>
     </>
   );

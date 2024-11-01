@@ -6,11 +6,25 @@ import s_4_a from '../assets/img/smart/type_a/s_4.svg';
 import s_5_a from '../assets/img/smart/type_a/s_5.svg';
 import s_6_a from '../assets/img/smart/type_a/s_6.svg';
 
+import s_0_a_x from '../assets/img/smart/type_a/s_0_a_x.svg';
+import s_1_a_x from '../assets/img/smart/type_a/s_1_a_x.svg';
+import s_2_a_x from '../assets/img/smart/type_a/s_2_a_x.svg';
+import s_3_a_x from '../assets/img/smart/type_a/s_3_a_x.svg';
+import s_4_a_x from '../assets/img/smart/type_a/s_4_a_x.svg';
+import s_5_a_x from '../assets/img/smart/type_a/s_5_a_x.svg';
+import s_6_a_x from '../assets/img/smart/type_a/s_6_a_x.svg';
+
 import s_0_b from '../assets/img/smart/type_b/s_0.svg';
 import s_1_b from '../assets/img/smart/type_b/s_1.svg';
 import s_2_b from '../assets/img/smart/type_b/s_2.svg';
 import s_3_b from '../assets/img/smart/type_b/s_3.svg';
 import s_4_b from '../assets/img/smart/type_b/s_4.svg';
+
+import s_0_b_x from '../assets/img/smart/type_b/s_0_b_x.svg';
+import s_1_b_x from '../assets/img/smart/type_b/s_1_b_x.svg';
+import s_2_b_x from '../assets/img/smart/type_b/s_2_b_x.svg';
+import s_3_b_x from '../assets/img/smart/type_b/s_3_b_x.svg';
+import s_4_b_x from '../assets/img/smart/type_b/s_4_b_x.svg';
 
 import result_y from '../assets/img/smart/type_a/result_list_y.svg';
 import result_x from '../assets/img/smart/type_a/result_list_x.svg';
@@ -80,6 +94,37 @@ export const PREV_A = [
   },
 ];
 
+export const PREV_A_X = [
+  {
+    id: 0,
+    img: s_0_a_x,
+  },
+  {
+    id: 1,
+    img: s_1_a_x,
+  },
+  {
+    id: 2,
+    img: s_6_a_x,
+  },
+  {
+    id: 3,
+    img: s_2_a_x,
+  },
+  {
+    id: 4,
+    img: s_3_a_x,
+  },
+  {
+    id: 5,
+    img: s_4_a_x,
+  },
+  {
+    id: 6,
+    img: s_5_a_x,
+  },
+];
+
 export const PREV_B = [
   {
     id: 0,
@@ -100,6 +145,29 @@ export const PREV_B = [
   {
     id: 4,
     img: s_3_b,
+  },
+];
+
+export const PREV_B_X = [
+  {
+    id: 0,
+    img: s_0_b_x,
+  },
+  {
+    id: 1,
+    img: s_1_b_x,
+  },
+  {
+    id: 2,
+    img: s_4_b_x,
+  },
+  {
+    id: 3,
+    img: s_2_b_x,
+  },
+  {
+    id: 4,
+    img: s_3_b_x,
   },
 ];
 

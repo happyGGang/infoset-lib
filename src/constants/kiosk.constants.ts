@@ -30,6 +30,17 @@ import k_7_a_x from '../assets/img/kiosk/type_a/k_7_x.svg';
 import k_8_a_x from '../assets/img/kiosk/type_a/k_8_x.svg';
 import k_9_a_x from '../assets/img/kiosk/type_a/k_9_x.svg';
 
+import k_0_b_x from '../assets/img/kiosk/type_b/k_0_x.svg';
+import k_1_b_x from '../assets/img/kiosk/type_b/k_1_x.svg';
+import k_2_b_x from '../assets/img/kiosk/type_b/k_2_x.svg';
+import k_3_b_x from '../assets/img/kiosk/type_b/k_3_x.svg';
+import k_4_b_x from '../assets/img/kiosk/type_b/k_4_x.svg';
+import k_5_b_x from '../assets/img/kiosk/type_b/k_5_x.svg';
+import k_6_b_x from '../assets/img/kiosk/type_b/k_6_x.svg';
+import k_7_b_x from '../assets/img/kiosk/type_b/k_7_x.svg';
+import k_8_b_x from '../assets/img/kiosk/type_b/k_8_x.svg';
+import k_9_b_x from '../assets/img/kiosk/type_b/k_9_x.svg';
+
 import notice_0 from '../assets/img/kiosk/type_a/notice_0.svg';
 import notice_1 from '../assets/img/kiosk/type_a/notice_1.svg';
 import notice_2 from '../assets/img/kiosk/type_a/notice_2.svg';
@@ -142,6 +153,49 @@ export const PREV_A_X = [
   {
     id: 9,
     img: k_9_a_x,
+  },
+];
+
+export const PREV_B_X = [
+  {
+    id: 0,
+    img: k_0_b_x,
+  },
+  {
+    id: 1,
+    img: k_1_b_x,
+  },
+  {
+    id: 2,
+    img: k_2_b_x,
+  },
+  {
+    id: 3,
+    img: k_3_b_x,
+  },
+  {
+    id: 4,
+    img: k_4_b_x,
+  },
+  {
+    id: 5,
+    img: k_5_b_x,
+  },
+  {
+    id: 6,
+    img: k_6_b_x,
+  },
+  {
+    id: 7,
+    img: k_7_b_x,
+  },
+  {
+    id: 8,
+    img: k_8_b_x,
+  },
+  {
+    id: 9,
+    img: k_9_b_x,
   },
 ];
 

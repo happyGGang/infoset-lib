@@ -86,7 +86,7 @@ const BestBookA = () => {
 
   function handleFullPage() {
     toggleFullPage();
-    toggleLandscape();
+    horizontalMode ? toggleLandscape(true) : toggleLandscape(false);
   }
 
   return (

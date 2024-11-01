@@ -22,7 +22,7 @@ const CourseDetailB = () => {
 
   function handleFullPage() {
     toggleFullPage();
-    toggleLandscape();
+    horizontalMode ? toggleLandscape(true) : toggleLandscape(false);
   }
 
   return (
