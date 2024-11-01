@@ -12,6 +12,8 @@ import Layout from '../components/layout';
 import zoom from '../assets/img/zoom.svg';
 import { useFullPageStore } from '../store/full_page.store';
 import { useOrientationStore } from '../store/landscape.store';
+import FullIndex from '../components/full_index';
+import FullNavigation from '../components/full_navigation';
 
 export const Route = createFileRoute('/smart/a')({
   component: SmartTypeA,
@@ -21,6 +23,11 @@ function SmartTypeA() {
   const [selectedId, setSelectedId] = useState(0);
   const { toggleFullPage, isFullPage } = useFullPageStore();
   const { isLandscape } = useOrientationStore();
+  const [isShow, setIsShow] = useState(false);
+
+  const handleBackgroundClick = () => {
+    setIsShow((prev) => !prev);
+  };
 
   return (
     <>
@@ -32,8 +39,11 @@ function SmartTypeA() {
               ? `url(${PREV_A[selectedId].img}) `
               : `url(${PREV_A_X[selectedId].img})`,
           }}
+          onClick={handleBackgroundClick}
         >
           <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+          {isShow && <FullNavigation />}
+          {isShow && <FullIndex list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>
       ) : (
         <Layout>

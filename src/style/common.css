@@ -34,23 +34,7 @@
 }
 
 
-.full_y img {
-  position: absolute;
-  z-index: 9999;
-  top: 1rem;
-  right: 47rem;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-.full_y:hover img {
-  opacity: 1;
-}
-
-.full img {
+.full_y .zoom {
   position: absolute;
   z-index: 9999;
   top: 1rem;
@@ -62,6 +46,22 @@
   opacity: 0;
 }
 
-.full:hover img {
+.full_y:hover .zoom {
+  opacity: 1;
+}
+
+.full .zoom {
+  position: absolute;
+  z-index: 9999;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.full:hover .zoom {
   opacity: 1;
 }

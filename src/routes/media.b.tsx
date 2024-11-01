@@ -10,6 +10,8 @@ import Title from '../components/title';
 import Layout from '../components/layout';
 import { useFullPageStore } from '../store/full_page.store';
 import zoom from '../assets/img/zoom.svg';
+import FullIndex from '../components/full_index';
+import FullNavigation from '../components/full_navigation';
 
 export const Route = createFileRoute('/media/b')({
   component: MediaWallTypeB,
@@ -19,12 +21,23 @@ function MediaWallTypeB() {
   const [selectedId, setSelectedId] = useState(0);
   const { toggleFullPage } = useFullPageStore();
   const { isFullPage } = useFullPageStore();
+  const [isShow, setIsShow] = useState(false);
+
+  const handleBackgroundClick = () => {
+    setIsShow((prev) => !prev);
+  };
 
   return (
     <>
       {isFullPage ? (
-        <div className={'full'} style={{ backgroundImage: `url(${PREV_B[selectedId].img})` }}>
+        <div
+          className={'full'}
+          style={{ backgroundImage: `url(${PREV_B[selectedId].img})` }}
+          onClick={handleBackgroundClick}
+        >
           <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+          {isShow && <FullNavigation />}
+          {isShow && <FullIndex list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>
       ) : (
         <Layout>

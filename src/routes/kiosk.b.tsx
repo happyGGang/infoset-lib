@@ -11,6 +11,9 @@ import Layout from '../components/layout';
 import { useFullPageStore } from '../store/full_page.store';
 import zoom from '../assets/img/zoom.svg';
 import { useOrientationStore } from '../store/landscape.store';
+import FullIndex from '../components/full_index';
+import { PREV_A } from '../constants/media.constants';
+import FullNavigation from '../components/full_navigation';
 
 export const Route = createFileRoute('/kiosk/b')({
   component: KioskTypeB,
@@ -20,6 +23,11 @@ function KioskTypeB() {
   const [selectedId, setSelectedId] = useState(0);
   const { toggleFullPage, isFullPage } = useFullPageStore();
   const { isLandscape } = useOrientationStore();
+  const [isShow, setIsShow] = useState(false);
+
+  const handleBackgroundClick = () => {
+    setIsShow((prev) => !prev);
+  };
 
   return (
     <>
@@ -31,8 +39,11 @@ function KioskTypeB() {
               ? `url(${PREV_B[selectedId].img}) `
               : `url(${PREV_B_X[selectedId].img})`,
           }}
+          onClick={handleBackgroundClick}
         >
           <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+          {isShow && <FullNavigation />}
+          {isShow && <FullIndex list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>
       ) : (
         <Layout>
