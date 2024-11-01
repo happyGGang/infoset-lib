@@ -41,7 +41,15 @@ function SmartTypeB() {
               : `url(${PREV_B_X[selectedId].img})`,
           }}
         >
-          <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+          <img
+            src={zoom}
+            alt=""
+            className={'zoom'}
+            onClick={(e) => {
+              e.stopPropagation(); // 이미지 클릭 시 배경 클릭 이벤트 방지
+              toggleFullPage();
+            }}
+          />
           {isShow && <FullNavigation />}
           {isShow && <FullIndex list={PREV_A} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>

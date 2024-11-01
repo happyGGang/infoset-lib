@@ -35,7 +35,15 @@ function MediaWallTypeB() {
           style={{ backgroundImage: `url(${PREV_B[selectedId].img})` }}
           onClick={handleBackgroundClick}
         >
-          <img src={zoom} alt="" className={'zoom'} onClick={toggleFullPage} />
+          <img
+            src={zoom}
+            alt=""
+            className={'zoom'}
+            onClick={(e) => {
+              e.stopPropagation(); // 이미지 클릭 시 배경 클릭 이벤트 방지
+              toggleFullPage();
+            }}
+          />
           {isShow && <FullNavigation />}
           {isShow && <FullIndex list={PREV_B} selectedId={selectedId} onSelect={setSelectedId} />}
         </div>
