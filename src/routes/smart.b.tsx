@@ -40,6 +40,7 @@ function SmartTypeB() {
               ? `url(${PREV_B[selectedId].img}) `
               : `url(${PREV_B_X[selectedId].img})`,
           }}
+          onClick={handleBackgroundClick}
         >
           <img
             src={zoom}

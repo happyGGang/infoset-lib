@@ -35,7 +35,7 @@ function KioskTypeA() {
           className={isLandscape ? 'full' : 'full_y'}
           style={{
             backgroundImage: !isLandscape
-              ? `url(${PREV_A[selectedId].img}) `
+              ? `url(${PREV_A[selectedId].img})  `
               : `url(${PREV_A_X[selectedId].img})`,
           }}
           onClick={handleBackgroundClick}
