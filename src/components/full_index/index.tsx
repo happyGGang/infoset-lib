@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './index.module.css';
 
 interface PrevProps {
@@ -9,6 +9,26 @@ interface PrevProps {
 
 const FullIndex: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
   const handleClick = (id: number) => onSelect(id);
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowRight') {
+      if (selectedId < list.length - 1) {
+        onSelect(selectedId + 1);
+      }
+    } else if (event.key === 'ArrowLeft') {
+      if (selectedId > 0) {
+        onSelect(selectedId - 1);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedId, list.length]);
 
   return (
     <div className={styles.container}>
