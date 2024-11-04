@@ -51,6 +51,7 @@
   margin-bottom: 2.15rem;
   animation: slideInUp 0.8s ease forwards;
   text-align: center;
+  white-space: pre-line;
   color: #8B95A1;
 }
 
@@ -61,8 +62,8 @@
   font-style: normal;
   line-height: 150%;
   margin-bottom: 1.17rem;
-  animation: slideInUp 0.8s ease forwards;
   text-align: center;
+  white-space: pre-line;
   letter-spacing: -0.04294rem;
   color: #191F28;
 }
@@ -73,9 +74,13 @@
   font-weight: 500;
   font-style: normal;
   line-height: normal;
-  animation: slideInUp 0.8s ease forwards;
   text-align: center;
   color: #6B7684;
+}
+
+/* 애니메이션을 위한 스타일 */
+.animate {
+  animation: slideInUp 0.8s ease forwards;
 }
 
 @keyframes slideInUp {
@@ -88,4 +93,3 @@
     opacity: 1;
   }
 }
-
