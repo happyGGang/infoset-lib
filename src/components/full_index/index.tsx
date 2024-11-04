@@ -12,13 +12,11 @@ const FullIndex: React.FC<PrevProps> = ({ list, selectedId, onSelect }) => {
 
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'ArrowRight') {
-      if (selectedId < list.length - 1) {
-        onSelect(selectedId + 1);
-      }
+      const nextIndex = (selectedId + 1) % list.length;
+      onSelect(nextIndex);
     } else if (event.key === 'ArrowLeft') {
-      if (selectedId > 0) {
-        onSelect(selectedId - 1);
-      }
+      const prevIndex = (selectedId - 1 + list.length) % list.length;
+      onSelect(prevIndex);
     }
   };
 
