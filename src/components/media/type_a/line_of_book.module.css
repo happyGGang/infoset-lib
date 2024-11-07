@@ -74,7 +74,7 @@
 
 /* 애니메이션을 위한 스타일 */
 .animate {
-  animation: slideInUp 0.8s ease forwards;
+  animation: slideInUp 0.9s ease forwards;
 }
 
 @keyframes slideInUp {
@@ -87,3 +87,25 @@
     opacity: 1;
   }
 }
+
+/* 한 글자씩 나타나는 애니메이션 */
+.animate_char {
+  display: inline-block;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards; /* 애니메이션 시간 늘리기 */
+  animation-delay: 0.2s; /* 애니메이션 지연 시간 */
+  opacity: 0;
+}
+
+/* 한자씩 위로 나타나는 애니메이션 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

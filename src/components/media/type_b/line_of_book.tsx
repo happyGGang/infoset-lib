@@ -32,6 +32,18 @@ const LineOfBookB: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const renderAnimatedTitle = () => {
+    return data[currentIndex].title.split(/(\s+)/).map((char, index) => (
+      <span
+        key={index}
+        className={char.trim() ? (animate ? styles.animate_char : '') : ''}
+        style={char.trim() ? { animationDelay: `${index * 0.1}s` } : {}}
+      >
+        {char}
+      </span>
+    ));
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -40,9 +52,7 @@ const LineOfBookB: React.FC = () => {
           <div className={styles.header_title_en}>A LINE OF BOOK</div>
         </div>
         <div className={styles.title}>책 속의 한줄 발견</div>
-        <div className={`${styles.line_of_book} ${animate ? styles.animate : ''}`}>
-          {data[currentIndex].title}
-        </div>
+        <div className={`${styles.line_of_book}`}>{renderAnimatedTitle()}</div>
         <div className={`${styles.caption} ${animate ? styles.animate : ''}`}>
           {data[currentIndex].des}
         </div>
