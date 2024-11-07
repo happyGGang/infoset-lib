@@ -105,23 +105,23 @@ export const PREV_A_X = [
   },
   {
     id: 2,
-    img: s_6_a_x,
-  },
-  {
-    id: 3,
     img: s_2_a_x,
   },
   {
-    id: 4,
+    id: 3,
     img: s_3_a_x,
   },
   {
-    id: 5,
+    id: 4,
     img: s_4_a_x,
   },
   {
-    id: 6,
+    id: 5,
     img: s_5_a_x,
+  },
+  {
+    id: 6,
+    img: s_6_a_x,
   },
 ];
 
@@ -159,15 +159,15 @@ export const PREV_B_X = [
   },
   {
     id: 2,
-    img: s_4_b_x,
-  },
-  {
-    id: 3,
     img: s_2_b_x,
   },
   {
-    id: 4,
+    id: 3,
     img: s_3_b_x,
+  },
+  {
+    id: 4,
+    img: s_4_b_x,
   },
 ];
 
